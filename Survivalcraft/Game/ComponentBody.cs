@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Engine;
 using GameEntitySystem;
+using Survivalcraft.Game;
 using TemplatesDatabase;
 
 namespace Game
@@ -350,7 +351,8 @@ namespace Game
 				ComponentHealth componentHealth = base.Entity.FindComponent<ComponentHealth>();
 				if (componentHealth != null)
 				{
-					componentHealth.Injure(1f, null, true, "Crushed");
+					Boolean def = true;
+					componentHealth.Injure(1f, null, def && !ModifierHolder.allowUnrestrictedTravel, "Crushed");
 					return;
 				}
 				base.Project.RemoveEntity(base.Entity, true);

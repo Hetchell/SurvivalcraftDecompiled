@@ -9,5 +9,6 @@ namespace Survivalcraft.Game
     internal class ModifierHolder
     {
         public static Boolean allowUnrestrictedTravel = true;
+        public static float steppedTravel = 5.0f;
     }
 }

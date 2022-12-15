@@ -316,6 +316,11 @@ namespace Game
 					playerStats.HighestAltitude = MathUtils.Max(playerStats.HighestAltitude, (double)position.Y);
 					playerStats.EasiestModeUsed = (GameMode)MathUtils.Min((int)this.m_subsystemGameInfo.WorldSettings.GameMode, (int)playerStats.EasiestModeUsed);
 				}
+				if(this.m_componentCreature is ComponentPlayer)
+				{
+					if(ComponentInput.speed > 3 && ComponentInput.state)
+						this.m_componentCreature.ComponentBody.Position = new Vector3(position.X + ComponentInput.step, position.Y, position.Z);
+				}
 				this.m_lastPosition = new Vector3?(position);
 				this.m_swimBurstRemaining = MathUtils.Saturate(0.1f * this.m_swimBurstRemaining + dt);
 				int x = Terrain.ToCell(position.X);

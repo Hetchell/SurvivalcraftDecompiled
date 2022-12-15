@@ -293,7 +293,7 @@ namespace Game
 			this.m_subsystemSky = base.Project.FindSubsystem<SubsystemSky>(true);
 			this.m_subsystemAnimatedTextures = base.Project.FindSubsystem<SubsystemAnimatedTextures>(true);
 			this.m_shader = ContentManager.Get<Shader>("Shaders/AlphaTested");
-			foreach (Object obj in valuesDictionary.GetValue<ValuesDictionary>("MovingBlockSets"))
+			foreach (Object obj in valuesDictionary.GetValue<ValuesDictionary>("MovingBlockSets").Values)
 			{
 				ValuesDictionary valuesDictionary2 = (ValuesDictionary)obj;
 				Vector3 value = valuesDictionary2.GetValue<Vector3>("Position");

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Engine;
 using Engine.Input;
 using GameEntitySystem;
+using Survivalcraft.Game;
 using TemplatesDatabase;
 
 namespace Game
@@ -12,6 +13,8 @@ namespace Game
 	{
 
 		public static int speed = 1;
+		public static Boolean state = false;
+		public static float step = 0;
 		// Token: 0x17000192 RID: 402
 		// (get) Token: 0x06000DC3 RID: 3523 RVA: 0x00069BE9 File Offset: 0x00067DE9
 		public PlayerInput PlayerInput
@@ -191,8 +194,19 @@ namespace Game
                     speed--;
                     Debug.WriteLine("Speed is decreased");
                 }
-                Debug.Write("Speed is: " + speed);
-
+                Debug.WriteLine("Speed is: " + speed);
+				if (input.IsKeyDown(Key.LeftArrow))
+				{
+					state = true;
+					step = ModifierHolder.steppedTravel;
+				} else if (input.IsKeyDown(Key.RightArrow))
+                {
+                    state = true;
+                    step = -ModifierHolder.steppedTravel;
+                } else
+				{
+                    state = false;
+                }
                 Vector3 vector = default(Vector3) + Vector3.UnitX * (float)(input.IsKeyDown(Key.D) ? 1 : 0);
 				vector += -Vector3.UnitZ * (float)(input.IsKeyDown(Key.S) ? 1 : 0);
 				vector += Vector3.UnitZ * (float)(input.IsKeyDown(Key.W) ? 1 : 0);
