@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using Engine;
+using Survivalcraft.Game;
 
 namespace Game
 {
@@ -9,10 +10,10 @@ namespace Game
 	// Token: 0x02000311 RID: 785
 	public class TerrainChunkGeneratorProviderActive : ITerrainContentsGenerator
 	{
-        private int x_prev;
-        private int y_prev;
-        // Token: 0x1700036A RID: 874
-        // (get) Token: 0x0600166E RID: 5742 RVA: 0x000AD68E File Offset: 0x000AB88E
+
+		// Token: 0x1700036A RID: 874
+		// (get) Token: 0x0600166E RID: 5742 RVA: 0x000AD68E File Offset: 0x000AB88E
+		private ModifierHolder modifyTerrain;
         public int OceanLevel
 		{
 			get
@@ -73,6 +74,7 @@ namespace Game
 			this.TGWater = true;
 			this.TGExtras = true;
 			this.TGCavesAndPockets = true;
+			this.modifyTerrain = new ModifierHolder(subsystemTerrain, this, num);
 		}
 
 		// Token: 0x06001671 RID: 5745 RVA: 0x000ADA54 File Offset: 0x000ABC54
@@ -115,17 +117,19 @@ namespace Game
 		public void GenerateChunkContentsPass1(TerrainChunk chunk)
 		{
 			this.GenerateSurfaceParameters(chunk, 0, 0, 16, 8);
-			//this.GenerateTerrain(chunk, 0, 0, 16, 8);
-			//this.GenerateTerrain(chunk, chunk.Origin.X, chunk.Origin.Y, 3, 3);
-			this.GenerateTerrain(chunk, 14, 27, 16, 5);
-		}
+            this.modifyTerrain.GenerateTerrain(chunk, true);
+            //this.GenerateTerrain(chunk, chunk.Origin.X, chunk.Origin.Y, 3, 3);
+            //this.GenerateTerrain(chunk, 14, 27, 16, 5);
+            //this.GenerateTerrain(chunk, 0, 0, 16, 8);
+        }
 
 		// Token: 0x06001673 RID: 5747 RVA: 0x000ADB49 File Offset: 0x000ABD49
 		public void GenerateChunkContentsPass2(TerrainChunk chunk)
 		{
 			this.GenerateSurfaceParameters(chunk, 0, 8, 16, 16);
-			this.GenerateTerrain(chunk, 0, 8, 16, 16);
-		}
+			this.modifyTerrain.GenerateTerrain(chunk, false);
+            //this.GenerateTerrain(chunk, 0, 8, 16, 16);
+        }
 
 		// Token: 0x06001674 RID: 5748 RVA: 0x000ADB65 File Offset: 0x000ABD65
 		public void GenerateChunkContentsPass3(TerrainChunk chunk)
@@ -387,133 +391,125 @@ namespace Game
 			}
 		}
 
-		// Token: 0x06001680 RID: 5760 RVA: 0x000AE480 File Offset: 0x000AC680
-		public void GenerateTerrain(TerrainChunk chunk, int x1, int z1, int x2, int z2)
-		{
-			int num = x2 - x1;
-			int num2 = z2 - z1;
-			Terrain terrain = this.m_subsystemTerrain.Terrain;
-			int num3 = chunk.Origin.X + x1;
-			int num4 = chunk.Origin.Y + z1;
-			TerrainChunkGeneratorProviderActive.Grid2d grid2d = new TerrainChunkGeneratorProviderActive.Grid2d(num, num2);
-			TerrainChunkGeneratorProviderActive.Grid2d grid2d2 = new TerrainChunkGeneratorProviderActive.Grid2d(num, num2);
-			for (int i = 0; i < num2; i++)
-			{
-				for (int j = 0; j < num; j++)
-				{
-					grid2d.Set(j, i, this.CalculateOceanShoreDistance((float)(j + num3), (float)(i + num4)));
-					grid2d2.Set(j, i, this.CalculateMountainRangeFactor((float)(j + num3), (float)(i + num4)));
-				}
-			}
-			TerrainChunkGeneratorProviderActive.Grid3d grid3d = new TerrainChunkGeneratorProviderActive.Grid3d(num / 4 + 1, 33, num2 / 4 + 1);
-			for (int k = 0; k < grid3d.SizeX; k++)
-			{
-				for (int l = 0; l < grid3d.SizeZ; l++)
-				{
-					int x = k * 4 + num3;
-					int y = l * 4 + num4;
-					if(x / 100 != this.x_prev / 100 || y / 100 != this.y_prev / 100)
-					{
-                        //Debug.WriteLine("x -> chunk coordinate shiftscale: " + x, "TerrainChunkProviderActive");
-                        //Debug.WriteLine("y -> chunk coordinate shiftscale: " + y, "TerrainChunkProviderActive");
+        // Token: 0x06001680 RID: 5760 RVA: 0x000AE480 File Offset: 0x000AC680
+        public void GenerateTerrain(TerrainChunk chunk, int x1, int z1, int x2, int z2)
+        {
+            int num = x2 - x1;
+            int num2 = z2 - z1;
+            Terrain terrain = this.m_subsystemTerrain.Terrain;
+            int num3 = chunk.Origin.X + x1;
+            int num4 = chunk.Origin.Y + z1;
+            TerrainChunkGeneratorProviderActive.Grid2d grid2d = new TerrainChunkGeneratorProviderActive.Grid2d(num, num2);
+            TerrainChunkGeneratorProviderActive.Grid2d grid2d2 = new TerrainChunkGeneratorProviderActive.Grid2d(num, num2);
+            for (int i = 0; i < num2; i++)
+            {
+                for (int j = 0; j < num; j++)
+                {
+                    grid2d.Set(j, i, this.CalculateOceanShoreDistance((float)(j + num3), (float)(i + num4)));
+                    grid2d2.Set(j, i, this.CalculateMountainRangeFactor((float)(j + num3), (float)(i + num4)));
+                }
+            }
+            TerrainChunkGeneratorProviderActive.Grid3d grid3d = new TerrainChunkGeneratorProviderActive.Grid3d(num / 4 + 1, 33, num2 / 4 + 1);
+            for (int k = 0; k < grid3d.SizeX; k++)
+            {
+                for (int l = 0; l < grid3d.SizeZ; l++)
+                {
+                    int num5 = k * 4 + num3;
+                    int num6 = l * 4 + num4;
+                    float num7 = this.CalculateHeight((float)num5, (float)num6);
+                    float v = this.CalculateMountainRangeFactor((float)num5, (float)num6);
+                    float num8 = MathUtils.Lerp(this.TGMinTurbulence, 1f, TerrainChunkGeneratorProviderActive.Squish(v, this.TGTurbulenceZero, 1f));
+                    for (int m = 0; m < grid3d.SizeY; m++)
+                    {
+                        int num9 = m * 8;
+                        float num10 = this.TGTurbulenceStrength * num8 * MathUtils.Saturate(num7 - (float)num9) * (2f * SimplexNoise.OctavedNoise((float)num5, (float)num9, (float)num6, this.TGTurbulenceFreq, this.TGTurbulenceOctaves, 4f, this.TGTurbulencePersistence, false) - 1f);
+                        float num11 = (float)num9 + num10;
+                        float num12 = num7 - num11;
+                        num12 += MathUtils.Max(4f * (this.TGDensityBias - (float)num9), 0f);
+                        grid3d.Set(k, m, l, num12);
                     }
-					this.y_prev = y;
-					this.x_prev = x;
-                    float num7 = this.CalculateHeight((float)x, (float)y);
-					float v = this.CalculateMountainRangeFactor((float)x, (float)y);
-					float num8 = MathUtils.Lerp(this.TGMinTurbulence, 1f, TerrainChunkGeneratorProviderActive.Squish(v, this.TGTurbulenceZero, 1f));
-					for (int m = 0; m < grid3d.SizeY; m++)
-					{
-						int num9 = m * 8;
-						float num10 = this.TGTurbulenceStrength * num8 * MathUtils.Saturate(num7 - (float)num9) * (2f * SimplexNoise.OctavedNoise((float)x, (float)num9, (float)y, this.TGTurbulenceFreq, this.TGTurbulenceOctaves, 4f, this.TGTurbulencePersistence, false) - 1f);
-						float num11 = (float)num9 + num10;
-						float num12 = num7 - num11;
-						//num12 *= 318.7f;
-						num12 += MathUtils.Max(4f * (this.TGDensityBias - (float)num9), 0f);
-						grid3d.Set(k, m, l, num12);
-					}
-				}
-			}
-			int oceanLevel = this.OceanLevel;
-			for (int n = 0; n < grid3d.SizeX - 1; n++)
-			{
-				for (int num13 = 0; num13 < grid3d.SizeZ - 1; num13++)
-				{
-					for (int num14 = 0; num14 < grid3d.SizeY - 1; num14++)
-					{
-						float num15;
-						float num16;
-						float num17;
-						float num18;
-						float num19;
-						float num20;
-						float num21;
-						float num22;
-						grid3d.Get8(n, num14, num13, out num15, out num16, out num17, out num18, out num19, out num20, out num21, out num22);
-						float num23 = (num16 - num15) / 4f;
-						float num24 = (num18 - num17) / 4f;
-						float num25 = (num20 - num19) / 4f;
-						float num26 = (num22 - num21) / 4f;
-						float num27 = num15;
-						float num28 = num17;
-						float num29 = num19;
-						float num30 = num21;
-						for (int num31 = 0; num31 < 4; num31++)
-						{
-							float num32 = (num29 - num27) / 4f;
-							float num33 = (num30 - num28) / 4f;
-							float num34 = num27;
-							float num35 = num28;
-							for (int num36 = 0; num36 < 4; num36++)
-							{
-								float num37 = (num35 - num34) / 8f;
-								float num38 = num34;
-								int num39 = num31 + n * 4;
-								int num40 = num36 + num13 * 4;
-								int x3 = x1 + num39;
-								int z3 = z1 + num40;
-								float x4 = grid2d.Get(num39, num40);
-								float num41 = grid2d2.Get(num39, num40);
-								int temperatureFast = chunk.GetTemperatureFast(x3, z3);
-								int humidityFast = chunk.GetHumidityFast(x3, z3);
-								float f = num41 - 0.01f * (float)humidityFast;
-								float num42 = MathUtils.Lerp(100f, 0f, f);
-								float num43 = MathUtils.Lerp(300f, 30f, f);
-								bool flag = (temperatureFast > 8 && humidityFast < 8 && num41 < 0.97f) || (MathUtils.Abs(x4) < 16f && num41 < 0.97f);
-								int num44 = TerrainChunk.CalculateCellIndex(x3, 0, z3);
-								for (int num45 = 0; num45 < 8; num45++)
-								{
-									int num46 = num45 + num14 * 8;
-									int value = 0;
-									if (num38 < 0f)
-									{
-										if (num46 <= oceanLevel)
-										{
-											value = 18;
-										}
-									}
-									else
-									{
-										value = ((!flag) ? ((num38 >= num43) ? 67 : 3) : ((num38 >= num42) ? ((num38 >= num43) ? 67 : 3) : 4));
-									}
-									chunk.SetCellValueFast(num44 + num46, value);
-									num38 += num37;
-								}
-								num34 += num32;
-								num35 += num33;
-							}
-							num27 += num23;
-							num28 += num24;
-							num29 += num25;
-							num30 += num26;
-						}
-					}
-				}
-			}
-		}
+                }
+            }
+            int oceanLevel = this.OceanLevel;
+            for (int n = 0; n < grid3d.SizeX - 1; n++)
+            {
+                for (int num13 = 0; num13 < grid3d.SizeZ - 1; num13++)
+                {
+                    for (int num14 = 0; num14 < grid3d.SizeY - 1; num14++)
+                    {
+                        float num15;
+                        float num16;
+                        float num17;
+                        float num18;
+                        float num19;
+                        float num20;
+                        float num21;
+                        float num22;
+                        grid3d.Get8(n, num14, num13, out num15, out num16, out num17, out num18, out num19, out num20, out num21, out num22);
+                        float num23 = (num16 - num15) / 4f;
+                        float num24 = (num18 - num17) / 4f;
+                        float num25 = (num20 - num19) / 4f;
+                        float num26 = (num22 - num21) / 4f;
+                        float num27 = num15;
+                        float num28 = num17;
+                        float num29 = num19;
+                        float num30 = num21;
+                        for (int num31 = 0; num31 < 4; num31++)
+                        {
+                            float num32 = (num29 - num27) / 4f;
+                            float num33 = (num30 - num28) / 4f;
+                            float num34 = num27;
+                            float num35 = num28;
+                            for (int num36 = 0; num36 < 4; num36++)
+                            {
+                                float num37 = (num35 - num34) / 8f;
+                                float num38 = num34;
+                                int num39 = num31 + n * 4;
+                                int num40 = num36 + num13 * 4;
+                                int x3 = x1 + num39;
+                                int z3 = z1 + num40;
+                                float x4 = grid2d.Get(num39, num40);
+                                float num41 = grid2d2.Get(num39, num40);
+                                int temperatureFast = chunk.GetTemperatureFast(x3, z3);
+                                int humidityFast = chunk.GetHumidityFast(x3, z3);
+                                float f = num41 - 0.01f * (float)humidityFast;
+                                float num42 = MathUtils.Lerp(100f, 0f, f);
+                                float num43 = MathUtils.Lerp(300f, 30f, f);
+                                bool flag = (temperatureFast > 8 && humidityFast < 8 && num41 < 0.97f) || (MathUtils.Abs(x4) < 16f && num41 < 0.97f);
+                                int num44 = TerrainChunk.CalculateCellIndex(x3, 0, z3);
+                                for (int num45 = 0; num45 < 8; num45++)
+                                {
+                                    int num46 = num45 + num14 * 8;
+                                    int value = 0;
+                                    if (num38 < 0f)
+                                    {
+                                        if (num46 <= oceanLevel)
+                                        {
+                                            value = 18;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        value = ((!flag) ? ((num38 >= num43) ? 67 : 3) : ((num38 >= num42) ? ((num38 >= num43) ? 67 : 3) : 4));
+                                    }
+                                    chunk.SetCellValueFast(num44 + num46, value);
+                                    num38 += num37;
+                                }
+                                num34 += num32;
+                                num35 += num33;
+                            }
+                            num27 += num23;
+                            num28 += num24;
+                            num29 += num25;
+                            num30 += num26;
+                        }
+                    }
+                }
+            }
+        }
 
-		// Token: 0x06001681 RID: 5761 RVA: 0x000AE8E4 File Offset: 0x000ACAE4
-		public void GenerateSurface(TerrainChunk chunk)
+        // Token: 0x06001681 RID: 5761 RVA: 0x000AE8E4 File Offset: 0x000ACAE4
+        public void GenerateSurface(TerrainChunk chunk)
 		{
 			Terrain terrain = this.m_subsystemTerrain.Terrain;
 			Game.Random random = new Game.Random(this.m_seed + chunk.Coords.X + 101 * chunk.Coords.Y);
@@ -2570,6 +2566,7 @@ namespace Game
 		public bool TGCavesAndPockets;
 
 		// Token: 0x020004F1 RID: 1265
+
 		public class CavePoint
 		{
 			// Token: 0x0400181D RID: 6173
