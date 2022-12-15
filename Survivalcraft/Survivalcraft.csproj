@@ -1,0 +1,1094 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA748A40-AB7A-4111-B72F-3B45B5ABCDDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Survivalcraft</RootNamespace>
+    <AssemblyName>Survivalcraft</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Survivalcraft.ico</ApplicationIcon>
+    <StartupObject>Game.Program</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Engine, Version=1.0.8195.32035, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="EntitySystem, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\EntitySystem.dll</HintPath>
+    </Reference>
+    <Reference Include="FJ.CoreWin">
+      <HintPath>..\..\..\SurvivalCraft2Modded\FJ.CoreWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NVorbis">
+      <HintPath>..\..\..\SurvivalCraft2Modded\NVorbis.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\..\..\SurvivalCraft2Modded\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="PngCs">
+      <HintPath>..\..\..\SurvivalCraft2Modded\PngCs.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.D3DCompiler, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.D3DCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XAudio2, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.XInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System_Xml">
+      <HintPath>..\..\..\SurvivalCraft2Modded\System_Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileEntry.cs" />
+    <Compile Include="Game\ActiveExternalContentInfo.cs" />
+    <Compile Include="Game\AdjustableDelayGateBlock.cs" />
+    <Compile Include="Game\AdjustableDelayGateElectricElement.cs" />
+    <Compile Include="Game\AimState.cs" />
+    <Compile Include="Game\AirBlock.cs" />
+    <Compile Include="Game\AlphaTestCubeBlock.cs" />
+    <Compile Include="Game\AnalogToDigitalConverterBlock.cs" />
+    <Compile Include="Game\AnalogToDigitalConverterElectricElement.cs" />
+    <Compile Include="Game\AnalyticsManager.cs" />
+    <Compile Include="Game\AnalyticsManagerUtils.cs" />
+    <Compile Include="Game\AnalyticsParameter.cs" />
+    <Compile Include="Game\AndGateBlock.cs" />
+    <Compile Include="Game\AndGateElectricElement.cs" />
+    <Compile Include="Game\ArrowBlock.cs" />
+    <Compile Include="Game\ArrowLineWidget.cs" />
+    <Compile Include="Game\AStar.cs" />
+    <Compile Include="Game\AttachedSignBlock.cs" />
+    <Compile Include="Game\AudioManager.cs" />
+    <Compile Include="Game\AverageCountDebugItemAttribute.cs" />
+    <Compile Include="Game\AverageTimeDebugItemAttribute.cs" />
+    <Compile Include="Game\AxeBlock.cs" />
+    <Compile Include="Game\BasaltBlock.cs" />
+    <Compile Include="Game\BasaltFenceBlock.cs" />
+    <Compile Include="Game\BasaltSlabBlock.cs" />
+    <Compile Include="Game\BasaltStairsBlock.cs" />
+    <Compile Include="Game\BaseDelayGateElectricElement.cs" />
+    <Compile Include="Game\BasePerspectiveCamera.cs" />
+    <Compile Include="Game\BasePumpkinBlock.cs" />
+    <Compile Include="Game\BatteryBlock.cs" />
+    <Compile Include="Game\BatteryElectricElement.cs" />
+    <Compile Include="Game\BedrockBlock.cs" />
+    <Compile Include="Game\BestiaryCreatureInfo.cs" />
+    <Compile Include="Game\BestiaryDescriptionScreen.cs" />
+    <Compile Include="Game\BestiaryScreen.cs" />
+    <Compile Include="Game\BevelledButtonWidget.cs" />
+    <Compile Include="Game\BevelledRectangleWidget.cs" />
+    <Compile Include="Game\BirchLeavesBlock.cs" />
+    <Compile Include="Game\BirchWoodBlock.cs" />
+    <Compile Include="Game\BitmapButtonWidget.cs" />
+    <Compile Include="Game\Block.cs" />
+    <Compile Include="Game\BlockColorsMap.cs" />
+    <Compile Include="Game\BlockDebrisParticleSystem.cs" />
+    <Compile Include="Game\BlockDigMethod.cs" />
+    <Compile Include="Game\BlockDropValue.cs" />
+    <Compile Include="Game\BlockGeometryGenerator.cs" />
+    <Compile Include="Game\BlockIconWidget.cs" />
+    <Compile Include="Game\BlockMesh.cs" />
+    <Compile Include="Game\BlockMeshVertex.cs" />
+    <Compile Include="Game\BlockPlacementData.cs" />
+    <Compile Include="Game\BlocksManager.cs" />
+    <Compile Include="Game\BlocksTexturesCache.cs" />
+    <Compile Include="Game\BlocksTexturesManager.cs" />
+    <Compile Include="Game\BoatBlock.cs" />
+    <Compile Include="Game\BodyRaycastResult.cs" />
+    <Compile Include="Game\BombBlock.cs" />
+    <Compile Include="Game\BottomSuckerBlock.cs" />
+    <Compile Include="Game\BowBlock.cs" />
+    <Compile Include="Game\BowWidget.cs" />
+    <Compile Include="Game\BreadBlock.cs" />
+    <Compile Include="Game\BreathingMode.cs" />
+    <Compile Include="Game\BrickBlock.cs" />
+    <Compile Include="Game\BrickFenceBlock.cs" />
+    <Compile Include="Game\BricksBlock.cs" />
+    <Compile Include="Game\BrickSlabBlock.cs" />
+    <Compile Include="Game\BrickStairsBlock.cs" />
+    <Compile Include="Game\BucketBlock.cs" />
+    <Compile Include="Game\BuildConfiguration.cs" />
+    <Compile Include="Game\BuildFurnitureDialog.cs" />
+    <Compile Include="Game\BulletBlock.cs" />
+    <Compile Include="Game\BurntDebrisParticleSystem.cs" />
+    <Compile Include="Game\BusyBarWidget.cs" />
+    <Compile Include="Game\BusyDialog.cs" />
+    <Compile Include="Game\ButtonBlock.cs" />
+    <Compile Include="Game\ButtonElectricElement.cs" />
+    <Compile Include="Game\ButtonFurnitureElectricElement.cs" />
+    <Compile Include="Game\ButtonWidget.cs" />
+    <Compile Include="Game\CactusBlock.cs" />
+    <Compile Include="Game\Camera.cs" />
+    <Compile Include="Game\CampfireBlock.cs" />
+    <Compile Include="Game\CancellableBusyDialog.cs" />
+    <Compile Include="Game\CancellableProgress.cs" />
+    <Compile Include="Game\CanvasBlock.cs" />
+    <Compile Include="Game\CanvasWidget.cs" />
+    <Compile Include="Game\CarpetBlock.cs" />
+    <Compile Include="Game\CellDoorBlock.cs" />
+    <Compile Include="Game\CellFace.cs" />
+    <Compile Include="Game\CellTrapdoorBlock.cs" />
+    <Compile Include="Game\CharacterSkinsCache.cs" />
+    <Compile Include="Game\CharacterSkinsManager.cs" />
+    <Compile Include="Game\CheckboxWidget.cs" />
+    <Compile Include="Game\ChestBlock.cs" />
+    <Compile Include="Game\ChestWidget.cs" />
+    <Compile Include="Game\ChristmasTreeBlock.cs" />
+    <Compile Include="Game\ChristmasTreeElectricElement.cs" />
+    <Compile Include="Game\ChunkBlock.cs" />
+    <Compile Include="Game\ClayBlock.cs" />
+    <Compile Include="Game\ClearWidget.cs" />
+    <Compile Include="Game\ClickableWidget.cs" />
+    <Compile Include="Game\ClickTextWidget.cs" />
+    <Compile Include="Game\ClipboardManager.cs" />
+    <Compile Include="Game\ClothingBlock.cs" />
+    <Compile Include="Game\ClothingData.cs" />
+    <Compile Include="Game\ClothingSlot.cs" />
+    <Compile Include="Game\ClothingWidget.cs" />
+    <Compile Include="Game\CoalBlock.cs" />
+    <Compile Include="Game\CoalChunkBlock.cs" />
+    <Compile Include="Game\CoalOreBlock.cs" />
+    <Compile Include="Game\CobblestoneBlock.cs" />
+    <Compile Include="Game\CobblestoneSlabBlock.cs" />
+    <Compile Include="Game\CobblestoneStairsBlock.cs" />
+    <Compile Include="Game\CollectionUtils.cs" />
+    <Compile Include="Game\CommunityContentEntry.cs" />
+    <Compile Include="Game\CommunityContentManager.cs" />
+    <Compile Include="Game\CommunityContentMode.cs" />
+    <Compile Include="Game\CommunityContentScreen.cs" />
+    <Compile Include="Game\CompassBlock.cs" />
+    <Compile Include="Game\ComponentAimingSights.cs" />
+    <Compile Include="Game\ComponentAutoJump.cs" />
+    <Compile Include="Game\ComponentAvoidFireBehavior.cs" />
+    <Compile Include="Game\ComponentAvoidPlayerBehavior.cs" />
+    <Compile Include="Game\ComponentBehavior.cs" />
+    <Compile Include="Game\ComponentBehaviorSelector.cs" />
+    <Compile Include="Game\ComponentBirdModel.cs" />
+    <Compile Include="Game\ComponentBlockEntity.cs" />
+    <Compile Include="Game\ComponentBlockHighlight.cs" />
+    <Compile Include="Game\ComponentBoat.cs" />
+    <Compile Include="Game\ComponentBody.cs" />
+    <Compile Include="Game\ComponentCattleDriveBehavior.cs" />
+    <Compile Include="Game\ComponentCetaceanBreatheBehavior.cs" />
+    <Compile Include="Game\ComponentChaseBehavior.cs" />
+    <Compile Include="Game\ComponentChest.cs" />
+    <Compile Include="Game\ComponentClothing.cs" />
+    <Compile Include="Game\ComponentCraftingTable.cs" />
+    <Compile Include="Game\ComponentCreativeInventory.cs" />
+    <Compile Include="Game\ComponentCreature.cs" />
+    <Compile Include="Game\ComponentCreatureModel.cs" />
+    <Compile Include="Game\ComponentCreatureSounds.cs" />
+    <Compile Include="Game\ComponentDamage.cs" />
+    <Compile Include="Game\ComponentDiggingCracks.cs" />
+    <Compile Include="Game\ComponentDigInMudBehavior.cs" />
+    <Compile Include="Game\ComponentDispenser.cs" />
+    <Compile Include="Game\ComponentDumpRiderBehavior.cs" />
+    <Compile Include="Game\ComponentEatPickableBehavior.cs" />
+    <Compile Include="Game\ComponentFindPlayerBehavior.cs" />
+    <Compile Include="Game\ComponentFirstPersonModel.cs" />
+    <Compile Include="Game\ComponentFishModel.cs" />
+    <Compile Include="Game\ComponentFishOutOfWaterBehavior.cs" />
+    <Compile Include="Game\ComponentFlightlessBirdModel.cs" />
+    <Compile Include="Game\ComponentFlu.cs" />
+    <Compile Include="Game\ComponentFlyAroundBehavior.cs" />
+    <Compile Include="Game\ComponentFlyAwayBehavior.cs" />
+    <Compile Include="Game\ComponentFourLeggedModel.cs" />
+    <Compile Include="Game\ComponentFrame.cs" />
+    <Compile Include="Game\ComponentFurnace.cs" />
+    <Compile Include="Game\ComponentFurnitureInventory.cs" />
+    <Compile Include="Game\ComponentGlowingEyes.cs" />
+    <Compile Include="Game\ComponentGui.cs" />
+    <Compile Include="Game\ComponentHealth.cs" />
+    <Compile Include="Game\ComponentHerdBehavior.cs" />
+    <Compile Include="Game\ComponentHowlBehavior.cs" />
+    <Compile Include="Game\ComponentHumanModel.cs" />
+    <Compile Include="Game\ComponentInput.cs" />
+    <Compile Include="Game\ComponentIntro.cs" />
+    <Compile Include="Game\ComponentIntroShip.cs" />
+    <Compile Include="Game\ComponentInventory.cs" />
+    <Compile Include="Game\ComponentInventoryBase.cs" />
+    <Compile Include="Game\ComponentLayEggBehavior.cs" />
+    <Compile Include="Game\ComponentLevel.cs" />
+    <Compile Include="Game\ComponentLocomotion.cs" />
+    <Compile Include="Game\ComponentLookAroundBehavior.cs" />
+    <Compile Include="Game\ComponentLoot.cs" />
+    <Compile Include="Game\ComponentMiner.cs" />
+    <Compile Include="Game\ComponentModel.cs" />
+    <Compile Include="Game\ComponentMount.cs" />
+    <Compile Include="Game\ComponentMoveAwayBehavior.cs" />
+    <Compile Include="Game\ComponentName.cs" />
+    <Compile Include="Game\ComponentOnFire.cs" />
+    <Compile Include="Game\ComponentOuterClothingModel.cs" />
+    <Compile Include="Game\ComponentPathfinding.cs" />
+    <Compile Include="Game\ComponentPilot.cs" />
+    <Compile Include="Game\ComponentPlayer.cs" />
+    <Compile Include="Game\ComponentRandomFeedBehavior.cs" />
+    <Compile Include="Game\ComponentRandomPeckBehavior.cs" />
+    <Compile Include="Game\ComponentRider.cs" />
+    <Compile Include="Game\ComponentRunAwayBehavior.cs" />
+    <Compile Include="Game\ComponentScreenOverlays.cs" />
+    <Compile Include="Game\ComponentShapeshifter.cs" />
+    <Compile Include="Game\ComponentSickness.cs" />
+    <Compile Include="Game\ComponentSimpleModel.cs" />
+    <Compile Include="Game\ComponentSleep.cs" />
+    <Compile Include="Game\ComponentSpawn.cs" />
+    <Compile Include="Game\ComponentStareBehavior.cs" />
+    <Compile Include="Game\ComponentSteedBehavior.cs" />
+    <Compile Include="Game\ComponentStubbornSteedBehavior.cs" />
+    <Compile Include="Game\ComponentSummonBehavior.cs" />
+    <Compile Include="Game\ComponentSwimAroundBehavior.cs" />
+    <Compile Include="Game\ComponentSwimAwayBehavior.cs" />
+    <Compile Include="Game\ComponentUdder.cs" />
+    <Compile Include="Game\ComponentVitalStats.cs" />
+    <Compile Include="Game\ComponentVrHandsModel.cs" />
+    <Compile Include="Game\ComponentWalkAroundBehavior.cs" />
+    <Compile Include="Game\ContainerWidget.cs" />
+    <Compile Include="Game\ContentManager.cs" />
+    <Compile Include="Game\ContentScreen.cs" />
+    <Compile Include="Game\CookedBirdBlock.cs" />
+    <Compile Include="Game\CookedFishBlock.cs" />
+    <Compile Include="Game\CookedMeatBlock.cs" />
+    <Compile Include="Game\CopperAxeBlock.cs" />
+    <Compile Include="Game\CopperBlock.cs" />
+    <Compile Include="Game\CopperIngotBlock.cs" />
+    <Compile Include="Game\CopperMacheteBlock.cs" />
+    <Compile Include="Game\CopperOreBlock.cs" />
+    <Compile Include="Game\CopperPickaxeBlock.cs" />
+    <Compile Include="Game\CopperRakeBlock.cs" />
+    <Compile Include="Game\CopperShovelBlock.cs" />
+    <Compile Include="Game\CopperSpearBlock.cs" />
+    <Compile Include="Game\CottonBlock.cs" />
+    <Compile Include="Game\CottonWadBlock.cs" />
+    <Compile Include="Game\CounterBlock.cs" />
+    <Compile Include="Game\CounterElectricElement.cs" />
+    <Compile Include="Game\CraftingRecipe.cs" />
+    <Compile Include="Game\CraftingRecipeSlotWidget.cs" />
+    <Compile Include="Game\CraftingRecipesManager.cs" />
+    <Compile Include="Game\CraftingRecipeWidget.cs" />
+    <Compile Include="Game\CraftingTableBlock.cs" />
+    <Compile Include="Game\CraftingTableWidget.cs" />
+    <Compile Include="Game\CreativeInventoryPanel.cs" />
+    <Compile Include="Game\CreativeInventoryWidget.cs" />
+    <Compile Include="Game\CreatureCategory.cs" />
+    <Compile Include="Game\CrossBlock.cs" />
+    <Compile Include="Game\CrossbowBlock.cs" />
+    <Compile Include="Game\CrossbowWidget.cs" />
+    <Compile Include="Game\CubeBlock.cs" />
+    <Compile Include="Game\DatabaseManager.cs" />
+    <Compile Include="Game\DataSizeFormatter.cs" />
+    <Compile Include="Game\DeathCamera.cs" />
+    <Compile Include="Game\DebugCamera.cs" />
+    <Compile Include="Game\DebugItemAttribute.cs" />
+    <Compile Include="Game\DebugItemsContainerAttribute.cs" />
+    <Compile Include="Game\DebugMenuItemAttribute.cs" />
+    <Compile Include="Game\DelayGateBlock.cs" />
+    <Compile Include="Game\DelayGateElectricElement.cs" />
+    <Compile Include="Game\DetonatorBlock.cs" />
+    <Compile Include="Game\DetonatorElectricElement.cs" />
+    <Compile Include="Game\Dialog.cs" />
+    <Compile Include="Game\DialogsManager.cs" />
+    <Compile Include="Game\DiamondAxeBlock.cs" />
+    <Compile Include="Game\DiamondBlock.cs" />
+    <Compile Include="Game\DiamondChunkBlock.cs" />
+    <Compile Include="Game\DiamondMacheteBlock.cs" />
+    <Compile Include="Game\DiamondOreBlock.cs" />
+    <Compile Include="Game\DiamondPickaxeBlock.cs" />
+    <Compile Include="Game\DiamondRakeBlock.cs" />
+    <Compile Include="Game\DiamondShovelBlock.cs" />
+    <Compile Include="Game\DiamondSpearBlock.cs" />
+    <Compile Include="Game\DigitalToAnalogConverterBlock.cs" />
+    <Compile Include="Game\DigitalToAnalogConverterElectricElement.cs" />
+    <Compile Include="Game\DirtBlock.cs" />
+    <Compile Include="Game\DiskExternalContentProvider.cs" />
+    <Compile Include="Game\DispenserBlock.cs" />
+    <Compile Include="Game\DispenserElectricElement.cs" />
+    <Compile Include="Game\DispenserWidget.cs" />
+    <Compile Include="Game\DoorBlock.cs" />
+    <Compile Include="Game\DoorElectricElement.cs" />
+    <Compile Include="Game\DoughBlock.cs" />
+    <Compile Include="Game\DownloadContentFromLinkDialog.cs" />
+    <Compile Include="Game\DragHostWidget.cs" />
+    <Compile Include="Game\DragMode.cs" />
+    <Compile Include="Game\DrawBlockEnvironmentData.cs" />
+    <Compile Include="Game\DropboxExternalContentProvider.cs" />
+    <Compile Include="Game\DryBushBlock.cs" />
+    <Compile Include="Game\EditAdjustableDelayGateDialog.cs" />
+    <Compile Include="Game\EditBatteryDialog.cs" />
+    <Compile Include="Game\EditColorDialog.cs" />
+    <Compile Include="Game\EditMemeryDialogB.cs" />
+    <Compile Include="Game\EditMemoryBankDialog.cs" />
+    <Compile Include="Game\EditPaletteDialog.cs" />
+    <Compile Include="Game\EditPistonDialog.cs" />
+    <Compile Include="Game\EditSignDialog.cs" />
+    <Compile Include="Game\EditTruthTableDialog.cs" />
+    <Compile Include="Game\EggBlock.cs" />
+    <Compile Include="Game\ElectricConnection.cs" />
+    <Compile Include="Game\ElectricConnectionPath.cs" />
+    <Compile Include="Game\ElectricConnectorDirection.cs" />
+    <Compile Include="Game\ElectricConnectorType.cs" />
+    <Compile Include="Game\ElectricElement.cs" />
+    <Compile Include="Game\EmptyBucketBlock.cs" />
+    <Compile Include="Game\EntityReference.cs" />
+    <Compile Include="Game\EntityReferenceHumanReadableConverter.cs" />
+    <Compile Include="Game\EnumUtils.cs" />
+    <Compile Include="Game\EnvironmentBehaviorMode.cs" />
+    <Compile Include="Game\ExceptionManager.cs" />
+    <Compile Include="Game\ExperienceBlock.cs" />
+    <Compile Include="Game\ExplosionParticleSystem.cs" />
+    <Compile Include="Game\ExternalContentEntry.cs" />
+    <Compile Include="Game\ExternalContentLinkDialog.cs" />
+    <Compile Include="Game\ExternalContentManager.cs" />
+    <Compile Include="Game\ExternalContentScreen.cs" />
+    <Compile Include="Game\ExternalContentType.cs" />
+    <Compile Include="Game\FeatherBlock.cs" />
+    <Compile Include="Game\FenceBlock.cs" />
+    <Compile Include="Game\FenceGateBlock.cs" />
+    <Compile Include="Game\FenceGateElectricElement.cs" />
+    <Compile Include="Game\FireBlock.cs" />
+    <Compile Include="Game\FireParticleSystem.cs" />
+    <Compile Include="Game\FireWidget.cs" />
+    <Compile Include="Game\FireworksBlock.cs" />
+    <Compile Include="Game\FireworksParticleSystem.cs" />
+    <Compile Include="Game\FireworksTrailParticleSystem.cs" />
+    <Compile Include="Game\FixedCamera.cs" />
+    <Compile Include="Game\FixedSizePanelWidget.cs" />
+    <Compile Include="Game\FlatBlock.cs" />
+    <Compile Include="Game\FloatListDebugMenuItemAttribute.cs" />
+    <Compile Include="Game\FlourBlock.cs" />
+    <Compile Include="Game\FlowerBlock.cs" />
+    <Compile Include="Game\FluidBlock.cs" />
+    <Compile Include="Game\FluidInfo.cs" />
+    <Compile Include="Game\FlyCamera.cs" />
+    <Compile Include="Game\FoodBlock.cs" />
+    <Compile Include="Game\FoodType.cs" />
+    <Compile Include="Game\FourLedBlock.cs" />
+    <Compile Include="Game\FourLedElectricElement.cs" />
+    <Compile Include="Game\FppCamera.cs" />
+    <Compile Include="Game\FramedGlassBlock.cs" />
+    <Compile Include="Game\FullInventoryWidget.cs" />
+    <Compile Include="Game\FurBlock.cs" />
+    <Compile Include="Game\FurnaceBlock.cs" />
+    <Compile Include="Game\FurnaceWidget.cs" />
+    <Compile Include="Game\FurnitureBlock.cs" />
+    <Compile Include="Game\FurnitureDesign.cs" />
+    <Compile Include="Game\FurnitureDesignWidget.cs" />
+    <Compile Include="Game\FurnitureElectricElement.cs" />
+    <Compile Include="Game\FurnitureGeometry.cs" />
+    <Compile Include="Game\FurnitureInteractionMode.cs" />
+    <Compile Include="Game\FurnitureInventoryPanel.cs" />
+    <Compile Include="Game\FurniturePacksManager.cs" />
+    <Compile Include="Game\FurnitureSet.cs" />
+    <Compile Include="Game\FurnitureSetItemWidget.cs" />
+    <Compile Include="Game\FuseParticleSystem.cs" />
+    <Compile Include="Game\GameLoadingScreen.cs" />
+    <Compile Include="Game\GameLogSink.cs" />
+    <Compile Include="Game\GameManager.cs" />
+    <Compile Include="Game\GameMenuDialog.cs" />
+    <Compile Include="Game\GameMode.cs" />
+    <Compile Include="Game\GamepadHelpDialog.cs" />
+    <Compile Include="Game\GameScreen.cs" />
+    <Compile Include="Game\GamesWidget.cs" />
+    <Compile Include="Game\GameWidget.cs" />
+    <Compile Include="Game\GermaniumChunkBlock.cs" />
+    <Compile Include="Game\GermaniumOreBlock.cs" />
+    <Compile Include="Game\GermaniumOreChunkBlock.cs" />
+    <Compile Include="Game\GlassBlock.cs" />
+    <Compile Include="Game\GlowPoint.cs" />
+    <Compile Include="Game\GlowPointType.cs" />
+    <Compile Include="Game\GraniteBlock.cs" />
+    <Compile Include="Game\GrassBlock.cs" />
+    <Compile Include="Game\GrassTrapBlock.cs" />
+    <Compile Include="Game\GravelBlock.cs" />
+    <Compile Include="Game\GravestoneBlock.cs" />
+    <Compile Include="Game\GridPanelWidget.cs" />
+    <Compile Include="Game\GuiSize.cs" />
+    <Compile Include="Game\GunpowderBlock.cs" />
+    <Compile Include="Game\GunpowderKegBlock.cs" />
+    <Compile Include="Game\GunpowderKegElectricElement.cs" />
+    <Compile Include="Game\GunSmokeParticleSystem.cs" />
+    <Compile Include="Game\HammerBlock.cs" />
+    <Compile Include="Game\HelpScreen.cs" />
+    <Compile Include="Game\HelpTopic.cs" />
+    <Compile Include="Game\HelpTopicScreen.cs" />
+    <Compile Include="Game\HitValueParticleSystem.cs" />
+    <Compile Include="Game\HygrometerBlock.cs" />
+    <Compile Include="Game\HygrometerElectricElement.cs" />
+    <Compile Include="Game\IAStarStorage.cs" />
+    <Compile Include="Game\IAStarWorld.cs" />
+    <Compile Include="Game\IceBlock.cs" />
+    <Compile Include="Game\IDragTargetWidget.cs" />
+    <Compile Include="Game\IDrawable.cs" />
+    <Compile Include="Game\IEditableItemData.cs" />
+    <Compile Include="Game\IElectricElementBlock.cs" />
+    <Compile Include="Game\IElectricWireElementBlock.cs" />
+    <Compile Include="Game\IExternalContentProvider.cs" />
+    <Compile Include="Game\IInventory.cs" />
+    <Compile Include="Game\IMovingBlockSet.cs" />
+    <Compile Include="Game\IncendiaryBombBlock.cs" />
+    <Compile Include="Game\IngotBlock.cs" />
+    <Compile Include="Game\INoiseListener.cs" />
+    <Compile Include="Game\InstancedModelData.cs" />
+    <Compile Include="Game\InstancedModelsManager.cs" />
+    <Compile Include="Game\IntroCamera.cs" />
+    <Compile Include="Game\InventoryDragData.cs" />
+    <Compile Include="Game\InventorySlotWidget.cs" />
+    <Compile Include="Game\IPaintableBlock.cs" />
+    <Compile Include="Game\IronAttachedSignBlock.cs" />
+    <Compile Include="Game\IronAxeBlock.cs" />
+    <Compile Include="Game\IronBlock.cs" />
+    <Compile Include="Game\IronDoorBlock.cs" />
+    <Compile Include="Game\IronFenceBlock.cs" />
+    <Compile Include="Game\IronFenceGateBlock.cs" />
+    <Compile Include="Game\IronHammerBlock.cs" />
+    <Compile Include="Game\IronIngotBlock.cs" />
+    <Compile Include="Game\IronLadderBlock.cs" />
+    <Compile Include="Game\IronMacheteBlock.cs" />
+    <Compile Include="Game\IronOreBlock.cs" />
+    <Compile Include="Game\IronOreChunkBlock.cs" />
+    <Compile Include="Game\IronPickaxeBlock.cs" />
+    <Compile Include="Game\IronPostedSignBlock.cs" />
+    <Compile Include="Game\IronRakeBlock.cs" />
+    <Compile Include="Game\IronShovelBlock.cs" />
+    <Compile Include="Game\IronSpearBlock.cs" />
+    <Compile Include="Game\ITerrainContentsGenerator.cs" />
+    <Compile Include="Game\ITrailParticleSystem.cs" />
+    <Compile Include="Game\IUpdateable.cs" />
+    <Compile Include="Game\IvyBlock.cs" />
+    <Compile Include="Game\JackOLanternBlock.cs" />
+    <Compile Include="Game\KelpBlock.cs" />
+    <Compile Include="Game\KeyboardHelpDialog.cs" />
+    <Compile Include="Game\KillParticleSystem.cs" />
+    <Compile Include="Game\LabelWidget.cs" />
+    <Compile Include="Game\LadderBlock.cs" />
+    <Compile Include="Game\LanguageControl.cs" />
+    <Compile Include="Game\LargeDryBushBlock.cs" />
+    <Compile Include="Game\LargeGunpowderKegBlock.cs" />
+    <Compile Include="Game\LargeIncendiaryKegBlock.cs" />
+    <Compile Include="Game\LayoutDirection.cs" />
+    <Compile Include="Game\LeatherBlock.cs" />
+    <Compile Include="Game\LeavesBlock.cs" />
+    <Compile Include="Game\LedBlock.cs" />
+    <Compile Include="Game\LedElectricElement.cs" />
+    <Compile Include="Game\LevelFactorDialog.cs" />
+    <Compile Include="Game\LightbulbBlock.cs" />
+    <Compile Include="Game\LightBulbElectricElement.cs" />
+    <Compile Include="Game\LightingManager.cs" />
+    <Compile Include="Game\LimestoneBlock.cs" />
+    <Compile Include="Game\LinkWidget.cs" />
+    <Compile Include="Game\ListPanelWidget.cs" />
+    <Compile Include="Game\ListSelectionDialog.cs" />
+    <Compile Include="Game\LitFurnaceBlock.cs" />
+    <Compile Include="Game\LoadingCamera.cs" />
+    <Compile Include="Game\LoadingScreen.cs" />
+    <Compile Include="Game\LoginDialog.cs" />
+    <Compile Include="Game\LookControlMode.cs" />
+    <Compile Include="Game\MacheteBlock.cs" />
+    <Compile Include="Game\MagmaBlock.cs" />
+    <Compile Include="Game\MagmaBucketBlock.cs" />
+    <Compile Include="Game\MagmaSplashParticleSystem.cs" />
+    <Compile Include="Game\MagnetBlock.cs" />
+    <Compile Include="Game\MainMenuScreen.cs" />
+    <Compile Include="Game\MalachiteBlock.cs" />
+    <Compile Include="Game\MalachiteChunkBlock.cs" />
+    <Compile Include="Game\MarbleBlock.cs" />
+    <Compile Include="Game\MarbleSlabBlock.cs" />
+    <Compile Include="Game\MarbleStairsBlock.cs" />
+    <Compile Include="Game\MarketplaceManager.cs" />
+    <Compile Include="Game\MatchBlock.cs" />
+    <Compile Include="Game\MatrixUtils.cs" />
+    <Compile Include="Game\MediumGunpowderKegBlock.cs" />
+    <Compile Include="Game\MediumIncendiaryKegBlock.cs" />
+    <Compile Include="Game\MemoryBankBlock.cs" />
+    <Compile Include="Game\MemoryBankData.cs" />
+    <Compile Include="Game\MemoryBankElectricElement.cs" />
+    <Compile Include="Game\MessageDialog.cs" />
+    <Compile Include="Game\MessageDialogButton.cs" />
+    <Compile Include="Game\MessageWidget.cs" />
+    <Compile Include="Game\MilkBucketBlock.cs" />
+    <Compile Include="Game\MimosaLeavesBlock.cs" />
+    <Compile Include="Game\MimosaWoodBlock.cs" />
+    <Compile Include="Game\ModelRenderingMode.cs" />
+    <Compile Include="Game\ModelShader.cs" />
+    <Compile Include="Game\ModelWidget.cs" />
+    <Compile Include="Game\ModifierHolder.cs" />
+    <Compile Include="Game\ModifyWorldScreen.cs" />
+    <Compile Include="Game\MoreCommunityLinkDialog.cs" />
+    <Compile Include="Game\MotdManager.cs" />
+    <Compile Include="Game\MotdWidget.cs" />
+    <Compile Include="Game\MotionDetectorBlock.cs" />
+    <Compile Include="Game\MotionDetectorElectricElement.cs" />
+    <Compile Include="Game\MountedElectricElement.cs" />
+    <Compile Include="Game\MountedElectricElementBlock.cs" />
+    <Compile Include="Game\MoveControlMode.cs" />
+    <Compile Include="Game\MoveRoseWidget.cs" />
+    <Compile Include="Game\MovingBlock.cs" />
+    <Compile Include="Game\MovingBlocksRaycastResult.cs" />
+    <Compile Include="Game\MulticoloredLedBlock.cs" />
+    <Compile Include="Game\MulticoloredLedElectricElement.cs" />
+    <Compile Include="Game\MultistateFurnitureElectricElement.cs" />
+    <Compile Include="Game\MusicManager.cs" />
+    <Compile Include="Game\MusketBlock.cs" />
+    <Compile Include="Game\MusketWidget.cs" />
+    <Compile Include="Game\MyTipDialog.cs" />
+    <Compile Include="Game\NagScreen.cs" />
+    <Compile Include="Game\NandGateBlock.cs" />
+    <Compile Include="Game\NandGateElectricElement.cs" />
+    <Compile Include="Game\NewWorldScreen.cs" />
+    <Compile Include="Game\NorGateBlock.cs" />
+    <Compile Include="Game\NorGateElectricElement.cs" />
+    <Compile Include="Game\NotGateBlock.cs" />
+    <Compile Include="Game\NotGateElectricElement.cs" />
+    <Compile Include="Game\OakLeavesBlock.cs" />
+    <Compile Include="Game\OakWoodBlock.cs" />
+    <Compile Include="Game\OneLedBlock.cs" />
+    <Compile Include="Game\OneLedElectricElement.cs" />
+    <Compile Include="Game\OnFireParticleSystem.cs" />
+    <Compile Include="Game\OrbitCamera.cs" />
+    <Compile Include="Game\OrGateBlock.cs" />
+    <Compile Include="Game\OrGateElectricElement.cs" />
+    <Compile Include="Game\PaintBucketBlock.cs" />
+    <Compile Include="Game\PaintedCubeBlock.cs" />
+    <Compile Include="Game\PaintParticleSystem.cs" />
+    <Compile Include="Game\PaintStripperBucketBlock.cs" />
+    <Compile Include="Game\PanoramaWidget.cs" />
+    <Compile Include="Game\Particle.cs" />
+    <Compile Include="Game\ParticleBillboardingMode.cs" />
+    <Compile Include="Game\ParticleSystem.cs" />
+    <Compile Include="Game\ParticleSystemBase.cs" />
+    <Compile Include="Game\PathfindingResult.cs" />
+    <Compile Include="Game\PerformanceManager.cs" />
+    <Compile Include="Game\PhotodiodeBlock.cs" />
+    <Compile Include="Game\PhotodiodeElectricElement.cs" />
+    <Compile Include="Game\Pickable.cs" />
+    <Compile Include="Game\PickaxeBlock.cs" />
+    <Compile Include="Game\PigmentBlock.cs" />
+    <Compile Include="Game\PistonBlock.cs" />
+    <Compile Include="Game\PistonElectricElement.cs" />
+    <Compile Include="Game\PistonHeadBlock.cs" />
+    <Compile Include="Game\PistonMode.cs" />
+    <Compile Include="Game\PlanksBlock.cs" />
+    <Compile Include="Game\PlantsManager.cs" />
+    <Compile Include="Game\Platform.cs" />
+    <Compile Include="Game\PlayerClass.cs" />
+    <Compile Include="Game\PlayerData.cs" />
+    <Compile Include="Game\PlayerInfo.cs" />
+    <Compile Include="Game\PlayerInput.cs" />
+    <Compile Include="Game\PlayerModelWidget.cs" />
+    <Compile Include="Game\PlayerScreen.cs" />
+    <Compile Include="Game\PlayersScreen.cs" />
+    <Compile Include="Game\PlayerStats.cs" />
+    <Compile Include="Game\PlayerWidget.cs" />
+    <Compile Include="Game\PlayScreen.cs" />
+    <Compile Include="Game\PostedSignBlock.cs" />
+    <Compile Include="Game\PrecipitationShaftInfo.cs" />
+    <Compile Include="Game\PrecipitationShaftParticleSystem.cs" />
+    <Compile Include="Game\PrecipitationType.cs" />
+    <Compile Include="Game\PressurePlateBlock.cs" />
+    <Compile Include="Game\PressurePlateElectricElement.cs" />
+    <Compile Include="Game\Profiler.cs" />
+    <Compile Include="Game\Program.cs" />
+    <Compile Include="Game\Progress.cs" />
+    <Compile Include="Game\ProgressManager.cs" />
+    <Compile Include="Game\Projectile.cs" />
+    <Compile Include="Game\ProjectileStoppedAction.cs" />
+    <Compile Include="Game\Properties\Resources.cs" />
+    <Compile Include="Game\PublishCommunityLinkDialog.cs" />
+    <Compile Include="Game\PukeParticleSystem.cs" />
+    <Compile Include="Game\PumpkinBlock.cs" />
+    <Compile Include="Game\PumpkinSoupBucketBlock.cs" />
+    <Compile Include="Game\PurpleFlowerBlock.cs" />
+    <Compile Include="Game\RainSplashParticleSystem.cs" />
+    <Compile Include="Game\RakeBlock.cs" />
+    <Compile Include="Game\Random.cs" />
+    <Compile Include="Game\RandomGeneratorBlock.cs" />
+    <Compile Include="Game\RandomGeneratorElectricElement.cs" />
+    <Compile Include="Game\RandomJumpCamera.cs" />
+    <Compile Include="Game\RateCommunityContentDialog.cs" />
+    <Compile Include="Game\RawBirdBlock.cs" />
+    <Compile Include="Game\RawFishBlock.cs" />
+    <Compile Include="Game\RawMeatBlock.cs" />
+    <Compile Include="Game\RaycastMode.cs" />
+    <Compile Include="Game\RealTimeClockBlock.cs" />
+    <Compile Include="Game\RealTimeClockElectricElement.cs" />
+    <Compile Include="Game\RecipaediaDescriptionScreen.cs" />
+    <Compile Include="Game\RecipaediaRecipesScreen.cs" />
+    <Compile Include="Game\RecipaediaScreen.cs" />
+    <Compile Include="Game\RectangleWidget.cs" />
+    <Compile Include="Game\RedFlowerBlock.cs" />
+    <Compile Include="Game\ReportCommunityContentDialog.cs" />
+    <Compile Include="Game\ResolutionMode.cs" />
+    <Compile Include="Game\RodBlock.cs" />
+    <Compile Include="Game\RotateableElectricElement.cs" />
+    <Compile Include="Game\RotateableMountedElectricElementBlock.cs" />
+    <Compile Include="Game\RottenBirdBlock.cs" />
+    <Compile Include="Game\RottenBreadBlock.cs" />
+    <Compile Include="Game\RottenDoughBlock.cs" />
+    <Compile Include="Game\RottenEggBlock.cs" />
+    <Compile Include="Game\RottenFishBlock.cs" />
+    <Compile Include="Game\RottenMeatBlock.cs" />
+    <Compile Include="Game\RottenMilkBucketBlock.cs" />
+    <Compile Include="Game\RottenPumpkinBlock.cs" />
+    <Compile Include="Game\RottenPumpkinSoupBucketBlock.cs" />
+    <Compile Include="Game\RunningAverage.cs" />
+    <Compile Include="Game\RyeBlock.cs" />
+    <Compile Include="Game\SaddleBlock.cs" />
+    <Compile Include="Game\SaltpeterChunkBlock.cs" />
+    <Compile Include="Game\SaltpeterOreBlock.cs" />
+    <Compile Include="Game\SandBlock.cs" />
+    <Compile Include="Game\SandstoneBlock.cs" />
+    <Compile Include="Game\SandstoneSlabBlock.cs" />
+    <Compile Include="Game\SandstoneStairsBlock.cs" />
+    <Compile Include="Game\SaplingBlock.cs" />
+    <Compile Include="Game\ScannedItemData.cs" />
+    <Compile Include="Game\Screen.cs" />
+    <Compile Include="Game\ScreenCaptureManager.cs" />
+    <Compile Include="Game\ScreenLayout.cs" />
+    <Compile Include="Game\ScreenResolutionManager.cs" />
+    <Compile Include="Game\ScreenshotSize.cs" />
+    <Compile Include="Game\ScreensManager.cs" />
+    <Compile Include="Game\ScreenSpaceFireRenderer.cs" />
+    <Compile Include="Game\ScrollPanelWidget.cs" />
+    <Compile Include="Game\SeagrassBlock.cs" />
+    <Compile Include="Game\SeaUrchinBlock.cs" />
+    <Compile Include="Game\SeedsBlock.cs" />
+    <Compile Include="Game\Segment2.cs" />
+    <Compile Include="Game\Segment3.cs" />
+    <Compile Include="Game\SelectExternalContentProviderDialog.cs" />
+    <Compile Include="Game\SelectExternalContentTypeDialog.cs" />
+    <Compile Include="Game\SemiconductorBlock.cs" />
+    <Compile Include="Game\SettingsAudioScreen.cs" />
+    <Compile Include="Game\SettingsCompatibilityScreen.cs" />
+    <Compile Include="Game\SettingsControlsScreen.cs" />
+    <Compile Include="Game\SettingsGraphicsScreen.cs" />
+    <Compile Include="Game\SettingsManager.cs" />
+    <Compile Include="Game\SettingsPerformanceScreen.cs" />
+    <Compile Include="Game\SettingsScreen.cs" />
+    <Compile Include="Game\SettingsUiScreen.cs" />
+    <Compile Include="Game\SevenSegmentDisplayBlock.cs" />
+    <Compile Include="Game\SevenSegmentDisplayElectricElement.cs" />
+    <Compile Include="Game\ShapeshiftParticleSystem.cs" />
+    <Compile Include="Game\ShortInventoryWidget.cs" />
+    <Compile Include="Game\ShovelBlock.cs" />
+    <Compile Include="Game\SignBlock.cs" />
+    <Compile Include="Game\SignData.cs" />
+    <Compile Include="Game\SignElectricElement.cs" />
+    <Compile Include="Game\SimplexNoise.cs" />
+    <Compile Include="Game\SkyRenderingMode.cs" />
+    <Compile Include="Game\SlabBlock.cs" />
+    <Compile Include="Game\SliderWidget.cs" />
+    <Compile Include="Game\SmallGunpowderKegBlock.cs" />
+    <Compile Include="Game\SmallIncendiaryKegBlock.cs" />
+    <Compile Include="Game\SmeltingRecipeWidget.cs" />
+    <Compile Include="Game\SmokeTrailParticleSystem.cs" />
+    <Compile Include="Game\SnowballBlock.cs" />
+    <Compile Include="Game\SnowBlock.cs" />
+    <Compile Include="Game\SnowSplashParticleSystem.cs" />
+    <Compile Include="Game\SoilBlock.cs" />
+    <Compile Include="Game\SortedMultiCollection.cs" />
+    <Compile Include="Game\SoundGeneratorBlock.cs" />
+    <Compile Include="Game\SoundGeneratorElectricElement.cs" />
+    <Compile Include="Game\SoundParticleSystem.cs" />
+    <Compile Include="Game\SpawnChunk.cs" />
+    <Compile Include="Game\SpawnDialog.cs" />
+    <Compile Include="Game\SpawnEntityData.cs" />
+    <Compile Include="Game\SpawnLocationType.cs" />
+    <Compile Include="Game\SpearBlock.cs" />
+    <Compile Include="Game\SpikedPlankBlock.cs" />
+    <Compile Include="Game\SpikedPlankElectricElement.cs" />
+    <Compile Include="Game\SPMBoxExternalContentProvider.cs" />
+    <Compile Include="Game\SpruceLeavesBlock.cs" />
+    <Compile Include="Game\SpruceWoodBlock.cs" />
+    <Compile Include="Game\SRLatchBlock.cs" />
+    <Compile Include="Game\SRLatchElectricElement.cs" />
+    <Compile Include="Game\StackPanelWidget.cs" />
+    <Compile Include="Game\StairsBlock.cs" />
+    <Compile Include="Game\StarfishBlock.cs" />
+    <Compile Include="Game\StarRatingWidget.cs" />
+    <Compile Include="Game\StartingPositionMode.cs" />
+    <Compile Include="Game\StateMachine.cs" />
+    <Compile Include="Game\StickBlock.cs" />
+    <Compile Include="Game\StoneAxeBlock.cs" />
+    <Compile Include="Game\StoneBrickBlock.cs" />
+    <Compile Include="Game\StoneBrickSlabBlock.cs" />
+    <Compile Include="Game\StoneBrickStairsBlock.cs" />
+    <Compile Include="Game\StoneChunkBlock.cs" />
+    <Compile Include="Game\StoneClubBlock.cs" />
+    <Compile Include="Game\StoneFenceBlock.cs" />
+    <Compile Include="Game\StoneSlabBlock.cs" />
+    <Compile Include="Game\StoneSpearBlock.cs" />
+    <Compile Include="Game\StoneStairsBlock.cs" />
+    <Compile Include="Game\StraightFlightCamera.cs" />
+    <Compile Include="Game\StringBlock.cs" />
+    <Compile Include="Game\StringsManager.cs" />
+    <Compile Include="Game\StringUtils.cs" />
+    <Compile Include="Game\SubsystemAdjustableDelayGateBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemAmbientSounds.cs" />
+    <Compile Include="Game\SubsystemAnimatedTextures.cs" />
+    <Compile Include="Game\SubsystemArrowBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemAudio.cs" />
+    <Compile Include="Game\SubsystemBatteryBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemBlockBehaviors.cs" />
+    <Compile Include="Game\SubsystemBlockEntities.cs" />
+    <Compile Include="Game\SubsystemBlocksScanner.cs" />
+    <Compile Include="Game\SubsystemBlocksTexture.cs" />
+    <Compile Include="Game\SubsystemBoatBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemBodies.cs" />
+    <Compile Include="Game\SubsystemBombBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemBottomSuckerBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemBowBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemBucketBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemBulletBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCactusBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCampfireBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCarpetBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemChestBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCollapsingBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCraftingTableBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemCreatureSpawn.cs" />
+    <Compile Include="Game\SubsystemCrossbowBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemDispenserBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemDoorBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemDrawing.cs" />
+    <Compile Include="Game\SubsystemEditableItemBehavior.cs" />
+    <Compile Include="Game\SubsystemEggBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemElectricBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemElectricity.cs" />
+    <Compile Include="Game\SubsystemExplosions.cs" />
+    <Compile Include="Game\SubsystemExplosivesBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFenceBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFenceGateBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFertilizerBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFireBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFireworksBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFluidBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFurnaceBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemFurnitureBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemGameInfo.cs" />
+    <Compile Include="Game\SubsystemGameWidgets.cs" />
+    <Compile Include="Game\SubsystemGlow.cs" />
+    <Compile Include="Game\SubsystemGrassBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemGrassTrapBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemGravestoneBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemHammerBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemImpactExplosivesBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemInWaterBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemItemsScanner.cs" />
+    <Compile Include="Game\SubsystemIvyBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemLadderBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemMagmaBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemMagnetBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemMatchBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemMemoryBankBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemMetersBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemModelsRenderer.cs" />
+    <Compile Include="Game\SubsystemMovingBlocks.cs" />
+    <Compile Include="Game\SubsystemMusketBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemNames.cs" />
+    <Compile Include="Game\SubsystemNoise.cs" />
+    <Compile Include="Game\SubsystemPalette.cs" />
+    <Compile Include="Game\SubsystemParticles.cs" />
+    <Compile Include="Game\SubsystemPathfinding.cs" />
+    <Compile Include="Game\SubsystemPickables.cs" />
+    <Compile Include="Game\SubsystemPistonBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemPlantBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemPlayers.cs" />
+    <Compile Include="Game\SubsystemPlayerStats.cs" />
+    <Compile Include="Game\SubsystemPollableBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemPostprocessor.cs" />
+    <Compile Include="Game\SubsystemProjectiles.cs" />
+    <Compile Include="Game\SubsystemRakeBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemRotBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemSaddleBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemSaplingBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemShadows.cs" />
+    <Compile Include="Game\SubsystemSignBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemSky.cs" />
+    <Compile Include="Game\SubsystemSnowBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemSoilBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemSoundMaterials.cs" />
+    <Compile Include="Game\SubsystemSpawn.cs" />
+    <Compile Include="Game\SubsystemSpikesBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemStairsBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemTerrain.cs" />
+    <Compile Include="Game\SubsystemThrowableBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemTime.cs" />
+    <Compile Include="Game\SubsystemTimeOfDay.cs" />
+    <Compile Include="Game\SubsystemTorchBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemTrapdoorBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemTreasureGeneratorBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemTruthTableCircuitBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemUpdate.cs" />
+    <Compile Include="Game\SubsystemWaterBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemWaterPlantBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemWeather.cs" />
+    <Compile Include="Game\SubsystemWhistleBlockBehavior.cs" />
+    <Compile Include="Game\SubsystemWoodBlockBehavior.cs" />
+    <Compile Include="Game\Subtexture.cs" />
+    <Compile Include="Game\SulphurChunkBlock.cs" />
+    <Compile Include="Game\SulphurOreBlock.cs" />
+    <Compile Include="Game\SwitchBlock.cs" />
+    <Compile Include="Game\SwitchElectricElement.cs" />
+    <Compile Include="Game\SwitchFurnitureElectricElement.cs" />
+    <Compile Include="Game\TallGrassBlock.cs" />
+    <Compile Include="Game\TallSpruceLeavesBlock.cs" />
+    <Compile Include="Game\TargetBlock.cs" />
+    <Compile Include="Game\TargetElectricElement.cs" />
+    <Compile Include="Game\Terrain.cs" />
+    <Compile Include="Game\TerrainBrush.cs" />
+    <Compile Include="Game\TerrainChunk.cs" />
+    <Compile Include="Game\TerrainChunkGeometry.cs" />
+    <Compile Include="Game\TerrainChunkSliceGeometry.cs" />
+    <Compile Include="Game\TerrainChunkState.cs" />
+    <Compile Include="Game\TerrainContentGeneratorVersion2_1_inactive.cs" />
+    <Compile Include="Game\TerrainChunkGeneratorProviderActive.cs" />
+    <Compile Include="Game\TerrainContentsGeneratorFlat.cs" />
+    <Compile Include="Game\TerrainGenerationMode.cs" />
+    <Compile Include="Game\TerrainGeometry.cs" />
+    <Compile Include="Game\TerrainGeometrySubset.cs" />
+    <Compile Include="Game\TerrainRaycastResult.cs" />
+    <Compile Include="Game\TerrainRenderer.cs" />
+    <Compile Include="Game\TerrainSerializer129.cs" />
+    <Compile Include="Game\TerrainSerializer14.cs" />
+    <Compile Include="Game\TerrainSerializer22.cs" />
+    <Compile Include="Game\TerrainUpdater.cs" />
+    <Compile Include="Game\TerrainVertex.cs" />
+    <Compile Include="Game\TextBoxDialog.cs" />
+    <Compile Include="Game\TextBoxWidget.cs" />
+    <Compile Include="Game\TextOrientation.cs" />
+    <Compile Include="Game\TextureAtlas.cs" />
+    <Compile Include="Game\TextureAtlasManager.cs" />
+    <Compile Include="Game\ThermometerBlock.cs" />
+    <Compile Include="Game\ThermometerElectricElement.cs" />
+    <Compile Include="Game\TimeOfDayMode.cs" />
+    <Compile Include="Game\TorchBlock.cs" />
+    <Compile Include="Game\TouchInput.cs" />
+    <Compile Include="Game\TouchInputType.cs" />
+    <Compile Include="Game\TouchInputWidget.cs" />
+    <Compile Include="Game\TppCamera.cs" />
+    <Compile Include="Game\TransferShExternalContentProvider.cs" />
+    <Compile Include="Game\TrapdoorBlock.cs" />
+    <Compile Include="Game\TrapDoorElectricElement.cs" />
+    <Compile Include="Game\TreasureGeneratorBlock.cs" />
+    <Compile Include="Game\TreeType.cs" />
+    <Compile Include="Game\TrialEndedScreen.cs" />
+    <Compile Include="Game\TruthTableCircuitBlock.cs" />
+    <Compile Include="Game\TruthTableCircuitElectricElement.cs" />
+    <Compile Include="Game\TruthTableData.cs" />
+    <Compile Include="Game\UniformSpacingPanelWidget.cs" />
+    <Compile Include="Game\UpdateOrder.cs" />
+    <Compile Include="Game\UserInfo.cs" />
+    <Compile Include="Game\UserManager.cs" />
+    <Compile Include="Game\ValueBarWidget.cs" />
+    <Compile Include="Game\VersionConverter.cs" />
+    <Compile Include="Game\VersionConverter10To14.cs" />
+    <Compile Include="Game\VersionConverter110To111.cs" />
+    <Compile Include="Game\VersionConverter111To112.cs" />
+    <Compile Include="Game\VersionConverter112To113.cs" />
+    <Compile Include="Game\VersionConverter113To114.cs" />
+    <Compile Include="Game\VersionConverter114To115.cs" />
+    <Compile Include="Game\VersionConverter115To116.cs" />
+    <Compile Include="Game\VersionConverter116To117.cs" />
+    <Compile Include="Game\VersionConverter117To118.cs" />
+    <Compile Include="Game\VersionConverter118To119.cs" />
+    <Compile Include="Game\VersionConverter119To120.cs" />
+    <Compile Include="Game\VersionConverter120To121.cs" />
+    <Compile Include="Game\VersionConverter121To122.cs" />
+    <Compile Include="Game\VersionConverter122To123.cs" />
+    <Compile Include="Game\VersionConverter123To124.cs" />
+    <Compile Include="Game\VersionConverter124To125.cs" />
+    <Compile Include="Game\VersionConverter125To126.cs" />
+    <Compile Include="Game\VersionConverter126To127.cs" />
+    <Compile Include="Game\VersionConverter127To128.cs" />
+    <Compile Include="Game\VersionConverter128To129.cs" />
+    <Compile Include="Game\VersionConverter129To130.cs" />
+    <Compile Include="Game\VersionConverter130To20.cs" />
+    <Compile Include="Game\VersionConverter14To15.cs" />
+    <Compile Include="Game\VersionConverter15To16.cs" />
+    <Compile Include="Game\VersionConverter16To17.cs" />
+    <Compile Include="Game\VersionConverter17To18.cs" />
+    <Compile Include="Game\VersionConverter18To19.cs" />
+    <Compile Include="Game\VersionConverter19To110.cs" />
+    <Compile Include="Game\VersionConverter20To21.cs" />
+    <Compile Include="Game\VersionConverter21To22.cs" />
+    <Compile Include="Game\VersionsManager.cs" />
+    <Compile Include="Game\ViewAngleMode.cs" />
+    <Compile Include="Game\ViewGameLogDialog.cs" />
+    <Compile Include="Game\ViewWidget.cs" />
+    <Compile Include="Game\VitalStatsWidget.cs" />
+    <Compile Include="Game\VrController.cs" />
+    <Compile Include="Game\VrControllerButton.cs" />
+    <Compile Include="Game\VrEye.cs" />
+    <Compile Include="Game\VrManager.cs" />
+    <Compile Include="Game\WaterBlock.cs" />
+    <Compile Include="Game\WaterBucketBlock.cs" />
+    <Compile Include="Game\WaterPlantBlock.cs" />
+    <Compile Include="Game\WaterSplashParticleSystem.cs" />
+    <Compile Include="Game\WebBrowserManager.cs" />
+    <Compile Include="Game\WebManager.cs" />
+    <Compile Include="Game\WhalePlumeParticleSystem.cs" />
+    <Compile Include="Game\WhistleBlock.cs" />
+    <Compile Include="Game\WhiteFlowerBlock.cs" />
+    <Compile Include="Game\WickerLampBlock.cs" />
+    <Compile Include="Game\Widget.cs" />
+    <Compile Include="Game\WidgetAlignment.cs" />
+    <Compile Include="Game\WidgetInput.cs" />
+    <Compile Include="Game\WidgetInputDevice.cs" />
+    <Compile Include="Game\WidgetsList.cs" />
+    <Compile Include="Game\WindowBlock.cs" />
+    <Compile Include="Game\WindowMode.cs" />
+    <Compile Include="Game\WireBlock.cs" />
+    <Compile Include="Game\WireDomainElectricElement.cs" />
+    <Compile Include="Game\WireThroughBlock.cs" />
+    <Compile Include="Game\WireThroughBricksBlock.cs" />
+    <Compile Include="Game\WireThroughCobblestoneBlock.cs" />
+    <Compile Include="Game\WireThroughPlanksBlock.cs" />
+    <Compile Include="Game\WireThroughSemiconductorBlock.cs" />
+    <Compile Include="Game\WireThroughStoneBlock.cs" />
+    <Compile Include="Game\WoodBlock.cs" />
+    <Compile Include="Game\WoodenAttachedSignBlock.cs" />
+    <Compile Include="Game\WoodenClubBlock.cs" />
+    <Compile Include="Game\WoodenDoorBlock.cs" />
+    <Compile Include="Game\WoodenFenceBlock.cs" />
+    <Compile Include="Game\WoodenFenceGateBlock.cs" />
+    <Compile Include="Game\WoodenLadderBlock.cs" />
+    <Compile Include="Game\WoodenPostedSignBlock.cs" />
+    <Compile Include="Game\WoodenRakeBlock.cs" />
+    <Compile Include="Game\WoodenSlabBlock.cs" />
+    <Compile Include="Game\WoodenSpearBlock.cs" />
+    <Compile Include="Game\WoodenStairsBlock.cs" />
+    <Compile Include="Game\WoodenTrapdoorBlock.cs" />
+    <Compile Include="Game\WorldInfo.cs" />
+    <Compile Include="Game\WorldItem.cs" />
+    <Compile Include="Game\WorldOptionsScreen.cs" />
+    <Compile Include="Game\WorldPalette.cs" />
+    <Compile Include="Game\WorldSettings.cs" />
+    <Compile Include="Game\WorldsManager.cs" />
+    <Compile Include="Game\XorGateBlock.cs" />
+    <Compile Include="Game\XorGateElectricElement.cs" />
+    <Compile Include="Game\ZipArchive.cs" />
+    <Compile Include="Game\ZipArchiveEntry.cs" />
+    <Compile Include="ManageContentScreen.cs" />
+    <Compile Include="ModInfo.cs" />
+    <Compile Include="ModsManager.cs" />
+    <Compile Include="PluginLoaderAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleJson\IJsonSerializerStrategy.cs" />
+    <Compile Include="SimpleJson\JsonArray.cs" />
+    <Compile Include="SimpleJson\JsonObject.cs" />
+    <Compile Include="SimpleJson\PocoJsonSerializerStrategy.cs" />
+    <Compile Include="SimpleJson\Reflection\ReflectionUtils.cs" />
+    <Compile Include="SimpleJson\SimpleJson.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Game\Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
