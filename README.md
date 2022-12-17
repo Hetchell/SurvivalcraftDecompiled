@@ -6,6 +6,7 @@ Decompilation effort possible with DotPeek and DnSpy and programming headaches.
 The game is still broken, but it is now able to be played to my usage. Useless code inside are for helping debugging. 
 
 CURRENT BUGS/ISSUES:
+1. <Fixed>
 2. Explosive barrels unable to light fuse. 
 3. Magma does not behave properly => will eat sand up? 
 4. Terrain generation: 
