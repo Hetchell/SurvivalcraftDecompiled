@@ -6,7 +6,6 @@ Decompilation effort possible with DotPeek and DnSpy and programming headaches.
 The game is still broken, but it is now able to be played to my usage. Useless code inside are for helping debugging. 
 
 CURRENT BUGS/ISSUES:
-1. Block placement does not work => will break the game(i.e. all solid blocks become transparent, no-clip for all entities)
 2. Explosive barrels unable to light fuse. 
 3. Magma does not behave properly => will eat sand up? 
 4. Terrain generation: 
@@ -20,4 +19,3 @@ TODO LIST:
 1. Make creative fly speed variable by up/down button. Now only set to two speeds. => Find out why speed is limited.
 2. Break terrain generation. 
 3. Implement teleportation(?). 
-4. Fix bug/issue 1. 
