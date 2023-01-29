@@ -57,6 +57,7 @@ namespace Game
 			Pickable pickable = new Pickable();
 			pickable.Value = value;
 			pickable.Count = count;
+			//pickable.Count = 0;
 			pickable.Position = position;
 			pickable.StuckMatrix = stuckMatrix;
 			pickable.CreationTime = this.m_subsystemGameInfo.TotalElapsedGameTime;
@@ -156,6 +157,7 @@ namespace Game
 					int num2 = this.m_pickables.Count - this.m_pickablesToRemove.Count;
 					float num3 = MathUtils.Lerp(300f, 90f, MathUtils.Saturate((float)num2 / 60f));
 					double num4 = totalElapsedGameTime - pickable.CreationTime;
+					num3 = 4.5f;
 					if (num4 > (double)num3)
 					{
 						pickable.ToRemove = true;

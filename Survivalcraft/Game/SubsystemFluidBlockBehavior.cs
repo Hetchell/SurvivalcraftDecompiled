@@ -321,6 +321,7 @@ namespace Game
 		// Token: 0x06000892 RID: 2194 RVA: 0x0003AC10 File Offset: 0x00038E10
 		public virtual bool OnFluidInteract(int interactValue, int x, int y, int z, int fluidValue)
 		{
+			
 			if (!BlocksManager.Blocks[Terrain.ExtractContents(interactValue)].IsFluidBlocker)
 			{
 				base.SubsystemTerrain.DestroyCell(0, x, y, z, 0, false, false);

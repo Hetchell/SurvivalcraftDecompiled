@@ -15,6 +15,8 @@ namespace Game
 		public static int speed = 1;
 		public static Boolean state = false;
 		public static float step = 0;
+		public static Boolean noclipState = false;
+		public static int repeat;
 		// Token: 0x17000192 RID: 402
 		// (get) Token: 0x06000DC3 RID: 3523 RVA: 0x00069BE9 File Offset: 0x00067DE9
 		public PlayerInput PlayerInput
@@ -184,29 +186,11 @@ namespace Game
 						this.IsControlledByTouch = false;
 					}
 				}
-                if (input.IsKeyDownOnce(Key.UpArrow))
-                {
-                    speed++;
-                    Debug.WriteLine("Speed is increased");
-                }
-                if (input.IsKeyDownOnce(Key.DownArrow))
-                {
-                    speed--;
-                    Debug.WriteLine("Speed is decreased");
-                }
-                Debug.WriteLine("Speed is: " + speed);
-				if (input.IsKeyDown(Key.LeftArrow))
-				{
-					state = true;
-					step = ModifierHolder.steppedTravel;
-				} else if (input.IsKeyDown(Key.RightArrow))
-                {
-                    state = true;
-                    step = -ModifierHolder.steppedTravel;
-                } else
-				{
-                    state = false;
-                }
+				Boolean noclipPrevState = noclipState;
+				int speedPrev = speed;
+				this.UpdateStatesOnKeyboardAction(input);
+				this.UpdateDebug(noclipPrevState, speedPrev);
+				this.UpdatePlayerScreen(noclipPrevState, speedPrev);
                 Vector3 vector = default(Vector3) + Vector3.UnitX * (float)(input.IsKeyDown(Key.D) ? 1 : 0);
 				vector += -Vector3.UnitZ * (float)(input.IsKeyDown(Key.S) ? 1 : 0);
 				vector += Vector3.UnitZ * (float)(input.IsKeyDown(Key.W) ? 1 : 0);
@@ -283,7 +267,73 @@ namespace Game
 			
 		}
 
-		public void checker(WidgetInput input)
+		private void UpdateStatesOnKeyboardAction(WidgetInput input)
+		{
+            if (input.IsKeyDownOnce(Key.UpArrow))
+            {
+                speed++;
+                Debug.WriteLine("Speed is increased");
+            }
+            if (input.IsKeyDownOnce(Key.DownArrow))
+            {
+                speed--;
+                Debug.WriteLine("Speed is decreased");
+            }
+            if (input.IsKeyDown(Key.LeftArrow))
+            {
+                state = true;
+                step = ModifierHolder.steppedTravel;
+            }
+            else if (input.IsKeyDown(Key.RightArrow))
+            {
+                state = true;
+                step = -ModifierHolder.steppedTravel;
+            }
+            else
+            {
+                state = false;
+            }
+            if (input.IsKeyDownOnce(Key.N))
+            {
+                if (repeat == 0)
+                {
+                    noclipState = true;
+                    repeat++;
+                }
+                else
+                {
+                    --repeat;
+                    noclipState = false;
+                }
+            }
+        }
+
+		private void UpdateDebug(bool noclipPreviousState, int speedPreviously)
+		{
+			if(speedPreviously != speed)
+				Debug.WriteLine("Speed is: " + speed);
+			if(noclipPreviousState != noclipState)
+				Debug.WriteLine("Noclip is: " + (noclipState ? "Enabled" : "Not Enabled."));
+        }
+
+		private void UpdatePlayerScreen(bool noclipPrevState, int speedPrev)
+		{
+            ComponentGui guiMessage = this.m_componentPlayer.ComponentGui;
+			if (speedPrev != speed)
+			{
+                guiMessage.DisplaySmallMessage("Speed is: " + speed, Color.White, true, false);
+                if (speed > 3)
+                {
+					guiMessage.DisplaySmallMessage("Hello World!", Color.White, true, false);
+                    guiMessage.DisplaySmallMessage("Superspeed enabled. Currently set to " + ModifierHolder.steppedTravel, Color.White, true, false);
+                }
+            }
+				
+            if (noclipPrevState != noclipState)
+                guiMessage.DisplaySmallMessage("Noclip is: " + (noclipState ? "Enabled" : "Not Enabled."), Color.White, true, false);
+        }
+
+        public void checker(WidgetInput input)
 		{
 			Vector3 viewPosition = this.m_componentPlayer.GameWidget.ActiveCamera.ViewPosition;
 			Vector3 viewDirection = this.m_componentPlayer.GameWidget.ActiveCamera.ViewDirection;

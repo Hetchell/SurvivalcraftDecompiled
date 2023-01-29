@@ -45,6 +45,7 @@ namespace Game
 		// Token: 0x06000B72 RID: 2930 RVA: 0x0005608C File Offset: 0x0005428C
 		public void Update(float dt)
 		{
+			this.m_componentDamage.Hitpoints = 18494.5f;
 			if (this.m_componentDamage.Hitpoints < 0.33f)
 			{
 				this.m_componentBody.Density = 1.15f;
@@ -76,14 +77,14 @@ namespace Game
 			{
 				this.m_componentBody.Velocity += dt * 3f * this.MoveOrder * this.m_componentBody.Matrix.Forward;
 			}
-			if (flag)
-			{
-				this.m_componentDamage.Damage(0.005f * dt);
-				if (this.m_componentMount.Rider != null)
-				{
-					this.m_componentMount.Rider.StartDismounting();
-				}
-			}
+			//if (flag)
+			//{
+			//	this.m_componentDamage.Damage(0.005f * dt);
+			//	if (this.m_componentMount.Rider != null)
+			//	{
+			//		this.m_componentMount.Rider.StartDismounting();
+			//	}
+			//}
 			this.MoveOrder = 0f;
 			this.TurnOrder = 0f;
 		}

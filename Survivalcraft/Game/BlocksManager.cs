@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using Engine;
 using Engine.Graphics;
 using Engine.Serialization;
@@ -42,6 +43,17 @@ namespace Game
 			}
 		}
 
+		public static byte getID(Func<Block, bool> predicate)
+		{
+			byte i = 0;
+			for(; i < m_blocks.Length; i++)
+			{
+				if (predicate.Invoke(m_blocks[i]))
+					break;
+			}
+			return i;
+		}
+
 		// Token: 0x06001866 RID: 6246 RVA: 0x000C149C File Offset: 0x000BF69C
 		public static IEnumerable<TypeInfo> GetBlockTypes()
 		{
@@ -74,7 +86,7 @@ namespace Game
 			{
 				if (typeInfo.IsSubclassOf(typeof(Block)) && !typeInfo.IsAbstract)
 				{
-					FieldInfo fieldInfo = typeInfo.AsType().GetRuntimeFields().FirstOrDefault(new Func<FieldInfo, bool>(BlocksManager.c._.Initialize_b__11_0));
+					FieldInfo fieldInfo = typeInfo.AsType().GetRuntimeFields().FirstOrDefault(fi => fi.Name == "Index" && fi.IsPublic && fi.IsStatic);
 					if (!(fieldInfo != null) || !(fieldInfo.FieldType == typeof(int)))
 					{
 						throw new InvalidOperationException("Block type \"" + typeInfo.FullName + "\" does not have static field Index of type int.");
@@ -511,21 +523,5 @@ namespace Game
 
 		// Token: 0x04001158 RID: 4440
 		public static Func<IEnumerable<TypeInfo>> GetBlockTypes1;
-
-		// Token: 0x0200050E RID: 1294
-		public sealed class c
-		{
-			// Token: 0x06002110 RID: 8464 RVA: 0x000E62AD File Offset: 0x000E44AD
-			public bool Initialize_b__11_0(FieldInfo fi)
-			{
-				return fi.Name == "Index" && fi.IsPublic && fi.IsStatic;
-			}
-
-			// Token: 0x040018BC RID: 6332
-			public static readonly BlocksManager.c _ = new BlocksManager.c();
-
-			// Token: 0x040018BD RID: 6333
-			public static Func<FieldInfo, bool> __11_0;
-		}
 	}
 }

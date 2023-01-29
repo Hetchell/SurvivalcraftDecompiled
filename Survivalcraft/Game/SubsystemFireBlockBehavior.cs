@@ -57,7 +57,8 @@ namespace Game
 		{
 			int value = base.SubsystemTerrain.Terrain.GetCellValue(x, y, z);
 			int num = Terrain.ExtractContents(value);
-			if (BlocksManager.Blocks[num].FireDuration == 0f)
+			Block blockTarget = BlocksManager.Blocks[num];
+            if (blockTarget.FireDuration == 0f)
 			{
 				return false;
 			}

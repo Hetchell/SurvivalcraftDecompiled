@@ -191,11 +191,11 @@ namespace Game
 				}
 				else if (this.ViewUnderMagmaDepth > 0f)
 				{
-					this.m_viewFogRange.X = 0f;
-					this.m_viewFogRange.Y = 0.1f;
-					this.m_viewFogColor = new Color(255, 80, 0);
-					this.VisibilityRangeYMultiplier = 1f;
-					this.m_viewIsSkyVisible = false;
+					this.m_viewFogRange.X = 10f;
+					this.m_viewFogRange.Y = 90.1f;
+                    this.m_viewFogColor = Color.Gray;
+					this.VisibilityRangeYMultiplier = 45f;
+					this.m_viewIsSkyVisible = true;
 				}
 				else
 				{

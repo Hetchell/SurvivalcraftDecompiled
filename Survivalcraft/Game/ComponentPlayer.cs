@@ -128,7 +128,14 @@ namespace Game
 		// Token: 0x06000F47 RID: 3911 RVA: 0x00073E84 File Offset: 0x00072084
 		public void Update(float dt)
 		{
-			PlayerInput playerInput = this.ComponentInput.PlayerInput;
+            if (!ComponentInput.noclipState)
+			{
+				Block.m_defaultCollisionBoxes = new BoundingBox[]
+					{
+						new BoundingBox(Vector3.Zero, Vector3.One)
+					};
+            }
+            PlayerInput playerInput = this.ComponentInput.PlayerInput;
 			if (this.ComponentInput.IsControlledByTouch && this.m_aim != null)
 			{
 				playerInput.Look = Vector2.Zero;

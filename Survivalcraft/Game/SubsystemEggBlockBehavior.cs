@@ -26,7 +26,7 @@ namespace Game
 			bool isLaid = EggBlock.GetIsLaid(data);
 			if (!isCooked && (this.m_subsystemGameInfo.WorldSettings.GameMode == GameMode.Creative || this.m_random.Float(0f, 1f) <= (isLaid ? 0.15f : 1f)))
 			{
-				if (this.m_subsystemCreatureSpawn.Creatures.Count < 35)
+				if (this.m_subsystemCreatureSpawn.Creatures.Count < 100)
 				{
 					EggBlock.EggType eggType = this.m_eggBlock.GetEggType(data);
 					Entity entity = DatabaseManager.CreateEntity(base.Project, eggType.TemplateName, true);

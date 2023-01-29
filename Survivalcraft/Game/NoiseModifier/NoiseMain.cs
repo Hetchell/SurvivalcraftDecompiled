@@ -1,5 +1,6 @@
 ﻿using Engine;
 using Game;
+using OpenTK;
 using Random = Game.Random;
 
 namespace Survivalcraft.Game.NoiseModifier
@@ -8,14 +9,17 @@ namespace Survivalcraft.Game.NoiseModifier
     {
         private readonly Random rand;
         // Token: 0x04000F3C RID: 3900
-        public int[][] m_grad3;
-
+        private int[][] m_grad3;
+        private readonly int octaves;
+        private ImprovedNoise[] noises;
         // Token: 0x04000F3D RID: 3901
         public int[] m_permutations;
-        public NoiseMain(Random rand)
+        public NoiseMain(Random rand, int octaves)
         {
             this.rand = rand;
+            this.octaves = octaves;
             this.m_permutations = new int[512];
+            this.noises = new ImprovedNoise[octaves];
             for (int i = 0; i < 256; this.m_permutations[i] = i++) ;
             for (int l = 0; l < 256; ++l)
             {
@@ -93,6 +97,10 @@ namespace Survivalcraft.Game.NoiseModifier
                 -1
             };
             this.m_grad3 = array;
+            for(int i = 0; i < octaves; i++)
+            {
+                this.noises[i] = new ImprovedNoise(rand);
+            }
         }
         public static float Dot(int[] g, float x, float y)
         {
@@ -391,7 +399,33 @@ namespace Survivalcraft.Game.NoiseModifier
             return 1f - MathUtils.Abs(2f * num / num2 - 1f);
         }
 
-        
+        public double[] UseImprovedNoiseGenerateNoiseOctaves(double[] noiseArray, int xOffset, int yOffset, int zOffset, int xSize, int ySize, int zSize, double xScale, double yScale, double zScale)
+        {
+            if (noiseArray == null)
+            {
+                noiseArray = new double[xSize * ySize * zSize];
+            }
+            else
+            {
+                for (int i = 0; i < noiseArray.Length; ++i)
+                {
+                    noiseArray[i] = 0.0D;
+                }
+            }
+
+            double d3 = 1.0D;
+
+            for (int j = 0; j < this.octaves; ++j)
+            {
+                double d0 = (double)xOffset * d3 * xScale;
+                double d1 = (double)yOffset * d3 * yScale;
+                double d2 = (double)zOffset * d3 * zScale;
+                this.noises[j].populateNoiseArray(noiseArray, d0, d1, d2, xSize, ySize, zSize, xScale * d3, yScale * d3, zScale * d3, d3);
+                d3 /= 2.0D;
+            }
+
+            return noiseArray;
+        }
     }
 
 }

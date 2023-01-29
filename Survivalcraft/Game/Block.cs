@@ -302,8 +302,16 @@ namespace Game
 			return true;
 		}
 
-		// Token: 0x060010DD RID: 4317 RVA: 0x0007F44D File Offset: 0x0007D64D
-		public virtual bool IsHeatBlocker(int value)
+		public void Setter_m_defaultCollisionBoxesBackToOriginal()
+		{
+			Block.m_defaultCollisionBoxes = new BoundingBox[]
+					{
+						 new BoundingBox(Vector3.Zero, Vector3.One)
+					};
+		}
+
+        // Token: 0x060010DD RID: 4317 RVA: 0x0007F44D File Offset: 0x0007D64D
+        public virtual bool IsHeatBlocker(int value)
 		{
 			return this.IsCollidable;
 		}
@@ -569,7 +577,7 @@ namespace Game
 		protected Game.Random Random = new Game.Random();
 
 		// Token: 0x04000B46 RID: 2886
-		private static BoundingBox[] m_defaultCollisionBoxes = new BoundingBox[]
+		public static BoundingBox[] m_defaultCollisionBoxes = new BoundingBox[]
 		{
 			new BoundingBox(Vector3.Zero, Vector3.One)
 		};

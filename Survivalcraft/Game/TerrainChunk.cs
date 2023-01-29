@@ -72,7 +72,13 @@ namespace Game
 		// Token: 0x06001634 RID: 5684 RVA: 0x000A785E File Offset: 0x000A5A5E
 		public void SetCellValueFast(int x, int y, int z, int value)
 		{
+			//this.Cells[getIndex(x, y, z)] = value;
 			this.Cells[y + x * 256 + z * 256 * 16] = value;
+		}
+
+		private static int getIndex(int x, int y, int z)
+		{
+			return x << 12 | z << 8 | y;
 		}
 
 		// Token: 0x06001635 RID: 5685 RVA: 0x000A787D File Offset: 0x000A5A7D

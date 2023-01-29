@@ -626,6 +626,8 @@
     <Compile Include="Game\NandGateBlock.cs" />
     <Compile Include="Game\NandGateElectricElement.cs" />
     <Compile Include="Game\NewWorldScreen.cs" />
+    <Compile Include="Game\NoiseModifier\ImprovedNoise.cs" />
+    <Compile Include="Game\NoiseModifier\NoiseMain.cs" />
     <Compile Include="Game\NorGateBlock.cs" />
     <Compile Include="Game\NorGateElectricElement.cs" />
     <Compile Include="Game\NotGateBlock.cs" />
@@ -1065,6 +1067,7 @@
     <Compile Include="ModsManager.cs" />
     <Compile Include="PluginLoaderAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Game\SearchableListDialog.cs" />
     <Compile Include="SimpleJson\IJsonSerializerStrategy.cs" />
     <Compile Include="SimpleJson\JsonArray.cs" />
     <Compile Include="SimpleJson\JsonObject.cs" />
@@ -1089,6 +1092,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes\TerrainGeneratorMethodNotes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

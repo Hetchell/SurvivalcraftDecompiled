@@ -41,8 +41,10 @@ namespace Game
 			this.Seed(Game.Random.m_counter++);
 		}
 
-		// Token: 0x060014B9 RID: 5305 RVA: 0x000A0F30 File Offset: 0x0009F130
-		public void Seed(int seed)
+		public int UniformInt(int min, int max) => (int)((long)min + (long)this.Int() * (long)(max - min + 1) / 2147483648L);
+
+        // Token: 0x060014B9 RID: 5305 RVA: 0x000A0F30 File Offset: 0x0009F130
+        public void Seed(int seed)
 		{
 			this.m_s0 = MathUtils.Hash((uint)seed);
 			this.m_s1 = MathUtils.Hash((uint)(seed + 1));

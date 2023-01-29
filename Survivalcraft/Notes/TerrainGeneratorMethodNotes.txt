@@ -1,0 +1,1 @@
+﻿Notes regarding ModifierHolder, in particular to TerrainGenerator provider. 

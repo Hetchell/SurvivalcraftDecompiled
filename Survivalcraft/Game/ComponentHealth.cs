@@ -220,7 +220,7 @@ namespace Game
 			{
 				this.Injure(2f * this.m_componentCreature.ComponentBody.ImmersionFactor * dt, null, false, LanguageControl.Get("ComponentHealth", "1"));
 				float num2 = 1.1f + 0.1f * (float)MathUtils.Sin(12.0 * this.m_subsystemTime.GameTime);
-				this.m_redScreenFactor = MathUtils.Max(this.m_redScreenFactor, num2 * 1.5f * this.m_componentCreature.ComponentBody.ImmersionFactor);
+				//this.m_redScreenFactor = MathUtils.Max(this.m_redScreenFactor, num2 * 1.5f * this.m_componentCreature.ComponentBody.ImmersionFactor);
 			}
 			float num3 = MathUtils.Abs(this.m_componentCreature.ComponentBody.CollisionVelocityChange.Y);
 			if (!this.m_wasStanding && num3 > this.FallResilience)
@@ -314,7 +314,10 @@ namespace Game
 			{
 				double? num8 = this.m_subsystemGameInfo.TotalElapsedGameTime - this.DeathTime;
 				double num9 = (double)this.CorpseDuration;
-				if (num8.GetValueOrDefault() > num9 & num8 != null)
+				SubsystemCreatureSpawn.CreatureType Ctype = new SubsystemCreatureSpawn.CreatureType("Constant Gray Wolves", SpawnLocationType.Surface, false, true);
+
+                if (num8.GetValueOrDefault() > num9 & num8 != null
+					)//& !(this.m_componentCreature.DisplayName == "Gray Wolf"))
 				{
 					this.m_componentCreature.ComponentSpawn.Despawn();
 				}

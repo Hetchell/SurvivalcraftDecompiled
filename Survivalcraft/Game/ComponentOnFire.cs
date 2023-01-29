@@ -119,7 +119,11 @@ namespace Game
 			}
 			if (this.ComponentBody.ImmersionFactor > 0.2f && this.ComponentBody.ImmersionFluidBlock is MagmaBlock)
 			{
-				this.SetOnFire(null, this.m_random.Float(12f, 15f));
+				if (!componentHealth.IsInvulnerable
+					)//&& !(this.componentCreature.DisplayName == "Gray Wolf"))
+				{
+                    this.SetOnFire(null, this.m_random.Float(12f, 15f));
+                }
 			}
 		}
 
@@ -132,6 +136,8 @@ namespace Game
 			this.m_subsystemAmbientSounds = base.Project.FindSubsystem<SubsystemAmbientSounds>(true);
 			this.m_subsystemParticles = base.Project.FindSubsystem<SubsystemParticles>(true);
 			this.ComponentBody = base.Entity.FindComponent<ComponentBody>();
+			this.componentHealth = base.Entity.FindComponent<ComponentHealth>();
+			this.componentCreature = base.Entity.FindComponent<ComponentCreature>();
 			float value = valuesDictionary.GetValue<float>("FireDuration");
 			if (value > 0f)
 			{
@@ -262,6 +268,8 @@ namespace Game
 		// Token: 0x0400096D RID: 2413
 		public int m_fireTouchCount;
 
+		public ComponentHealth componentHealth;
+
 		// Token: 0x0400096E RID: 2414
 		public OnFireParticleSystem m_onFireParticleSystem;
 
@@ -270,5 +278,7 @@ namespace Game
 
 		// Token: 0x04000970 RID: 2416
 		public float m_fireDuration;
+
+		private ComponentCreature componentCreature;
 	}
 }

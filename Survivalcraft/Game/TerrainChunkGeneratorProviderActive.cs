@@ -74,7 +74,7 @@ namespace Game
 			this.TGWater = true;
 			this.TGExtras = true;
 			this.TGCavesAndPockets = true;
-			this.modifyTerrain = new ModifierHolder(subsystemTerrain, this, num);
+			this.modifyTerrain = new ModifierHolder(subsystemTerrain, this, num, random);
 		}
 
 		// Token: 0x06001671 RID: 5745 RVA: 0x000ADA54 File Offset: 0x000ABC54
@@ -110,7 +110,8 @@ namespace Game
 				}
 			}
 			int u = 1371930;
-			return new Vector3(zero.X + 0, this.CalculateHeight(zero.X, zero.Y), zero.Y);
+			//return new Vector3(zero.X + 0, this.CalculateHeight(zero.X, zero.Y), zero.Y);
+			return new Vector3(0, 300, 0);
 		}
 
 		// Token: 0x06001672 RID: 5746 RVA: 0x000ADB2F File Offset: 0x000ABD2F

@@ -107,16 +107,21 @@ namespace Game
 		{
 			this.m_subsystemFireBlockBehavior.SetCellOnFire(x, y, z, 1f);
 			int cellContents = base.SubsystemTerrain.Terrain.GetCellContents(x, y, z);
-			if (cellContents != 8)
-			{
-				if (cellContents - 61 <= 1)
-				{
-					base.SubsystemTerrain.DestroyCell(0, x, y, z, 0, false, false);
-					this.m_subsystemParticles.AddParticleSystem(new BurntDebrisParticleSystem(base.SubsystemTerrain, new Vector3((float)x + 0.5f, (float)(y + 1), (float)z + 0.5f)));
-					return;
-				}
-			}
-			else
+			//if (cellContents != 8)
+			//{
+			//	if (cellContents - 61 <= 1)
+			//	{
+			//		//base.SubsystemTerrain.DestroyCell(0, x, y, z, 0, false, false);
+			//		//this.m_subsystemParticles.AddParticleSystem(new BurntDebrisParticleSystem(base.SubsystemTerrain, new Vector3((float)x + 0.5f, (float)(y + 1), (float)z + 0.5f)));
+			//		//return;
+			//	}
+			//}
+			//else
+			//{
+			//	base.SubsystemTerrain.ChangeCell(x, y, z, 2, true);
+			//	this.m_subsystemParticles.AddParticleSystem(new BurntDebrisParticleSystem(base.SubsystemTerrain, new Vector3((float)x + 0.5f, (float)(y + 1), (float)z + 0.5f)));
+			//}
+			if (cellContents == 8)
 			{
 				base.SubsystemTerrain.ChangeCell(x, y, z, 2, true);
 				this.m_subsystemParticles.AddParticleSystem(new BurntDebrisParticleSystem(base.SubsystemTerrain, new Vector3((float)x + 0.5f, (float)(y + 1), (float)z + 0.5f)));

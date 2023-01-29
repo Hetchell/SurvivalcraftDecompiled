@@ -107,7 +107,7 @@ namespace Game
 			this.Children.Find("Properties", true).IsEnabled = (this.m_worldsListWidget.SelectedItem != null);
 			if (this.Children.Find<ButtonWidget>("Play", true).IsClicked && this.m_worldsListWidget.SelectedItem != null)
 			{
-				Console.Beep();
+				//Console.Beep();
 				this.Play(this.m_worldsListWidget.SelectedItem);
 			}
 			if (this.Children.Find<ButtonWidget>("NewWorld", true).IsClicked)

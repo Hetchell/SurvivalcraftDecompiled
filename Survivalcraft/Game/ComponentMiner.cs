@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
@@ -180,7 +181,7 @@ namespace Game
 		 */
 		public bool Place(TerrainRaycastResult raycastResult)
 		{
-			return true;
+			//return true;
 			if (ComponentMiner.Place1 != null)
 			{
 				return ComponentMiner.Place1(raycastResult);
@@ -207,6 +208,7 @@ namespace Game
 			if (BlocksManager.Blocks[num].IsPlaceable)
 			{
 				Block block = BlocksManager.Blocks[num];
+				//if (!ComponentInput.noclipState) block.Setter_m_defaultCollisionBoxesBackToOriginal();
 				BlockPlacementData placementValue = block.GetPlacementValue(this.m_subsystemTerrain, this, value, raycastResult);
 				if (placementValue.Value != 0)
 				{
@@ -216,42 +218,17 @@ namespace Game
 					int num4 = placementValue.CellFace.Z + point.Z;
 					if (num3 > 0 && num3 < 255 && (ComponentMiner.IsBlockPlacingAllowed(this.ComponentCreature.ComponentBody) || this.m_subsystemGameInfo.WorldSettings.GameMode <= GameMode.Harmless))
 					{
-						bool flag = false;
-						if (block.IsCollidable)
-						{
-							BoundingBox boundingBox = this.ComponentCreature.ComponentBody.BoundingBox;
-							boundingBox.Min += new Vector3(0.2f);
-							boundingBox.Max -= new Vector3(0.2f);
-							BoundingBox[] box = block.GetCustomCollisionBoxes(this.m_subsystemTerrain, placementValue.Value);
-							for (int i = 0; i < box.Length; i++)
-							{
-								box[i].Min += new Vector3((float)num2, (float)num3, (float)num4);
-								box[i].Max += new Vector3((float)num2, (float)num3, (float)num4);
-								if (boundingBox.Intersection(box[i]))
-								{
-									flag = true;
-									break;
-								}
-							}
-							//foreach (BoundingBox box1 in box)
-							//{
-							//	box1.Min += new Vector3((float)num2, (float)num3, (float)num4);
-							//	box1.Max += new Vector3((float)num2, (float)num3, (float)num4);
-							//	if (boundingBox.Intersection(box1))
-							//	{
-							//		flag = true;
-							//		break;
-							//	}
-							//}
-						}
+						bool flag = this.checkBlock(block, num2, num3, num4, placementValue);
 						if (!flag)
 						{
 							SubsystemBlockBehavior[] blockBehaviors = this.m_subsystemBlockBehaviors.GetBlockBehaviors(Terrain.ExtractContents(placementValue.Value));
-							for (int j = 0; j < blockBehaviors.Length; j++)
-							{
-								blockBehaviors[j].OnItemPlaced(num2, num3, num4, ref placementValue, value);
-							}
-							//this.m_subsystemTerrain.DestroyCell(0, num2, num3, num4, placementValue.Value, false, false);
+							//for (int j = 0; j < blockBehaviors.Length; j++)
+							//{
+							//	blockBehaviors[j].OnItemPlaced(num2, num3, num4, ref placementValue, value);
+							//}
+                            foreach (SubsystemBlockBehavior blockBehavior in this.m_subsystemBlockBehaviors.GetBlockBehaviors(Terrain.ExtractContents(placementValue.Value)))
+                                blockBehavior.OnItemPlaced(num2, num3, num4, ref placementValue, value);
+                            this.m_subsystemTerrain.DestroyCell(0, num2, num3, num4, placementValue.Value, false, false);
 							this.m_subsystemAudio.PlaySound("Audio/BlockPlaced", 1f, 0f, new Vector3((float)placementValue.CellFace.X, (float)placementValue.CellFace.Y, (float)placementValue.CellFace.Z), 5f, false);
 							this.Poke(false);
 							if (this.ComponentCreature.PlayerStats != null)
@@ -265,6 +242,52 @@ namespace Game
 			}
 			return false;
 		}
+
+		private bool checkBlock(Block block, int x, int y, int z, BlockPlacementData placementValue)
+		{
+			bool flag = false;
+			bool noclipState = true;
+            if (block.IsCollidable)
+            {
+				BoundingBox boundingBox = this.ComponentCreature.ComponentBody.BoundingBox;
+				boundingBox.Min += new Vector3(0.2f);
+				boundingBox.Max -= new Vector3(0.2f);
+				BoundingBox[] box = block.GetCustomCollisionBoxes(this.m_subsystemTerrain, placementValue.Value);
+				//need to refer box to another new boundingbox array, if not it would modify the original and cause clipping issues. 
+				//but this is useful. The lines that cause noclip behaviour are lines box[i].Min and Max. 
+				if (ComponentInput.noclipState)
+				{
+					//Debug.WriteLine("NoClip enabled.");
+                    for (int i = 0; i < box.Length; i++)
+                    {
+                        box[i].Min += new Vector3((float)x, (float)y, (float)z);
+                        box[i].Max += new Vector3((float)x, (float)y, (float)z);
+                        if (boundingBox.Intersection(box[i]))
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                } else
+				{
+					//block.Setter_m_defaultCollisionBoxesBackToOriginal();
+					BoundingBox[] r = new BoundingBox[box.Length];
+                    for (int i = 0; i < box.Length; i++)
+                    {
+                        r[i].Min += new Vector3((float)x, (float)y, (float)z);
+                        r[i].Max += new Vector3((float)x, (float)y, (float)z);
+                        if (boundingBox.Intersection(r[i]))
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                }
+				
+			}
+			//flag = false;
+			return flag;
+        }
 
 		// Token: 0x06000E8C RID: 3724 RVA: 0x00070358 File Offset: 0x0006E558
 		public bool Use(Ray3 ray)
@@ -297,8 +320,29 @@ namespace Game
 			return false;
 		}
 
-		// Token: 0x06000E8D RID: 3725 RVA: 0x00070420 File Offset: 0x0006E620
-		public bool Interact(TerrainRaycastResult raycastResult)
+        public BodyRaycastResult? PickBody(Ray3 ray)
+        {
+			Vector3 position = ray.Position;
+			Vector3 direction = ray.Direction;
+            direction = Vector3.Normalize(direction);
+            Vector3 creaturePosition = this.ComponentCreature.ComponentCreatureModel.EyePosition;
+            Vector3 end = position + direction * 15f;
+            return this.m_subsystemBodies.Raycast(position, end, 0.35f, (Func<ComponentBody, float, bool>)((body, distance) => (double)Vector3.Distance(position + distance * direction, creaturePosition) <= 5.0 && body.Entity != this.Entity && !body.IsChildOfBody(this.ComponentCreature.ComponentBody) && !this.ComponentCreature.ComponentBody.IsChildOfBody(body)));
+        }
+
+        public TerrainRaycastResult? PickTerrainForDigging(
+				Ray3 ray)
+        {
+			Vector3 direction = ray.Direction;
+			Vector3 position = ray.Position;
+            direction = Vector3.Normalize(direction);
+            Vector3 creaturePosition = this.ComponentCreature.ComponentCreatureModel.EyePosition;
+            Vector3 end = position + direction * 25f;
+            return this.m_subsystemTerrain.Raycast(position, end, true, true, (Func<int, float, bool>)((value, distance) => (double)Vector3.Distance(position + distance * direction, creaturePosition) <= 5.0 && !BlocksManager.Blocks[Terrain.ExtractContents(value)].IsDiggingTransparent));
+        }
+
+        // Token: 0x06000E8D RID: 3725 RVA: 0x00070420 File Offset: 0x0006E620
+        public bool Interact(TerrainRaycastResult raycastResult)
 		{
 			if (ComponentMiner.Interact1 != null)
 			{
