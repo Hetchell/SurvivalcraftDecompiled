@@ -425,7 +425,7 @@ namespace Game
 			this.setVectorSpeed(this.getVectorSpeed() + this.m_totalImpulse, "ControlRunnable");
 			if(this.creatureIn is ComponentPlayer)
 			{
-                Console.WriteLine("Speed is: " + this.getVectorSpeed().Length());
+                Console.WriteLine("Player speed is: " + this.getVectorSpeed().Length());
             }
 			this.m_totalImpulse = Vector3.Zero;
 			if (this.m_parentBody != null || this.m_velocity.LengthSquared() > 9.9999994E-11f || this.m_directMove != Vector3.Zero)

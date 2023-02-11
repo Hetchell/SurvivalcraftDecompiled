@@ -11,7 +11,7 @@ namespace Survivalcraft.Game.ModificationHolder
         public static Boolean allowFlyingAnimal = false;
         public static Boolean allowWolfDespawn = true;
         public static bool allowForUnrestrictedTravel = true;
-        public static float steppedLevelTravel = 5.0f;
+        public static float steppedLevelTravel = 10f;
         public static String[] animalTypes = { "Wolf", "Hyena" };
         public static float movementLimitPlayer = 100f * 100f;
         public static float movementLimitAnimalsDerFlying = 300f;

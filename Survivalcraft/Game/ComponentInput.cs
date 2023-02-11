@@ -4,6 +4,7 @@ using Engine;
 using Engine.Input;
 using GameEntitySystem;
 using Survivalcraft.Game;
+using Survivalcraft.Game.ModificationHolder;
 using TemplatesDatabase;
 
 namespace Game
@@ -322,9 +323,9 @@ namespace Game
 			if (speedPrev != speed)
 			{
                 guiMessage.DisplaySmallMessage("Speed is: " + speed, Color.White, true, false);
-                if (speed > 3)
+                if (speed > ModificationsHolder.steppedLevelTravel)
                 {
-					guiMessage.DisplaySmallMessage("Hello World!", Color.White, true, false);
+					//guiMessage.DisplaySmallMessage("Hello World!", Color.White, true, false);
                     guiMessage.DisplaySmallMessage("Superspeed enabled. Currently set to " + ModifierHolder.steppedTravel, Color.White, true, false);
                 }
             }

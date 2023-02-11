@@ -319,7 +319,7 @@ namespace Game
 				}
 				if(this.m_componentCreature is ComponentPlayer)
 				{
-					if(ComponentInput.speed > 3 && ComponentInput.state)
+					if(ComponentInput.speed > ModificationsHolder.steppedLevelTravel && ComponentInput.state)
 						this.m_componentCreature.ComponentBody.Position = new Vector3(position.X + ComponentInput.step, position.Y, position.Z);
 				}
 				this.m_lastPosition = new Vector3?(position);
@@ -464,7 +464,7 @@ namespace Game
 					Vector3 v2 = this.CreativeFlySpeed *  (right * vector3.X + Vector3.UnitY * vector3.Y + v * vector3.Z);
 					float num = (vector3 == Vector3.Zero) ? 5f : 3f;
 					vector += MathUtils.Saturate(num * dt) * (v2 - vector);
-					vector += (v2 * ComponentInput.speed * 0.05f);
+					vector += (v2 * ComponentInput.speed * 0.20f / ModificationsHolder.steppedLevelTravel);
 					this.m_componentCreature.ComponentBody.IsGravityEnabled = false;
 					this.m_componentCreature.ComponentBody.IsGroundDragEnabled = false;
 					this.m_flying = true;
