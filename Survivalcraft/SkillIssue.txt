@@ -3,7 +3,7 @@
 2. Populate dll. Add in the dlls as needed, it is all inside DLL folder. 
 3. Build project. 
 4. Run project. You will get exception. Press continue and let program crash. 
-5. Go to location for bin output of project. Then, open DLL folder, and from there put in OpenAL folder, lang folder and Content.pak folder into whatever configuration you build project on(Debug, Release...).
+5. Go to location for bin output of project. Then, open DLL folder, and from there put in lang folder and Content.pak folder into whatever configuration you build project on(Debug, Release...). Then, put in openal32.dll inside the same place. 
 6. Run game. You will see Chinese. I am still working on it, patient. 
 7. Enjoy game. 
 -> If you want to do modification, then you are on your own. You must:
