@@ -118,10 +118,10 @@ namespace Game
 		public void GenerateChunkContentsPass1(TerrainChunk chunk)
 		{
 			this.GenerateSurfaceParameters(chunk, 0, 0, 16, 8);
-            this.modifyTerrain.GenerateTerrain(chunk, true);
+            //this.modifyTerrain.GenerateTerrain(chunk, true);
             //this.GenerateTerrain(chunk, chunk.Origin.X, chunk.Origin.Y, 3, 3);
             //this.GenerateTerrain(chunk, 14, 27, 16, 5);
-            //this.GenerateTerrain(chunk, 0, 0, 16, 8);
+            this.GenerateTerrain(chunk, 0, 0, 16, 8);
         }
 
 		// Token: 0x06001673 RID: 5747 RVA: 0x000ADB49 File Offset: 0x000ABD49
@@ -393,6 +393,7 @@ namespace Game
 		}
 
         // Token: 0x06001680 RID: 5760 RVA: 0x000AE480 File Offset: 0x000AC680
+		//This is hijacked by ModifierHolder.
         public void GenerateTerrain(TerrainChunk chunk, int x1, int z1, int x2, int z2)
         {
             int num = x2 - x1;

@@ -602,6 +602,7 @@
     <Compile Include="Game\ModelRenderingMode.cs" />
     <Compile Include="Game\ModelShader.cs" />
     <Compile Include="Game\ModelWidget.cs" />
+    <Compile Include="Game\ModificationHolder\ModificationsHolder.cs" />
     <Compile Include="Game\ModifierHolder.cs" />
     <Compile Include="Game\ModifyWorldScreen.cs" />
     <Compile Include="Game\MoreCommunityLinkDialog.cs" />

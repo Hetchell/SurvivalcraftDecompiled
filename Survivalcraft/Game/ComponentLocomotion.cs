@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using Engine;
 using GameEntitySystem;
+using Survivalcraft.Game.ModificationHolder;
 using TemplatesDatabase;
 
 namespace Game
@@ -428,6 +429,16 @@ namespace Game
 			valuesDictionary.SetValue<bool>("IsCreativeFlyEnabled", this.IsCreativeFlyEnabled);
 		}
 
+		private Boolean FlyingLogicAnimal(String[] animalSet)
+		{
+			Boolean result = false;
+			for (int i = 0; i < animalSet.Length; i++)
+			{
+				result = result || this.m_componentCreature.DisplayName.Contains(animalSet[i]);
+			}
+			return result;
+		}
+
 		// Token: 0x06000E65 RID: 3685 RVA: 0x0006EA68 File Offset: 0x0006CC68
 		public void NormalMovement(float dt)
 		{
@@ -439,7 +450,9 @@ namespace Game
 			Vector3 vector2 = Vector3.Transform(this.m_componentCreature.ComponentBody.Matrix.Forward, Quaternion.CreateFromAxisAngle(right, this.LookAngles.Y));
 			if (this.WalkSpeed > 0f && this.WalkOrder != null)
 			{
-				if (this.IsCreativeFlyEnabled)
+				Boolean enabler = this.IsCreativeFlyEnabled;
+				enabler = ModificationsHolder.allowFlyingAnimal ? enabler || this.FlyingLogicAnimal(ModificationsHolder.animalTypes) : enabler;
+                if (enabler)
 				{
                     
                     Vector3 vector3 = new Vector3(this.WalkOrder.Value.X, 0f, this.WalkOrder.Value.Y);

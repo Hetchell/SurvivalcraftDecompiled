@@ -67,6 +67,7 @@ namespace Game
 					ComponentBody hitBody = this.GetHitBody(this.m_target.ComponentBody, out hitPoint);
 					if (hitBody != null)
 					{
+						//Console.WriteLine(hitBody);
 						float x = this.m_isPersistent ? this.m_random.Float(8f, 10f) : 2f;
 						this.m_chaseTime = MathUtils.Max(this.m_chaseTime, x);
 						this.m_componentMiner.Hit(hitBody, hitPoint, this.m_componentCreature.ComponentBody.Matrix.Forward);
@@ -125,7 +126,7 @@ namespace Game
 					{
 						bool flag = this.m_subsystemPlayers.IsPlayer(body.Entity);
 						bool flag2 = (componentCreature.Category & this.m_autoChaseMask) > (CreatureCategory)0;
-						if ((flag && this.m_subsystemGameInfo.WorldSettings.GameMode > GameMode.Harmless) || (!flag && flag2))
+						if ((flag && this.m_subsystemGameInfo.WorldSettings.GameMode > GameMode.Harmless || this.m_subsystemGameInfo.WorldSettings.GameMode == GameMode.Creative) || (!flag && flag2))
 						{
 							this.Attack(componentCreature, 7f, 7f, false);
 						}

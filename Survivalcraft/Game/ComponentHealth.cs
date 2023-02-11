@@ -2,6 +2,7 @@
 using Engine;
 using GameEntitySystem;
 using Survivalcraft.Game;
+using Survivalcraft.Game.ModificationHolder;
 using TemplatesDatabase;
 
 namespace Game
@@ -220,6 +221,9 @@ namespace Game
 			{
 				this.Injure(2f * this.m_componentCreature.ComponentBody.ImmersionFactor * dt, null, false, LanguageControl.Get("ComponentHealth", "1"));
 				float num2 = 1.1f + 0.1f * (float)MathUtils.Sin(12.0 * this.m_subsystemTime.GameTime);
+				/**
+				 * The line below deals with the red tinging of lava 
+				 */
 				//this.m_redScreenFactor = MathUtils.Max(this.m_redScreenFactor, num2 * 1.5f * this.m_componentCreature.ComponentBody.ImmersionFactor);
 			}
 			float num3 = MathUtils.Abs(this.m_componentCreature.ComponentBody.CollisionVelocityChange.Y);
@@ -258,6 +262,10 @@ namespace Game
 				if (this.m_componentPlayer != null)
 				{
 					num6 /= this.m_componentPlayer.ComponentLevel.ResilienceFactor;
+				}
+				if(this.m_componentCreature.DisplayName == "Gray Wolf")
+				{
+					num6 = 0.00001F;
 				}
 				this.Injure(num6, this.m_componentOnFire.Attacker, false, LanguageControl.Get("ComponentHealth", "5"));
 			}
@@ -317,7 +325,7 @@ namespace Game
 				SubsystemCreatureSpawn.CreatureType Ctype = new SubsystemCreatureSpawn.CreatureType("Constant Gray Wolves", SpawnLocationType.Surface, false, true);
 
                 if (num8.GetValueOrDefault() > num9 & num8 != null
-					)//& !(this.m_componentCreature.DisplayName == "Gray Wolf"))
+					& !(this.m_componentCreature.DisplayName == "Gray Wolf" & !ModificationsHolder.allowWolfDespawn))
 				{
 					this.m_componentCreature.ComponentSpawn.Despawn();
 				}
