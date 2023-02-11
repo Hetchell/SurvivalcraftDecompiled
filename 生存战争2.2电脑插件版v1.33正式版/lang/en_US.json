@@ -1,0 +1,3302 @@
+﻿{
+	"Language": {
+		"Name": "English"
+	},
+	"ContentManager": {
+		"1": "Content \"{0}\" has type {1}, requested type was {2}"
+	},
+	"AndroidSdCardExternalContentProvider": {
+		"1": "SD Card"
+	},
+	"ManageContentScreen": {
+		"1": "Blocks Texture | {0}x{1}",
+		"2": " | in {0} world(s)",
+		"3": "Furniture Pack | {0} designs(s)",
+		"4": "Character Skin | {0}x{1}",
+		"5": "[{0}] will be irrecoverably deleted.",
+		"6": "[{0}] will be irrecoverably deleted.\n(used by {1} world(s), they will revert to using the default)",
+		"7": "Select Items Filter",
+		"8": "All Items",
+		"9": "Are you sure?",
+		"10": "Invalid item type."
+	},
+	"SubsystemFurnitureBlockBehavior":{
+		"0":"Unsuitable block found",
+		"1":"Unsuitable block found",
+		"2":"Furniture design is too large",
+		"3":"Too many different furniture designs"	
+	},
+	"ExternalContentManager": {
+		"1": "Name empty.",
+		"2": "Name too long. Maximum 50 characters allowed.",
+		"3": "Name cannot start or end with a space.",
+		"4": "Unsupported external content type.",
+		"5": "Logging in",
+		"6": "Login Required",
+		"7": "Do you want to login to {0}?",
+		"8": "Login",
+		"9": "Select Upload Destination",
+		"10": "Uploading",
+		"11": "Cannot upload this item.",
+		"12": "Unsupported content type.",
+		"13": "Compressing world",
+		"14": "Uploading",
+		"15": "{0} uploaded.",
+		"Directory": "Directory",
+		"World": "World",
+		"Blocks Texture": "Blocks Texture",
+		"Character Skin": "Character Skin",
+		"Furniture Pack": "Furniture Pack"
+	},
+	"ComponentHealth": {
+		"1": "Burned by magma",
+		"2": "Impact with the ground",
+		"3": "Left the world",
+		"4": "Come back!",
+		"5": "Burned to death",
+		"6": "Stranded on land"
+	},
+	"PlayerWidget": {
+		"1": "{0} Controlled by {1}",
+		"2": "In game for {0} days",
+		"3": "Never spawned yet"
+	},
+	"CrossbowWidget":{
+		"0":"Pull",
+		"1":"Load bolt",
+		"2":"Ready to fire"
+	},
+	"SubsystemMusketBlockBehavior":{
+		"0":"Load gunpowder first",
+		"1":"No bullet, blind shot fired"
+	},
+	"BowWidget":{
+		"0":"Load arrow",
+		"1":"Ready to fire"
+	},
+
+	"SubsystemBowBlockBehavior":{
+		"0":"Load an arrow first"
+	},
+	"CraftingRecipesManager":{
+		"0":"Use a furnace to smelt this item",
+		"1":"Need more heat to smelt this item, use better fuel",
+		"2":"You must be level {0} to craft this item",
+		"3":"You must be level {0} to smelt this item"
+	
+	},
+	"SubsystemCrossbowBlockBehavior":{
+		"0":"Draw the crossbow first",
+		"1":"Load a bolt first"
+	},
+	"MusketWidget":{
+		"0":"Load gunpowder",
+		"1":"Load cotton wad",
+		"2":"Load bullet",
+		"3":"Ready to fire"
+	},
+	"PlayerData": {
+		"1": "Cannot change player class when player data already exists.",
+		"2": "Respawning {0} (Level {1})",
+		"3": "Your items will remain for a short time at the place of death.",
+		"4": "Spawning {0} (Level {1})",
+		"5": "Invalid spawn mode.",
+		"6": "YOU HAVE DIED",
+		"7": "{0}\n\nCannot respawn in \"{1}\" game mode",
+		"8": "{0}\n\nTap to restart adventure",
+		"9": "{0}\n\nTap to respawn",
+		"10": "More than 1 player with PlayerIndex {0} added to world.",
+		"11": "No GameWidget found for player.",
+		"12": "Unknown",
+		"13": "Cause of death: {0}"
+
+	},
+	"GameLoadingScreen": {
+		"1": "Error loading world"
+	},
+	"FurnitureDesign": {
+		"1": "Invalid name.",
+		"2": "Invalid furniture values string.",
+		"3": "resolution",
+		"4": "values",
+		"5": "{0}-state Furniture",
+		"6": "Furniture Button",
+		"7": "Furniture Switch",
+		"8": "{0}-state Connected Furniture",
+		"9": "Furniture"
+	},
+	"BuildFurnitureDialog": {
+		"1": "Complexity {0}/{1}{2}",
+		"2": " (OK)",
+		"3": "(too complex)",
+		"4": "Side View",
+		"5": "Top View",
+		"6": "Front View",
+		"7": "Rename Original Furniture",
+		"8": "Rename Modified Furniture",
+		"9": "Name Modified Furniture",
+		"10": "Rename Furniture",
+		"11": "Name Furniture"
+
+	},
+	"FurnitureInventoryPanel": {
+		"1": "{0} design(s) added. ",
+		"2": "{0} design(s) were already present in the world and were skipped. ",
+		"3": "{0} design(s) were skipped because {1} designs limit is reached.",
+		"4": "Import Successful",
+		"5": "Import Failed",
+		"6": "New",
+		"7": "Import From Content",
+		"8": "Add Furniture Set",
+		"9": "Rename",
+		"10": "Delete",
+		"11": "Move Up",
+		"12": "Move Down",
+		"13": "Export To Content",
+		"14": "Furniture Set Action",
+		"15": "Furniture Set Name",
+		"16": "New Set",
+		"17": "Furniture Set Name",
+		"18": "No Furniture Packs",
+		"19": "No furniture packs found in your content. Download some from Community Content.",
+		"20": "Select Furniture Pack",
+		"21": "Exported",
+		"22": "Furniture pack [{0}] exported to content.",
+		"23": "Export Failed",
+		"24": "Too many furniture sets",
+		"25": "Delete some furniture sets before adding a new one.",
+		"26": "All furniture in the set will become uncategorized and will be deleted if not used in the world.",
+		"27": "Delete",
+		"28": "Cancel"
+	},
+	"ExternalContentScreen": {
+		"1": "Enter",
+		"2": "Download",
+		"3": "Contents Of ",
+		"4": "Not logged in",
+		"5": "Logout",
+		"6": "Login",
+		"7": "Select Content Source",
+		"8": "Creating Link",
+		"9": "Retrieving Directory",
+		"10": "Downloading",
+		"11": " | (downloaded)",
+		"12": "Importing"
+	},
+	"FourLedBlock": {
+		"1": "Make colored 4-LEDs from copper, glass and paint"
+	},
+	"MulticoloredLedBlock": {
+		"1": "Make multicolored LEDs from copper, glass and wire"
+	},
+	"OneLedBlock": {
+		"1": "Make colored 1-LEDs from copper, glass and paint"
+	},
+	"LedBlock": {
+		"0": "White",
+		"1": "Cyan",
+		"2": "Red",
+		"3": "Blue",
+		"4": "Yellow",
+		"5": "Green",
+		"6": "Orange",
+		"7": "Purple"
+	},
+	"GameMenuDialog": {
+		"1": "Your device is fast",
+		"2": "Consider increasing visibility range or resolution for better graphics. To do so, go to performance settings.",
+		"3": "Your device is not fast enough",
+		"4": "Consider decreasing visibility range or resolution. To do so, go to performance settings.",
+		"5": "Game Statistics",
+		"6": "Game Mode",
+		"7": "Terrain Type",
+		"8": "World Seed",
+		"9": "(none)",
+		"10": "Sea Level",
+		"11": "Temperature",
+		"12": "Humidity",
+		"13": "Biome Size",
+		"14": "Furniture Designs In Use",
+		"15": "World Created In Version",
+		"16": "before 1.22",
+		"17": "Player Statistics",
+		"18": "Name",
+		"19": "Sex",
+		"20": " days ago",
+		"21": "Never spawned yet",
+		"22": "First Spawned",
+		"23": " days",
+		"24": "Never spawned yet",
+		"25": "Stayed Alive",
+		"26": "Respawned",
+		"27": " times",
+		"28": "Highest Level Attained",
+		"29": "Level {0}",
+		"30": "Location",
+		"31": "{0},{1} at altitude {2}",
+		"32": "(unavailable in {0})",
+		"33": "Combat Statistics",
+		"34": "Players Killed",
+		"35": "Land Creatures Killed",
+		"36": "Water Creatures Killed",
+		"37": "Air Creatures Killed",
+		"38": "Melee Attacks",
+		"39": "Melee Hits",
+		"40": "Ranged Attacks",
+		"41": "Ranged Hits",
+		"42": "Hits Received",
+		"43": "Work Statistics",
+		"44": "Blocks Dug",
+		"45": "Blocks Placed",
+		"46": "Blocks Interacted With",
+		"47": "Items Crafted/Smelted",
+		"48": "Furniture Made",
+		"49": "Movement Statistics",
+		"50": "Total Distance Travelled",
+		"51": "Distance Walked",
+		"52": "Distance Fallen",
+		"53": "Distance Climbed",
+		"54": "Distance Flown",
+		"55": "Distance Swum",
+		"56": "Distance Ridden",
+		"57": "Lowest Altitude",
+		"58": "Highest Altitude",
+		"59": "Deepest Dive",
+		"60": "Jumps",
+		"61": "Body Statistics",
+		"62": "Total Health Lost",
+		"63": "Food Eaten",
+		"64": " items",
+		"65": "Went To Sleep",
+		"66": " times",
+		"67": "Total Time Slept",
+		"68": " days",
+		"69": "Vomited",
+		"70": "Contracted Flu",
+		"71": "Became Sick",
+		"72": "Other Statistics",
+		"73": "Struck By Lightning",
+		"74": "Easiest Game Mode Used",
+		"75": "Death Record",
+		"76": "Morning of",
+		"77": "Afternoon of",
+		"78": "Evening of",
+		"79": "Night of",
+		"80": "{1} day {0:0}",
+		"81": "No player statistics available because world was started in an old version of the game.",
+		"82": "Restart Adventure",
+		"83": "Reset Adventure?",
+		"84": "The adventure will start from the beginning.",
+		"85": "Rate",
+		"86": "Select Content To Rate",
+		"87": "Edit Players",
+		"88": "Settings",
+		"89": "Help",
+		"90": "Keyboard Controls",
+		"91": "Gamepad Controls",
+		"92": "More Actions"
+	},
+	"BlocksManager": {
+		"1": "Block with type {0} not found.",
+		"2": "Not enough field values for block \"{0}\".",
+		"3": "Block \"{0}\" not found when loading block data.",
+		"4": "Data for block \"{0}\" specified more than once when loading block data.",
+		"5": "Field \"{0}\" not found or not accessible when loading block data.",
+		"6": "Reference block \"{0}\" not found when loading block data.",
+		"Terrain": "Terrain",
+		"Plants": "Plants",
+		"Construction": "Construction",
+		"Items": "Items",
+		"Tools": "Tools",
+		"Weapons": "Weapons",
+		"Clothes": "Clothes",
+		"Electrics": "Electrics",
+		"Food": "Food",
+		"Spawner Eggs": "Spawner Eggs",
+		"Painted": "Painted",
+		"Dyed": "Dyed",
+		"Fireworks": "Fireworks",
+		"All Blocks": "All Blocks",
+		"Not Dyed": "Not Dyed"
+	},
+	"BestiaryDescriptionScreen": {
+		"1": "Can Be Ridden:\n",
+		"2": "({0}% of time)",
+		"resilience": "resilience:\n",
+		"attack": "attack:\n",
+		"herding": "herding:\n",
+		"speed": "speed:\n",
+		"jump height": "jump height:\n",
+		"length unit": "meters\n",
+		"speed unit": "km/h\n",
+		"weight unit": "kg\n",
+		"weight": "weight\n",
+		"range": "{0} to {1}"
+	},
+	"CommunityContentScreen": {
+		"1": "Downloading {0}",
+		"2": "Retrieving Content",
+		"3": "Deleting {0}",
+		"4": "Are you sure?",
+		"5": "The link will be deleted from the server.",
+		"6": "Link Deleted",
+		"7": "It will stop appearing in the listings in a few minutes.",
+		"8": "Your Items Only",
+		"9": "All Items",
+		"10": "Invalid filter.",
+		"11": "Top Ranked",
+		"12": "Recently Added",
+		"13": "Invalid order.",
+		"Unknown": "Unknown",
+		"Directory": "Directory",
+		"World": "World",
+		"BlocksTexture": "BlocksTexture",
+		"CharacterSkin": "CharacterSkin",
+		"FurniturePack": "FurniturePack",
+		"ByRank": "ByRank",
+		"ByTime": "ByTime",
+		"Order Type": "Order Type",
+		"Filter": "Filter"
+	},
+	"ComponentClothing": {
+		"1": "Must be level {0} to wear {1}",
+		"2": "Your clothing has worn out"
+	},
+	"SkyRenderingMode": {
+		"Full": "Full",
+		"NoClouds": "NoClouds",
+		"Disabled": "Disabled"
+	},
+	"ViewAngleMode": {
+		"Normal": "Normal",
+		"Narrow": "Narrow",
+		"Wide": "Wide"
+	},
+	"ResolutionMode": {
+		"Low": "Low",
+		"Medium": "Medium",
+		"High": "High"
+	},
+	"WindowMode": {
+		"Resizable": "Resizable",
+		"Fixed": "Fixed",
+		"Fullscreen": "Fullscreen",
+		"Borderless": "Borderless"
+	},
+	"GuiSize": {
+		"Smallest": "Smallest",
+		"Smaller": "Smaller",
+		"Normal": "Normal"
+	},
+	"ScreenshotSize": {
+		"ScreenSize": "ScreenSize",
+		"FullHD": "FullHD"
+	},
+	"StartingPositionMode": {
+		"Easy": "Easy",
+		"Medium": "Medium",
+		"Hard": "Hard"
+	},
+	"CommunityContentMode": {
+		"Disabled": "Disabled",
+		"Strict": "Strict",
+		"Normal": "Normal",
+		"ShowAll": "ShowAll"
+	},
+	"MoveControlMode": {
+		"Pad": "Pad",
+		"Buttons": "Buttons"
+	},
+	"DigMethod": {
+		"Shovel": "Shovel",
+		"Quarry": "Quarry",
+		"Hack": "Hack",
+		"None": "None"
+	},
+	"LookControlMode": {
+		"Pad": "Pad",
+		"EntireScreen": "EntireScreen",
+		"SplitTouch": "SplitTouch"
+	},
+	"SettingsUiScreen": {
+		"1": "Adjust User Interface Settings",
+		"2": "Language:",
+		"3": "Window Mode:",
+		"4": "UI Size:",
+		"5": "UI Vertical Flip:",
+		"6": "Hide Move/Look Pads:",
+		"7": "Show UI in screenshots:",
+		"8": "Show logo in screenshots:",
+		"9": "Screenshot resolution:",
+		"10": "Community Content:"
+	},
+	"EnvironmentBehaviorMode": {
+		"Living": "Living",
+		"Static": "Static"
+	},
+	"TimeOfDayMode": {
+		"Changing": "Changing",
+		"Day": "Day",
+		"Night": "Night",
+		"Sunrise": "Sunrise",
+		"Sunset": "Sunset"
+	},
+	"GameMode": {
+		"Creative": "Creative",
+		"Harmless": "Harmless",
+		"Challenging": "Challenging",
+		"Adventure": "Adventure",
+		"Cruel": "Cruel"
+	},
+	"ComponentLocomotion": {
+		"1": "Running barefoot is slow, wear shoes"
+	},
+	"EggBlock": {
+		"1": "Cooked",
+		"2": "Laid",
+		"3": "spawn "
+	},
+	"CreativeInventoryWidget": {
+		"1": "Furniture",
+		"2": "User"
+	},
+	"SettingsControlsScreen": {
+		"1": "{0}blocks",
+		"2": "Pix"
+	},
+	"SettingsPerformanceScreen": {
+		"1": "{0} blocks",
+		"2": "(good for slower devices)",
+		"3": "(1GB RAM recommended)",
+		"4": "(2GB RAM and a fast\ndevice recommended)",
+		"5": "(4GB RAM and a very fast\ndevice recommended)",
+		"6": "(8GB RAM and a very fast\ndevice recommended)",
+		"7": "(16GB RAM and an extremely fast\ndevice recommended)",
+		"8": "{0} vsync",
+		"9": "Unlimited",
+		"10": "Large Visibility Range",
+		"11": "The game may crash randomly if your device does not have enough memory to handle the visibility range you selected."
+	},
+	"RecipaediaDescriptionScreen": {
+		"1": "Luminosity",
+		"2": "Fuel Value",
+		"3": "Is Stackable",
+		"4": "Yes (up to {0})",
+		"5": "Is Flammable",
+		"6": "Nutrition",
+		"7": "Max Storage Time",
+		"8": "Digging Method",
+		"9": "Digging Resilience",
+		"10": "Explosion Resilience",
+		"11": "Explosive Power",
+		"12": "Melee Power",
+		"13": "Melee Hit Ratio",
+		"14": "Projectile Power",
+		"15": "Shoveling",
+		"16": "Hacking",
+		"17": "Quarrying",
+		"18": "Durability",
+		"19": "Experience Orbs",
+		"20": "Can Be Dyed",
+		"21": "Armor Protection",
+		"22": "Armor Durability",
+		"23": "Insulation",
+		"24": "Movement Speed",
+		"25": "{0} days"
+	},
+	"ComponentVitalStats": {
+		"1": "You feel too sick to eat this",
+		"2": "You are full, no more food!",
+		"3": "It tastes horrible, no more!",
+		"4": "It tastes odd, no more",
+		"5": "Eat something else, you will get sick!",
+		"6": "You eat this too often",
+		"7": "You have eaten well",
+		"8": "Good, but you want more",
+		"9": "Starved to death",
+		"10": "You are starving, find food!",
+		"11": "You are close to starvation",
+		"12": "Time to eat something",
+		"13": "You are slightly hungry",
+		"14": "You are panting, slow down",
+		"15": "You are panting, get out of the water",
+		"16": "Drowned",
+		"17": "You are drowning!",
+		"18": "Rest a while!",
+		"19": "You will faint, go to sleep!",
+		"20": "You are falling over, sleep",
+		"21": "You are very tired, sleep",
+		"22": "You are tired, take a nap",
+		"23": "Can't go no more",
+		"24": "Aaa...",
+		"25": "Froze to death",
+		"26": "Hypothermia",
+		"27": "Your {0} freezing, dry your clothes!",
+		"28": "Your {0} freezing, seek shelter!",
+		"29": "Your {0} freezing, get clothed!",
+		"30": "Your {0} getting cold, dry your clothes",
+		"31": "Your {0} getting cold, seek shelter",
+		"32": "Your {0} getting cold, get clothed",
+		"33": "You feel a bit chilly",
+		"34": "It's too hot, run away!",
+		"35": "Overheated",
+		"36": "You feel hot",
+		"37": "Ugh...",
+		"38": "You are completely wet",
+		"39": "You are getting wet",
+		"40": "You are no longer wet",
+		"41": "head is",
+		"42": "chest is",
+		"43": "legs are",
+		"44": "feet are"
+	},
+	"RecipaediaScreen": {
+		"1": "recipe",
+		"2": "recipes",
+		"3": "No recipes"
+	},
+	"ComponentMiner": {
+		"1": "Must be level {0} to use {1}",
+		"2": "Miss",
+		"3": "Player-on-player attacks are disabled",
+		"4": "{0} by {1}",
+		"5": "force majeure",
+		"6": "accident",
+		"7": "bad luck",
+		"8": "unknown attacker",
+		"9": "wrong place wrong time",
+		"10": "unlucky",
+		"killed": "killed",
+		"kicked": "kicked",
+		"stung": "stung",
+		"crushed": "crushed",
+		"dismembered": "dismembered",
+		"hunted": "hunted",
+		"eaten": "eaten",
+		"mauled": "mauled",
+		"trampled": "trampled",
+		"bitten": "bitten",
+		"massacred": "massacred",
+		"ripped open": "ripped open",
+		"murdered": "murdered"
+	},
+	"ComponentIntro": {
+		"1": "Cast away, boys.",
+		"2": "Hey you, in the boat!",
+		"3": "Hey you, on the shore!",
+		"4": "We're leaving you here for good!"
+	},
+	"ComponentLevel": {
+		"1": "You've gained a level!",
+		"2": "Level {0}",
+		"3": "{0}% Stamina",
+		"4": "Sickness",
+		"5": "No Sickness",
+		"6": "Vomiting",
+		"7": "Not Vomiting",
+		"8": "Flu",
+		"9": "No Flu",
+		"10": "Coughing",
+		"11": "Not Coughing",
+		"12": "{0} Mode"
+	},
+	"ComponentSleep": {
+		"1": "You must be on dry land",
+		"2": "Too uncomfortable to sleep",
+		"3": "You are not tired enough",
+		"4": "You are too wet",
+		"5": "You need a better shelter",
+		"6": "Brrr, wet!",
+		"7": "Ehh... what time is it?",
+		"8": "Tap to wake up early",
+		"9": "You fell unconscious from lack of sleep",
+		"10": "Zzz..."
+	},
+	"WorldOptionsScreen": {
+		"1": "Select World Type",
+		"2": "Select Block",
+		"3": "Select Blocks Texture",
+		"4": "Unavailable",
+		"5": "Flat terrain is only available in Creative Mode",
+		"6": "Normal"
+	},
+	"ComponentSickness": {
+		"1": "Sickness",
+		"2": "You feel nauseous"
+	},
+	"ComponentPlayer": {
+		"1": "Sneak to improve your aim"
+	},
+	"ComponentGui": {
+		"1": "Press H for keyboard controls\n(or see HELP)",
+		"2": "Press START/PAUSE for gamepad controls\n(or see HELP)",
+		"3": "Sneak mode on",
+		"4": "Sneak mode off",
+		"5": "Mounted",
+		"6": "Dismounted",
+		"7": "Fly mode on",
+		"8": "Fly mode off",
+		"9": "Third person camera",
+		"10": "Orbit camera",
+		"11": "Fixed camera",
+		"12": "First person camera",
+		"13": "Photo saved in pictures library",
+		"14": "Error capturing photo, check game log",
+		"15": "Dawn",
+		"16": "Noon",
+		"17": "Dusk",
+		"18": "Midnight"
+	},
+	"ComponentFlu": {
+		"1": "Get warm, you will get flu!",
+		"2": "Get to warmth, you have flu!",
+		"3": "You have flu, warmth is healing",
+		"4": "Flu"
+	},
+	"SubsystemBoatBlockBehavior": {
+		"1": "Too many boats"
+	},
+	"Block": {
+		"1": "Block {0} has ToolDurability < -1 or > 65535."
+	},
+	"SoilBlock": {
+		"1": "Moist Compost",
+		"2": "Compost",
+		"3": "Moist soil",
+		"4": "Soil"
+	},
+	"LightbulbBlock": {
+		"1": "Lightbulb"
+	},
+	"PlayerScreen": {
+		"1": "Select Character Skin",
+		"2": "Select Input Device",
+		"3": "The player will be irrecoverably removed from the world. All items in inventory and stats will be lost.",
+		"4": "Mouse & Keyboard",
+		"5": "Gamepad 1",
+		"6": "Gamepad 2",
+		"7": "Gamepad 3",
+		"8": "Gamepad 4",
+		"9": "(not found)",
+		"10": "Touchscreen",
+		"11": "Virtual Reality",
+		"12": "Invalid player name. Only letters, digits and spaces allowed. Not too short, not too long either."
+	},
+	"ModifyWorldScreen": {
+		"1": "Are you sure?",
+		"2": "The world will be irrecoverably deleted.",
+		"3": "Abandon changes?",
+		"4": "You changed some of the world properties, but they were not applied yet."
+	},
+	"Usual": {
+		"unknown": "Unknown",
+		"yes": "Yes",
+		"no": "No",
+		"none": "None",
+		"nothing": "Nothing",
+		"ok": "Ok",
+		"error": "Error",
+		"on": "On",
+		"off": "Off",
+		"enable": "Enable",
+		"disable": "Disable",
+		"back": "Back",
+		"warning": "Warning",
+		"cancel": "Cancel",
+		"allowed": "Allowed",
+		"not allowed": "Not Allowed",
+		"success": "Success"
+	},
+	"Blocks": {
+		" ": {
+			"CRMessage:0":"Make a wooden rake instead",
+			"CRMessage:1":"Make a stone axe instead"
+		},
+		"AirBlock:0": {
+			"DisplayName": "Air",
+			"Description": ""
+		},
+		"BedrockBlock:0": {
+			"DisplayName": "Bedrock",
+			"Description": ""
+		},
+		"DirtBlock:0": {
+			"DisplayName": "Dirt",
+			"Description": "Dirt is a very common block found near the surface in most environments. It can be easily dug even with bare hands, but is best dug with a shovel. When exposed to direct sunlight, grass and flowers will spread to it from nearby blocks, if present."
+		},
+		"SoilBlock:0": {
+			"DisplayName": "Soil",
+			"Description": "Soil is dirt that has been made suitable for cultivation by using a rake. It can be easily damaged by walking or jumping on it. Soil can be fertilized by sprinkling saltpeter on it, plants will grow faster and slowly use up the fertilizer. Soil that is near water will become moist, making plants grow even faster."
+		},
+		"LimestoneBlock:0": {
+			"DisplayName": "Limestone",
+			"Description": "Limestone is a brittle whitish stone occasionally found near the surface close to water bodies. It can be easily quarried with a pickaxe, and because of its brittleness even with bare hands. It can be used for making pigments and marble."
+		},
+		"GraniteBlock:0": {
+			"DisplayName": "Granite",
+			"Description": "Granite is a tough grey stone that fills the majority of underground world and makes mountains stand tall. Sometimes contains veins of coal, and, often deeper, copper. When harvested, turns into cobblestone, which can in turn be smelted back into pure granite. Can be painted.",
+			"CRDescription:0": "Turn cobblestone into granite by smelting"
+		},
+		"BasaltBlock:0": {
+			"DisplayName": "Basalt",
+			"Description": "Basalt is a very tough dark stone of volcanic origin. To mine it effectively it's best to use a strong pickaxe. Basalt is tougher than granite, and forms the majority of deep underground world. Occasionally has pools of magma embedded in it, so be careful when tunnelling. Veins of sulphur and iron ore might sometimes be found when you are deep enough. Even more rarely, you will find the elusive diamond shining brightly from between the rocks. Can be painted."
+		},
+		"SandstoneBlock:0": {
+			"DisplayName": "Sandstone",
+			"Description": "A brittle yellow stone often found under dry, sandy areas. It can be easily quarried with a pickaxe, and because of its brittleness even with bare hands. It may contain saltpeter, which is found in shallow, flat veins in places where in the ancient times birds nested and covered the ground with their nitrogen rich droppings. Can be painted."
+		},
+		"GravelBlock:0": {
+			"DisplayName": "Gravel",
+			"Description": "Gravel is an aggregate of fine stones. Caches of gravel are often found underground, and it sometimes covers beaches. It is then known under the name of shingle. Gravel is a loose material that will collapse when tunnelled under, and may easily bury the unwary, so be careful. It is the best source of rocks for throwing."
+		},
+		"ClayBlock:0": {
+			"DisplayName": "Clay",
+			"Description": "Clay is a heavy, densely packed soil made of very small grains. From time immemorial it was known that by firing it in a furnace one can obtain bricks, which are the most versatile building material. Clay is often found on the bottoms of shallow lakes. Can be painted."
+		},
+		"SandBlock:0": {
+			"DisplayName": "Sand",
+			"Description": "Sand is a yellowish loose material that covers desert areas and beaches. Be careful because sand will collapse when tunnelled under. It is most commonly used to make glass. Cacti will often grow on it in dry and hot climates."
+		},
+		"GrassBlock:0": {
+			"DisplayName": "Grass",
+			"Description": "Grass grows on dirt blocks when there is enough sunlight available. When conditions are right, various flowers, tall grass blades and vegetables will grow on it. Grass is easily destroyed by covering it with something heavy and takes a long time to regrow."
+		},
+		"WaterBlock:0": {
+			"DisplayName": "Water",
+			"Description": "Water is a fluid that easily flows from place to place and fills low-lying areas. A bucket can be used to transport it from a source to a dry area. When placed in a cold area, water will freeze into ice."
+		},
+		"MagmaBlock:0": {
+			"DisplayName": "Magma",
+			"Description": "Hot molten rock occasionally found in pools, deep underground in basalt. It is extremely hot and will set anything flammable on fire as soon as it touches it. It will also very quickly kill any living thing that happens to fall into it. A bucket can be used to transport it away from its source."
+		},
+		"SnowBlock:0": {
+			"DisplayName": "Snow",
+			"Description": "A form of frozen water, covers ground in cold biomes. During cold weather, it may fall from the sky as snowfall and cover any area exposed directly to the sky."
+		},
+		"IceBlock:0": {
+			"DisplayName": "Ice",
+			"Description": "A block of water which has frozen solid. Whenever water is exposed to low temperatures, it will turn into ice. Ice can in turn be melted back into water by using fire or magma as a heat source. It has a slippery surface that makes walking difficult."
+		},
+		"FireBlock:0": {
+			"DisplayName": "Fire",
+			"Description": ""
+		},
+		"CoalOreBlock:0": {
+			"DisplayName": "Coal Ore",
+			"Description": "Coal ore is a vein of coal embedded in granite rock. Gains coal chunks when mined. Be careful, because certain ores require special tools for successful mining of the mineral. If improper tools are used, the mineral is lost."
+		},
+		"CopperOreBlock:0": {
+			"DisplayName": "Copper Ore",
+			"Description": "Copper ore is a vein of green copper carbonate embedded in granite rock. Gains malachite chunks when mined. Be careful, because certain ores require special tools for successful mining of the mineral. If improper tools are used, the mineral is lost. Further processing in the furnace is required to extract pure copper from the carbonate."
+		},
+		"IronOreBlock:0": {
+			"DisplayName": "Iron Ore",
+			"Description": "Iron ore is a vein of iron oxide embedded in basalt rock. Gains iron ore chunks when mined. Be careful, because certain ores require special tools for successful mining of the mineral. If improper tools are used, the mineral is lost. Further processing in the furnace is required to extract pure iron from the oxide."
+		},
+		"SulphurOreBlock:0": {
+			"DisplayName": "Sulphur Ore",
+			"Description": "Sulphur ore is a vein of elemental sulphur embedded in basalt rock. Gains sulphur chunks when mined. Be careful, because certain ores require special tools for successful mining of the mineral. If improper tools are used, the mineral is lost. Sulphur can be used to make pyrotechnic substances, like gunpowder or matches."
+		},
+		"DiamondOreBlock:0": {
+			"DisplayName": "Diamond Ore",
+			"Description": "Diamond ore are diamond crystals embedded in basalt rock. Gains diamonds when mined. Be careful, because certain ores require special tools for successful mining of the mineral. If improper tools are used, the mineral is lost."
+		},
+		"GermaniumOreBlock:0": {
+			"DisplayName": "Germanium Ore",
+			"Description": "Germanium ore are veins of germanium oxide embedded in basalt rock. Gains germanium ore blocks when mined. Be careful, because certain ores require special tools for successful mining of the mineral. If improper tools are used, the mineral is lost."
+		},
+		"SaltpeterOreBlock:0": {
+			"DisplayName": "Saltpeter Ore",
+			"Description": "Saltpeter ore is a vein of potassium nitrate embedded in sandstone rock. Gains saltpeter chunks when mined. Be careful, because certain ores require special tools for successful mining of the mineral. If improper tools are used, the mineral is lost. Saltpeter can be used to make explosives."
+		},
+		"CoalBlock:0": {
+			"DisplayName": "Solid Coal Block",
+			"Description": "A block of coal. If set on fire in the open, it will burn for a very long time. Good as a long lasting fuel in the furnace. You can craft it from a number of coal chunks, or split it back into them. Blocks of coal can sometimes be found underground inside of rich coal seams.",
+			"CRDescription:0": "Combine many coal chunks into a large block"
+		},
+		"StoneChunkBlock:0": {
+			"DisplayName": "Stone Chunk",
+			"Description": "A stone can be a formidable weapon in the hands of a skilled thrower. They are plentiful and easy to obtain. The best stones are found by digging in gravel blocks."
+		},
+		"CoalChunkBlock:0": {
+			"DisplayName": "Coal Chunk",
+			"Description": "A chunk of pure coal. Can be used for fuelling the furnace and as an ingredient of various substances, like gunpowder. Used as a reagent when reducing metal ores to pure metals. Also used as a pigment for making darker hues of paint. In absence of mineral coal, you can burn wood in an oxygen-poor atmosphere in the furnace and obtain a similar substance: charcoal.",
+			"CRDescription:0": "Make charcoal by burning wood in oxygenless atmosphere",
+			"CRDescription:1": "Dismantle coal block into chunks"
+		},
+		"MalachiteChunkBlock:0": {
+			"DisplayName": "Malachite Chunk",
+			"Description": "A chunk of copper carbonate with beautiful green color. When smelted in the furnace will turn into pure copper. Multiple chunks can be combined and form a large block of malachite, a beautiful decorative material.",
+			"CRDescription:0": "Dismantle malachite block into chunks"
+		},
+		"IronOreChunkBlock:0": {
+			"DisplayName": "Iron Ore Chunk",
+			"Description": "A chunk of iron ore. When smelted in the furnace will turn into pure iron useful for making durable tools and armor."
+		},
+		"SaltpeterChunkBlock:0": {
+			"DisplayName": "Saltpeter Chunk",
+			"Description": "A chunk of potassium nitrate. This is a white substance with high oxygen content that can be used as an oxidizer for making explosives or, when sprinkled over soil, as a fertilizer to speed up growth of plants and increase yields."
+		},
+		"SulphurChunkBlock:0": {
+			"DisplayName": "Sulphur Chunk",
+			"Description": "A chunk of elemental sulphur. Can be used as an ingredient in paints and pyrotechnic substances like gunpowder or matches."
+		},
+		"GermaniumOreChunkBlock:0": {
+			"DisplayName": "Germanium Ore Chunk",
+			"Description": "A chunk of germanium ore. When smelted in the furnace will turn into a pure germanium crystal useful for making electronic logic gates."
+		},
+		"GermaniumChunkBlock:0": {
+			"DisplayName": "Germanium Crystal",
+			"Description": "Germanium crystal is a crystal of pure electronic-grade germanium. It is a semiconductor and can be used to make electronic logic gates.",
+			"CRDescription:0": "Smelt germanium ore to obtain germanium crystals"
+		},
+		"DiamondChunkBlock:0": {
+			"DisplayName": "Diamond",
+			"Description": "Diamond is a crystal of pure carbon. Very rare and beautiful, it is found deep underground. It can be used for making extremely hard and durable tools. Being carbon, can also be burned as fuel in the furnace, but only fools waste this precious substance for such a mundane purpose.",
+			"CRDescription:0": "Dismantle diamond block into diamonds"
+		},
+		"OakWoodBlock:0": {
+			"DisplayName": "Oak Wood",
+			"Description": "Oak wood grows in trunks of oak trees, which grow in warm and humid areas. It can be crafted into planks, which are a versatile building and crafting material. It can also be used as a fuel in the furnace. To replant trees you need to obtain saplings from the leaves."
+		},
+		"BirchWoodBlock:0": {
+			"DisplayName": "Birch Wood",
+			"Description": "Birch wood grows in trunks of birch trees, which grow in temperate and humid areas. It can be crafted into planks, which are a versatile building and crafting material. It can also be used as a fuel in the furnace. To replant trees you need to obtain saplings from the leaves."
+		},
+		"SpruceWoodBlock:0": {
+			"DisplayName": "Spruce Wood",
+			"Description": "Spruce wood grows in trunks of spruce trees, which grow in cool areas. It can be crafted into planks, which are a versatile building and crafting material. It can also be used as a fuel in the furnace. To replant trees you need to obtain saplings from the leaves."
+		},
+		"MimosaWoodBlock:0": {
+			"DisplayName": "Mimosa Wood",
+			"Description": "Mimosa wood grows in trunks of mimosa trees, which grow in dry areas. It can be crafted into planks, which are a versatile building and crafting material. It can also be used as a fuel in the furnace. To replant trees you need to obtain saplings from the leaves."
+		},
+		"OakLeavesBlock:0": {
+			"DisplayName": "Oak Leaves",
+			"Description": "Oak leaves grow on oak trees and can be used to obtain oak saplings. They will burn and can be used as a cheap fuel. When placed away from the trunk, they will decay. Grass traps that can deceive both man and a beast can be crafted from these leaves."
+		},
+		"BirchLeavesBlock:0": {
+			"DisplayName": "Birch Leaves",
+			"Description": "Birch leaves grow on birch trees and can used to obtain birch saplings. They will burn and can be used as a cheap fuel. When placed away from the trunk, they will decay. "
+		},
+		"SpruceLeavesBlock:0": {
+			"DisplayName": "Spruce Leaves",
+			"Description": "Spruce leaves grow on spruce trees and can be used to obtain spruce saplings. They will burn and can be used as a cheap fuel. When placed away from the trunk, they will decay. During Christmas time, a Christmas Tree can be crafted from them."
+		},
+		"TallSpruceLeavesBlock:0": {
+			"DisplayName": "Tall Spruce Leaves",
+			"Description": "Tall spruce leaves grow on tall spruce trees and can be used to obtain tall spruce saplings. They will burn and can be used as a cheap fuel. When placed away from the trunk, they will decay."
+		},
+		"MimosaLeavesBlock:0": {
+			"DisplayName": "Mimosa Leaves",
+			"Description": "Mimosa leaves grow on mimosa trees and can be used to obtain mimosa saplings. They will burn and can be used as a cheap fuel. When placed away from the trunk, they will decay."
+		},
+		"TallGrassBlock:0": {
+			"DisplayName": "Tall Grass",
+			"Description": "Tall grass randomly grows on well lit and humid grass blocks. You can obtain grass seeds from it, which can be used to plant more grass. Can be used as a decorative plant."
+		},
+		"RyeBlock:0": {
+			"DisplayName": "Rye",
+			"Description": "Plant rye on tilled, moist and fertilized soil to obtain full grown plants. Harvesting the plants will yield large number of rye seeds. Rye also grows naturally in form or wild rye. You can obtain wild seeds by harvesting it."
+		},
+		"RedFlowerBlock:0": {
+			"DisplayName": "Red Flower",
+			"Description": "Red flowers randomly grow on well lit and humid grass blocks. Can be used as a decorative plant."
+		},
+		"PurpleFlowerBlock:0": {
+			"DisplayName": "Purple Flower",
+			"Description": "Purple flowers randomly grow on well lit and humid grass blocks. Can be used as a decorative plant and contains purple pigment that makes magenta paint"
+		},
+		"WhiteFlowerBlock:0": {
+			"DisplayName": "White Flower",
+			"Description": "White flowers randomly grow on well lit and humid grass blocks. Can be used as a decorative plant."
+		},
+		"DryBushBlock:0": {
+			"DisplayName": "Dry Bush",
+			"Description": "Dry bushes are commonly found on the edges of deserts or in cold places. Whenever a plant does not have enough humidity or sunlight to sustain itself, it will turn into a dry bush. "
+		},
+		"LargeDryBushBlock:0": {
+			"DisplayName": "Large Dry Bush",
+			"Description": "Dry bushes are commonly found on the edges of deserts or in cold places. Whenever a plant does not have enough humidity or sunlight to sustain itself, it will turn into a dry bush. "
+		},
+		"SaplingBlock:0": {
+			"DisplayName": "Oak Sapling",
+			"Description": "Saplings are used to plant trees. You can obtain them by crafting from the leaves of trees. When planting, be careful to place the saplings in a well lit place, full of moisture and of correct temperature. Use hygrometer and thermometer to measure these quantities. Oaks like it warm, birches moderately cool and spruces cold. All trees need a lot of humidity. If you plant a sapling in a wrong spot, it will wilt into a dry bush.",
+			"CRDescription:0": "Cut saplings from oak leaves"
+		},
+		"CactusBlock:0": {
+			"DisplayName": "Cactus",
+			"Description": "Cacti are large plants very tolerant to dry conditions, and will often be found growing to large sizes in the desert. They are prickly and cause injuries on touch, so be careful. They will regrow to up to 3 blocks high when only the top part is harvested. A cruel hunter may line their trap pit with these for a more effective kill."
+		},
+		"IvyBlock:0": {
+			"DisplayName": "Ivy",
+			"Description": "Ivy is a plant that grows and clings to vertical surfaces. It does not require much light to stay alive, but needs a humid and warm climate."
+		},
+		"PumpkinBlock:0": {
+			"DisplayName": "Pumpkin",
+			"Description": "Pumpkins are large, orange vegetables that grow in groups of 5 to 10 plants. When collected, they can be eaten, cooked into pumpkin soup or crafted into Jack O'Lanterns."
+		},
+		"RottenPumpkinBlock:0": {
+			"DisplayName": "Rotten Pumpkin",
+			"Description": "Rotten pumpkin, do not eat."
+		},
+		"SeedsBlock:0": {
+			"DisplayName": "",
+			"Description": "Seeds are used to plant various types of plants, such as grass, flowers and rye. Some plants need well tilled, moist and fertilized soil to grow properly. Otherwise their growth will be stunted and they will not reach full size.",
+			"CRDescription:0": "Extract seeds from tall grass"
+		},
+		"CottonBlock:0": {
+			"DisplayName": "Cotton",
+			"Description": "Cotton is a plant that grows in warm areas. When harvested, provides a number of cotton wads which can be further processed into cotton products."
+		},
+		"CottonWadBlock:0": {
+			"DisplayName": "Cotton Wad",
+			"Description": "Cotton wads are small chunks of packed cotton fibers. They can be processed further into cotton products."
+		},
+		"SeaUrchinBlock:0": {
+			"DisplayName": "Sea Urchin",
+			"Description": "Sea urchins are small, spiny animals that attach themselves to the sea floor and make a living by filtering nutrients from seawater. They are edible but not very tasty or nutritious."
+		},
+		"StarfishBlock:0": {
+			"DisplayName": "Starfish",
+			"Description": "Starfish are underwater predators that move slowly over the sea bottom."
+		},
+		"KelpBlock:0": {
+			"DisplayName": "Kelp",
+			"Description": "Kelp is undersea plant anchored to the sea bottom that reaches up to get access to sunlight. Watch out when swimming because you can get entangled and drown."
+		},
+		"SeagrassBlock:0": {
+			"DisplayName": "Seagrass",
+			"Description": "Seagrass is undersea plant anchored to the sea bottom that reaches up to get access to sunlight. Watch out when swimming because you can get entangled and drown."
+		},
+		"PlanksBlock:0": {
+			"DisplayName": "Planks",
+			"Description": "Planks are a versatile construction material that can be obtained by cutting wood blocks into pieces. A multitude of useful objects, such as a workbench or a chest can be made from planks. Planks are flammable and can be used as a fuel in the furnace. Can be painted.",
+			"CRDescription:0": "Cut a block of wood into planks",
+			"CRDescription:1": "Dismantle wicker lamp"
+		},
+		"CobblestoneBlock:0": {
+			"DisplayName": "Cobblestone",
+			"Description": "Cobblestone is a tough stone obtained by mining granite. It is a strong, rugged material that works well when used in construction of walls and floors. By smelting it in a furnace you can obtain pure granite of which it is made. Can be painted."
+		},
+		"StoneBrickBlock:0": {
+			"DisplayName": "Stone Bricks",
+			"Description": "Stone bricks can be made by binding together several stones of regular shape. They are a strong building material, very resilient to explosions and digging.",
+			"CRDescription:0": "Make stone bricks out of stones"
+		},
+		"BricksBlock:0": {
+			"DisplayName": "Brick Wall",
+			"Description": "Brick wall can be made by combining several bricks together and binding them with mortar. It is a versatile, strong and good looking building material. Brick walls which are no longer needed can be recycled back into constituent bricks. Can be painted.",
+			"CRDescription:0": "Make brick wall out of bricks"
+		},
+		"MarbleBlock:0": {
+			"DisplayName": "Marble",
+			"Description": "A beautiful decorative stone that can be obtained by melting together sand and limestone in a furnace. It is a brittle material that breaks easily.",
+			"CRDescription:0": "Melt sand with limestone to obtain marble"
+		},
+		"MalachiteBlock:0": {
+			"DisplayName": "Malachite Block",
+			"Description": "A block of malachite can be made by combining together many smaller malachite chunks. This material is very decorative but also brittle.",
+			"CRDescription:0": "Combine many malachite chunks into a large block"
+		},
+		"DiamondBlock:0": {
+			"DisplayName": "Solid Diamond Block",
+			"Description": "A block of diamond. Extremely valuable, contains multiple diamond crystals combined into one large block. Good for decorative purposes. Be careful, because diamond is flammable and will burn when touched by magma or set on fire by a lightning.",
+			"CRDescription:0": "Combine many diamonds into a large block"
+		},
+		"IronBlock:0": {
+			"DisplayName": "Solid Iron Block",
+			"Description": "A block of pure iron. Very heavy and durable. Extremely resilient to digging and explosions. Can be crafted from multiple iron ingots. Can be painted.",
+			"CRDescription:0": "Combine many iron ingots into a large block"
+		},
+		"CopperBlock:0": {
+			"DisplayName": "Solid Copper Block",
+			"Description": "A block of pure copper. Very heavy and durable. Extremely resilient to digging and explosions. Can be crafted from multiple copper ingots. Can be painted.",
+			"CRDescription:0": "Combine many copper ingots into a large block"
+		},
+		"SemiconductorBlock:0": {
+			"DisplayName": "Semiconductor Block",
+			"Description": "A block of semiconductor.",
+			"CRDescription:0": "Combine many germanium crystals into a semiconductor block"
+		},
+		"GlassBlock:0": {
+			"DisplayName": "Glass",
+			"Description": "Transparent block made by smelting sand in the furnace. Very useful for making windows and brightening up dark rooms. It is a very brittle material that will irrecoverably shatter when hit by something hard.",
+			"CRDescription:0": "Melt sand to obtain glass"
+		},
+		"FramedGlassBlock:0": {
+			"DisplayName": "Framed Glass",
+			"Description": "A glass block can be made stronger and more decorative by framing it in wooden sticks. Perfect for making windows.",
+			"CRDescription:0": "Frame glass with wood"
+		},
+		"WindowBlock:0": {
+			"DisplayName": "Window",
+			"Description": "A glass block can be made stronger and more decorative by framing it in wooden sticks. Perfect for making windows.",
+			"CRDescription:0": "Frame glass with wood"
+		},
+		"WoodenStairsBlock:0": {
+			"DisplayName": "Wooden Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"StoneStairsBlock:0": {
+			"DisplayName": "Stone Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"CobblestoneStairsBlock:0": {
+			"DisplayName": "Cobblestone Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"StoneBrickStairsBlock:0": {
+			"DisplayName": "Stone Brick Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"BrickStairsBlock:0": {
+			"DisplayName": "Brick Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"SandstoneStairsBlock:0": {
+			"DisplayName": "Sandstone Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"MarbleStairsBlock:0": {
+			"DisplayName": "Marble Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"BasaltStairsBlock:0": {
+			"DisplayName": "Basalt Stairs",
+			"Description": "Stairs make it easy to climb slopes. You no longer need to constantly jump and climb vertical faces, instead you move faster, saving time and energy. Stairs can be crafted from various materials. Stairs can also be placed upside-down on the ceilings. Can be painted.",
+			"CRDescription:0": "Make stairs to be able to climb heights quicker"
+		},
+		"WoodenSlabBlock:0": {
+			"DisplayName": "Wooden Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"StoneSlabBlock:0": {
+			"DisplayName": "Stone Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"CobblestoneSlabBlock:0": {
+			"DisplayName": "Cobblestone Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"StoneBrickSlabBlock:0": {
+			"DisplayName": "Stone Brick Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"BrickSlabBlock:0": {
+			"DisplayName": "Brick Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"SandstoneSlabBlock:0": {
+			"DisplayName": "Sandstone Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"MarbleSlabBlock:0": {
+			"DisplayName": "Marble Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"BasaltSlabBlock:0": {
+			"DisplayName": "Basalt Slab",
+			"Description": "Slabs are half-height blocks, which can be crafted from a variety of different materials. They can be used to cover floors at a cheaper cost than full size blocks. They can also be used to make long stairs, where each unit of length moves one up by a half unit of height. Slabs can also be affixed to the ceilings. Can be painted.",
+			"CRDescription:0": "Make slabs for decoration purposes"
+		},
+		"BrickBlock:0": {
+			"DisplayName": "Brick",
+			"Description": "Bricks are obtained by firing clay blocks in the furnace. They are the most versatile building material available, because objects constructed from bricks can be broken down into the constituent bricks if no longer needed.",
+			"CRDescription:0": "Fire clay to make bricks",
+			"CRDescription:1": "Recycle bricks from a brick wall",
+			"CRDescription:2": "Recycle bricks from brick stairs",
+			"CRDescription:3": "Recycle bricks from a brick slab"
+		},
+		"SnowballBlock:0": {
+			"DisplayName": "Snowball",
+			"Description": "Snowballs are made by compacting snow in one's hands. Soft and light, they can be thrown without risk of inflicting damage on the surroundings or injuries in the bystanders. Perfect for fun fights. Be careful when throwing them at dangerous animals, they will usually take a dim view of that."
+		},
+		"WoodenDoorBlock:0": {
+			"DisplayName": "Wooden Door",
+			"Description": "Doors are used to make entrances to buildings. They can be opened and closed by clicking on them. When connected to a copper wire, doors will open or close on the rising edge of electric signal. Iron doors cannot be operated manually when electrically connected.",
+			"CRDescription:0": "Make doors from wood"
+		},
+		"IronDoorBlock:0": {
+			"DisplayName": "Iron Door",
+			"Description": "Doors are used to make entrances to buildings. They can be opened and closed by clicking on them. When connected to a copper wire, doors will open or close on the rising edge of electric signal. Iron doors cannot be operated manually when electrically connected.",
+			"CRDescription:0": "Make strong doors from iron"
+		},
+		"CellDoorBlock:0": {
+			"DisplayName": "Cell Door",
+			"Description": "Doors are used to make entrances to buildings. They can be opened and closed by clicking on them. When connected to a copper wire, doors will open or close on the rising edge of electric signal. Iron doors cannot be operated manually when electrically connected.",
+			"CRDescription:0": "Make cell doors from rods"
+		},
+		"WoodenTrapdoorBlock:0": {
+			"DisplayName": "Wooden Trapdoor",
+			"Description": "Trapdoors are used to make vertical entrances to buildings. They can be opened and closed by clicking on them. When connected to a copper wire, trapdoors will open or close on the rising edge of electric signal. Iron trapdoors cannot be operated manually when electrically connected. They can be placed normally or upside-down, depending whether they are attached to top or bottom side of the block. Upside-down trapdoors will stop falling blocks.",
+			"CRDescription:0": "Make trapdoors from wood"
+		},
+		"CellTrapdoorBlock:0": {
+			"DisplayName": "Cell Trapdoor",
+			"Description": "Trapdoors are used to make vertical entrances to buildings. They can be opened and closed by clicking on them. When connected to a copper wire, trapdoors will open or close on the rising edge of electric signal. Iron trapdoors cannot be operated manually when electrically connected. They can be placed normally or upside-down, depending whether they are attached to top or bottom side of the block. Upside-down trapdoors will stop falling blocks.",
+			"CRDescription:0": "Make strong trapdoors from iron"
+		},
+		"WoodenLadderBlock:0": {
+			"DisplayName": "Wooden Ladder",
+			"Description": "Ladders are made from sticks or rods. They make it easy to climb and descend tall walls safely. It's safest to climb both up and down facing the wall. That means you have to approach backwards when entering the ladder from the top.",
+			"CRDescription:0": "Make wooden ladders to be able to climb vertical surfaces"
+		},
+		"IronLadderBlock:0": {
+			"DisplayName": "Iron Ladder",
+			"Description": "Ladders are made from sticks or rods. They make it easy to climb and descend tall walls safely. It's safest to climb both up and down facing the wall. That means you have to approach backwards when entering the ladder from the top.",
+			"CRDescription:0": "Make iron ladders to be able to climb vertical surfaces"
+		},
+		"WickerLampBlock:0": {
+			"DisplayName": "Wicker Lamp",
+			"Description": "Wicker lamp is a torch placed inside a wooden and wicker shade. It gives off slightly more light than the pure torch and is a nice, decorative item.",
+			"CRDescription:0": "Put a torch inside of a shade to make a lamp"
+		},
+		"TorchBlock:0": {
+			"DisplayName": "Torch",
+			"Description": "Torch is a piece of flammable coal affixed to a wooden stick. When attached to a wall or placed on the floor, it emits light. It is the easiest and cheapest way to light interiors of buildings or underground corridors.",
+			"CRDescription:0": "Affix a burning coal to a stick to make a torch"
+		},
+		"StickBlock:0": {
+			"DisplayName": "Stick",
+			"Description": "Sticks are made by cutting wooden planks into pieces. They are a versatile building material used in construction of many items, such as torches, ladders or fences. They can also be used as a last resort weapon or tool, although their attack power is low.",
+			"CRDescription:0": "Cut a wooden plank into sticks"
+		},
+		"IronIngotBlock:0": {
+			"DisplayName": "Iron Ingot",
+			"Description": "An ingot of pure iron. Can be crafted into very durable and strong iron tools. Only diamond-edged tools can best them. Combine multiple ingots to form an iron block.",
+			"CRDescription:0": "Smelt iron ore to obtain iron",
+			"CRDescription:1": "Dismantle iron block into ingots"
+		},
+		"CopperIngotBlock:0": {
+			"DisplayName": "Copper Ingot",
+			"Description": "An ingot of pure copper. Can be crafted into copper tools, such as buckets, wires and other electric devices. Combine multiple ingots to form a copper block.",
+			"CRDescription:0": "Smelt copper ore to obtain copper",
+			"CRDescription:1": "Dismantle copper block into ingots"
+		},
+		"RodBlock:0": {
+			"DisplayName": "Rod",
+			"Description": "Rods are made by forging iron into shape. They are useful for making fences, doors and other things.",
+			"CRDescription:0": "Forge an iron ingot into rods"
+		},
+		"CraftingTableBlock:0": {
+			"DisplayName": "Workbench",
+			"Description": "Workbench is a piece of workshop furniture made of wood. It is a very important item, because it allows you to craft items that require more than 2x2 crafting slots. All craftable items can be made on it, provided that you have the required materials.",
+			"CRDescription:0": "Make a crafting table from planks"
+		},
+		"FurnaceBlock:0": {
+			"DisplayName": "Furnace",
+			"Description": "A furnace is an enclosure made from fire resistant stone, in which a high temperature is maintained by burning combustible fuel. It is an important item that allows smelting, cooking and other forms of heat processing. The best fuel for the furnace are coal chunks, but wood and even leaves can be used if coal is unavailable. Furnace can be left unattended while working. It also emits a small amount of light.",
+			"CRDescription:0": "Make a furnace from stone"
+		},
+		"LitFurnaceBlock:0": {
+			"DisplayName": "Furnace",
+			"Description": "A furnace is an enclosure made from fire resistant stone, in which a high temperature is maintained by burning combustible fuel. It is an important item that allows smelting, cooking and other forms of heat processing. The best fuel for the furnace are coal chunks, but wood and even leaves can be used if coal is unavailable. Furnace can be left unattended while working. It also emits a small amount of light."
+		},
+		"ChestBlock:0": {
+			"DisplayName": "Chest",
+			"Description": "A chest made of wood is a good place to store excess items that you can't or don't want to carry. It will hold up to 16 stacks of items.",
+			"CRDescription:0": "Make a storage chest from planks"
+		},
+		"DispenserBlock:0": {
+			"DisplayName": "Dispenser",
+			"Description": "A dispenser stores items in a similar way to a chest, but allows dispensing them through the hole when triggered via rising edge of an electric signal. It can either dispense the item or shoot it as projectile, depending on the setting.",
+			"CRDescription:0": "Make a dispenser from planks, bow and germanium"
+		},
+		"SpikedPlankBlock:0": {
+			"DisplayName": "Spiked Plank",
+			"Description": "Wooden spikes penetrate flesh. The spiked planks can be placed on the floor, on the walls and on the ceiling. Touching them will cause injury. Trap pits are often lined with them. Spikes can be electrically controlled and will extend\/retract on a rising edge of an electric signal.",
+			"CRDescription:0": "Make sharp spiked planks from wood and sticks"
+		},
+		"GrassTrapBlock:0": {
+			"DisplayName": "Grass Trap",
+			"Description": "Grass trap is a deception device that resembles grass but collapses when something heavy stands on it. It's used for concealing traps so that an animal, unwary of the trap will walk on it and fall into the pit. It can only be crafted from oak leaves, no other leaves will work.",
+			"CRDescription:0": "Make grass trap from oak leaves to conceal deep pits"
+		},
+		"WoodenFenceBlock:0": {
+			"DisplayName": "Wooden Fence",
+			"Description": "Fences are used to enclose areas and prevent animals from going outside and predators from coming inside. Fence posts can be used as pillars or furniture elements. Can be painted.",
+			"CRDescription:0": "Make a fence from wooden sticks to enclose areas"
+		},
+		"WoodenFenceGateBlock:0": {
+			"DisplayName": "Wooden Fence Gate",
+			"Description": "Gates are used to make entrances to fenced areas. They can be opened and closed by clicking on them. When connected to a copper wire, gates will open or close on the rising edge of electric signal. Animals can't jump a fence gate. Can be painted.",
+			"CRDescription:0": "Make a fence gate from wooden sticks and planks"
+		},
+		"IronFenceBlock:0": {
+			"DisplayName": "Iron Fence",
+			"Description": "Fences are used to enclose areas and prevent animals from going outside and predators from coming inside. Fence posts can be used as pillars or furniture elements. Can be painted.",
+			"CRDescription:0": "Make a fence from rods to enclose areas"
+		},
+		"IronFenceGateBlock:0": {
+			"DisplayName": "Iron Fence Gate",
+			"Description": "Gates are used to make entrances to fenced areas. They can be opened and closed by clicking on them. When connected to a copper wire, gates will open or close on the rising edge of electric signal. Animals can't jump a fence gate. Can be painted.",
+			"CRDescription:0": "Make a fence gate from rods and ingots"
+		},
+		"StoneFenceBlock:0": {
+			"DisplayName": "Stone Fence",
+			"Description": "Fences are used to enclose areas and prevent animals from going outside and predators from coming inside. Fence posts can be used as pillars or furniture elements. Can be painted.",
+			"CRDescription:0": "Make a fence from stone to enclose areas"
+		},
+		"BrickFenceBlock:0": {
+			"DisplayName": "Brick Fence",
+			"Description": "Fences are used to enclose areas and prevent animals from going outside and predators from coming inside. Fence posts can be used as pillars or furniture elements. Can be painted.",
+			"CRDescription:0": "Make a fence from bricks to enclose areas"
+		},
+		"BasaltFenceBlock:0": {
+			"DisplayName": "Basalt Fence",
+			"Description": "Fences are used to enclose areas and prevent animals from going outside and predators from coming inside. Fence posts can be used as pillars or furniture elements. Can be painted.",
+			"CRDescription:0": "Make a fence from basalt to enclose areas"
+		},
+		"WoodenPostedSignBlock:0": {
+			"DisplayName": "Wooden Sign",
+			"Description": "Signs can contain up to 4 lines of black or colored text. They can be affixed to a vertical surface, placed on a post anchored in the ground, or hung from the ceiling. A sign can be made to act as an internet link by specifying a URL (URLs only work in Adventure mode). When attached to a copper wire, the sign message will be displayed on the screen on the rising edge of an electric signal. Use \\ (backslash) to continue message in the same line. Can be painted.",
+			"CRDescription:0": "Make printable wooden signs from wood"
+		},
+		"WoodenAttachedSignBlock:0": {
+			"DisplayName": "Wooden Sign",
+			"Description": ""
+		},
+		"IronPostedSignBlock:0": {
+			"DisplayName": "Iron Sign",
+			"Description": "Signs can contain up to 4 lines of black or colored text. They can be affixed to a vertical surface, placed on a post anchored in the ground, or hung from the ceiling. A sign can be made to act as an internet link by specifying a URL (URLs only work in Adventure mode). When attached to a copper wire, the sign message will be displayed on the screen on the rising edge of an electric signal. Use \\ (backslash) to continue message in the same line. Can be painted.",
+			"CRDescription:0": "Make printable metal signs from iron"
+		},
+		"IronAttachedSignBlock:0": {
+			"DisplayName": "Iron Sign",
+			"Description": ""
+		},
+		"SmallGunpowderKegBlock:0": {
+			"DisplayName": "Small Gunpowder Keg",
+			"Description": "Gunpowder keg is a sealed, wooden container filled with gunpowder, with a short fuse attached on the top. The fuse can be lit with a match or initiated electrically. The keg will explode after several seconds with devastating force, destroying blocks and killing any creatures within the blast range. Certain blocks, such as stone, iron and diamond are more resilient to explosions than others. Use detonators to cause an instantaneous explosion without fuse delay.",
+			"CRDescription:0": "Put gunpowder in a sealed keg to make it explode"
+		},
+		"MediumGunpowderKegBlock:0": {
+			"DisplayName": "Medium Gunpowder Keg",
+			"Description": "Gunpowder keg is a sealed, wooden container filled with gunpowder, with a short fuse attached on the top. The fuse can be lit with a match or initiated electrically. The keg will explode after several seconds with devastating force, destroying blocks and killing any creatures within the blast range. Certain blocks, such as stone, iron and diamond are more resilient to explosions than others. Use detonators to cause an instantaneous explosion without fuse delay.",
+			"CRDescription:0": "Put gunpowder in a sealed keg to make it explode"
+		},
+		"LargeGunpowderKegBlock:0": {
+			"DisplayName": "Large Gunpowder Keg",
+			"Description": "Gunpowder keg is a sealed, wooden container filled with gunpowder, with a short fuse attached on the top. The fuse can be lit with a match or initiated electrically. The keg will explode after several seconds with devastating force, destroying blocks and killing any creatures within the blast range. Certain blocks, such as stone, iron and diamond are more resilient to explosions than others. Use detonators to cause an instantaneous explosion without fuse delay.",
+			"CRDescription:0": "Put gunpowder in a sealed keg to make it explode"
+		},
+		"SmallIncendiaryKegBlock:0": {
+			"DisplayName": "Small Incendiary Keg",
+			"Description": "Incendiary keg is a gunpowder keg with added incendiary materials. It is weaker than regular gunpowder keg but its debris sets flammable objects on fire. Do not use near forests!",
+			"CRDescription:0": "Add sulphur to a gunpowder keg to make it incendiary"
+		},
+		"MediumIncendiaryKegBlock:0": {
+			"DisplayName": "Medium Incendiary Keg",
+			"Description": "Incendiary keg is a gunpowder keg with added incendiary materials. It is weaker than regular gunpowder keg but its debris sets flammable objects on fire. Do not use near forests!",
+			"CRDescription:0": "Add sulphur to a gunpowder keg to make it incendiary"
+		},
+		"LargeIncendiaryKegBlock:0": {
+			"DisplayName": "Large Incendiary Keg",
+			"Description": "Incendiary keg is a gunpowder keg with added incendiary materials. It is weaker than regular gunpowder keg but its debris sets flammable objects on fire. Do not use near forests!",
+			"CRDescription:0": "Add sulphur to a gunpowder keg to make it incendiary"
+		},
+		"GravestoneBlock:0": {
+			"DisplayName": "Gravestone",
+			"Description": "Gravestone marks a final resting place of past inhabitant of this land.",
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"BoatBlock:0": {
+			"DisplayName": "Boat",
+			"Description": "Boat allows you to cross large areas of water safely and quickly.",
+			"CRDescription:0": "Craft boat from planks"
+		},
+		"FeatherBlock:0": {
+			"DisplayName": "Feather",
+			"Description": "Feathers come from birds' tails and can be used as stabilizers in arrows."
+		},
+		"StringBlock:0": {
+			"DisplayName": "String",
+			"Description": "Strings can be made from ivy.",
+			"CRDescription:0": "Make a string from ivy",
+			"CRDescription:1": "Make strings from cotton"
+		},
+		"CanvasBlock:0": {
+			"DisplayName": "Canvas",
+			"Description": "Canvas is a heavy fabric woven of cotton threads. It is good for making light clothes.",
+			"CRDescription:0": "Make sheets of canvas from cotton"
+		},
+		"CarpetBlock:0": {
+			"DisplayName": "Carpet",
+			"Description": "Carpet is a decorative material laid on the floor. Can be dyed by bathing in a paint bucket in a heated furnace.",
+			"CRDescription:0": "Make carpet from canvas"
+		},
+		"CampfireBlock:0": {
+			"DisplayName": "Campfire",
+			"Description": "Campfire is easy to construct, provides heat, light and keeps predators away. You can make it bigger by throwing combustible items on top, such as sticks, leaves, wood blocks, planks etc.",
+			"CRDescription:0": "Craft campfire from sticks"
+		},
+		"GunpowderBlock:0": {
+			"DisplayName": "Gunpowder",
+			"Description": "A substance capable of burning in an oxygenless environment because it contains its own source of oxygen, saltpeter. When burning, gunpowder emits large amounts of hot gases. Will explode with devastating force if confined in a small volume, such as a keg, and ignited.",
+			"CRDescription:0": "Combine coal, sulphur and saltpeter to make gunpowder"
+		},
+		"PigmentBlock:0": {
+			"DisplayName": "White Pigment",
+			"Description": "Pigment is the main constituent of paints. It can be obtained by firing limestone in the furnace until it turns to white powder. To make white paint, boil the pigment in water using the furnace.",
+			"CRDescription:0": "Fire limestone to make white pigment"
+		},
+		"JackOLanternBlock:0": {
+			"DisplayName": "Jack O'Lantern",
+			"Description": "Jack O'Lanterns are usually carved from ripe pumpkins during Halloween. They emit weak light.",
+			"CRDescription:0": "When Halloween comes, carve Jack O'Lanterns from pumpkins and torches"
+		},
+		"MagnetBlock:0": {
+			"DisplayName": "Magnet",
+			"Description": "Magnets attract compass needle allowing you to find direction home while out in the wild. Don't forget to place one close to your house! The compass will show direction to the nearest magnet, or to spawn location if there are no magnets. You can only place a limited number of magnets in the world.",
+			"CRDescription:0": "Make a magnet to set attraction point for the compass"
+		},
+		"FurBlock:0": {
+			"DisplayName": "Fur",
+			"Description": "Fur can be obtained by killing furry animals such as bears. It is a strong material with good insulating properties, perfect for making winter clothes."
+		},
+		"LeatherBlock:0": {
+			"DisplayName": "Leather",
+			"Description": "Leather can be obtained by killing certain animals. It is a versatile material that can be used as a extremely durable, wear and tear resistant and waterproof fabric. It is also used to make saddles."
+		},
+		"SaddleBlock:0": {
+			"DisplayName": "Saddle",
+			"Description": "Saddle makes it possible to ride horses and other animals. A horse without a saddle will quickly dump the rider and run away.",
+			"CRDescription:0": "Craft saddle from leather to be able to ride on other animals"
+		},
+		"ChristmasTreeBlock:0": {
+			"DisplayName": "Christmas Tree",
+			"Description": "A must have for Christmas! A Christmas Tree is made from spruce leaves.",
+			"CRDescription:0": "Make a Christmas Tree from spruce cuttings"
+		},
+		"FurnitureBlock:0": {
+			"DisplayName": "Furniture",
+			"Description": "Furniture blocks consist of small sub-blocks that can be made of different materials. Create new furniture by using hammer on a design created in the world from full size blocks. Furniture can be made interactive or work with electricity by combining it with other items on the crafting table."
+		},
+		"TreasureGeneratorBlock:0": {
+			"DisplayName": "Treasure Generator",
+			"Description": ""
+		},
+		"ExperienceBlock:0": {
+			"DisplayName": "Experience Orb",
+			"Description": "Gives experience when collected by a player"
+		},
+		"ClothingBlock:0": {
+			"DisplayName": "Old Pants",
+			"Description": "Old pants you wore when being abandoned on this land. Can be dyed. Almost no protection. Weak insulation."
+		},
+		"EggBlock:0": {
+			"DisplayName": "Egg",
+			"Description": "Spawner egg. Bird eggs are occasionally laid by adult birds. If you look carefully, you may find and eat them. Cooking an egg will increase its nutritional value. Non-bird eggs are available in creative mode only and can be used to spawn all other animals. To spawn an animal in creative mode, throw the egg against a hard surface to smash it. Spawner eggs of some exotic animals are unavailable even in creative mode."
+		},
+		"StoneAxeBlock:0": {
+			"DisplayName": "Stone Axe",
+			"Description": "Stone axe is a primitive tool that can equally be used for digging, cutting wood and quarrying rocks. It greatly speeds up the process, but it will quickly get damaged and fail. Stone axe is a poor melee weapon, make a club if you want to fight. You should progress to specialized tools made of metals.",
+			"CRDescription:0": "Make a stone tool",
+			"CRDescription:1": "Make a stone tool",
+			"CRDescription:2": "Make a stone tool"
+		},
+		"CopperAxeBlock:0": {
+			"DisplayName": "Copper Axe",
+			"Description": "Axes are tools for cutting soft blocks, such as wood, furniture or leaves. They greatly speed up the cutting process, but eventually they will get damaged and fail. Axes made of better materials last longer and cut faster. Axe is also a powerful weapon, although it is very difficult to hit a moving target.",
+			"CRDescription:0": "Make a copper tool"
+		},
+		"IronAxeBlock:0": {
+			"DisplayName": "Iron Axe",
+			"Description": "Axes are tools for cutting soft blocks, such as wood, furniture or leaves. They greatly speed up the cutting process, but eventually they will get damaged and fail. Axes made of better materials last longer and cut faster. Axe is also a powerful weapon, although it is very difficult to hit a moving target.",
+			"CRDescription:0": "Make an iron tool"
+		},
+		"DiamondAxeBlock:0": {
+			"DisplayName": "Diamond Edge Axe",
+			"Description": "Axes are tools for cutting soft blocks, such as wood, furniture or leaves. They greatly speed up the cutting process, but eventually they will get damaged and fail. Axes made of better materials last longer and cut faster. Axe is also a powerful weapon, although it is very difficult to hit a moving target.",
+			"CRDescription:0": "Add diamonds to the working edge of the tool"
+		},
+		"CopperShovelBlock:0": {
+			"DisplayName": "Copper Shovel",
+			"Description": "Shovels are tools for digging blocks made of loose material, such as sand or gravel. They greatly speed up the digging process, but eventually they will get damaged and fail. Shovels made of better materials last longer and dig faster.",
+			"CRDescription:0": "Make a copper tool"
+		},
+		"IronShovelBlock:0": {
+			"DisplayName": "Iron Shovel",
+			"Description": "Shovels are tools for digging blocks made of loose material, such as sand or gravel. They greatly speed up the digging process, but eventually they will get damaged and fail. Shovels made of better materials last longer and dig faster.",
+			"CRDescription:0": "Make an iron tool"
+		},
+		"DiamondShovelBlock:0": {
+			"DisplayName": "Diamond Edge Shovel",
+			"Description": "Shovels are tools for digging blocks made of loose material, such as sand or gravel. They greatly speed up the digging process, but eventually they will get damaged and fail. Shovels made of better materials last longer and dig faster.",
+			"CRDescription:0": "Add diamonds to the working edge of the tool"
+		},
+		"CopperPickaxeBlock:0": {
+			"DisplayName": "Copper Pickaxe",
+			"Description": "Pickaxes are tools for quarrying hard blocks, such as stone or ice. They greatly speed up the quarrying process, but eventually they will get damaged and fail. Pickaxes made of better materials last longer and quarry faster.",
+			"CRDescription:0": "Make a copper tool"
+		},
+		"IronPickaxeBlock:0": {
+			"DisplayName": "Iron Pickaxe",
+			"Description": "Pickaxes are tools for quarrying hard blocks, such as stone or ice. They greatly speed up the quarrying process, but eventually they will get damaged and fail. Pickaxes made of better materials last longer and quarry faster.",
+			"CRDescription:0": "Make an iron tool"
+		},
+		"DiamondPickaxeBlock:0": {
+			"DisplayName": "Diamond Tip Pickaxe",
+			"Description": "Pickaxes are tools for quarrying hard blocks, such as stone or ice. They greatly speed up the quarrying process, but eventually they will get damaged and fail. Pickaxes made of better materials last longer and quarry faster.",
+			"CRDescription:0": "Add diamonds to the working edge of the tool"
+		},
+		"WoodenRakeBlock:0": {
+			"DisplayName": "Wooden Rake",
+			"Description": "Rakes are tools for turning dirt into soil. After the soil has been created by a rake, it is ready to be planted. The rake will eventually get damaged and fail. Rakes made of better materials last longer.",
+			"CRDescription:0": "Make a wooden tool"
+		},
+		"CopperRakeBlock:0": {
+			"DisplayName": "Copper Rake",
+			"Description": "Rakes are tools for turning dirt into soil. After the soil has been created by a rake, it is ready to be planted. The rake will eventually get damaged and fail. Rakes made of better materials last longer.",
+			"CRDescription:0": "Make a copper tool"
+		},
+		"IronRakeBlock:0": {
+			"DisplayName": "Iron Rake",
+			"Description": "Rakes are tools for turning dirt into soil. After the soil has been created by a rake, it is ready to be planted. The rake will eventually get damaged and fail. Rakes made of better materials last longer.",
+			"CRDescription:0": "Make an iron tool"
+		},
+		"DiamondRakeBlock:0": {
+			"DisplayName": "Diamond Spikes Rake",
+			"Description": "Rakes are tools for turning dirt into soil. After the soil has been created by a rake, it is ready to be planted. The rake will eventually get damaged and fail. Rakes made of better materials last longer.",
+			"CRDescription:0": "Add diamonds to the working edge of the tool"
+		},
+		"EmptyBucketBlock:0": {
+			"DisplayName": "Bucket",
+			"Description": "Bucket is a container made of copper and used to carry fluids, such as water, magma or milk. Bucket can be filled with the fluid at a source block and transported to a different location, where the source block can be placed to start a new body of fluid. You cannot fill the bucket from a non-source block.",
+			"CRDescription:0": "Make a copper tool"
+		},
+		"WaterBucketBlock:0": {
+			"DisplayName": "Water Bucket",
+			"Description": "Bucket is a container made of copper and used to carry fluids, such as water, magma or milk. Bucket can be filled with the fluid at a source block and transported to a different location, where the source block can be placed to start a new body of fluid. You cannot fill the bucket from a non-source block."
+		},
+		"MagmaBucketBlock:0": {
+			"DisplayName": "Magma Bucket",
+			"Description": "Bucket is a container made of copper and used to carry fluids, such as water, magma or milk. Bucket can be filled with the fluid at a source block and transported to a different location, where the source block can be placed to start a new body of fluid. You cannot fill the bucket from a non-source block."
+		},
+		"PaintStripperBucketBlock:0": {
+			"DisplayName": "Paint Stripper Bucket",
+			"Description": "A bucket full of paint stripper. Can be used to strip paint from previously painted surfaces and bring them to original appearance.",
+			"CRDescription:0": "Dissolve saltpeter in water to make paint stripper"
+		},
+		"PaintBucketBlock:0": {
+			"DisplayName": "Paint Bucket",
+			"Description": "A bucket full of paint. Can be used to paint surfaces for decorative purposes. Different colors of paint are obtained by dissolving colored ingredients, such as malachite or purple flowers into white paint.",
+			"CRDescription:0": "Dissolve white pigment in water to make white paint"
+		},
+		"MatchBlock:0": {
+			"DisplayName": "Match",
+			"Description": "A piece of sulphur on a stick, can be used to start fires. Be very careful when walking with matches because it is very easy to accidentally start a fire that may go out of control. Can be used to ignite fuses and as a weapon to set other animals on fire.",
+			"CRDescription:0": "Make a match to be able to start fires"
+		},
+		"CompassBlock:0": {
+			"DisplayName": "Compass",
+			"Description": "Compass points to the location of the place of last sleep or to the nearest magnet, if present. It is indispensable when finding your way home on far away journeys.",
+			"CRDescription:0": "Make a compass to always know the way home"
+		},
+		"ThermometerBlock:0": {
+			"DisplayName": "Thermometer",
+			"Description": "Thermometer displays ambient temperature. It is an important tool when planting trees. Oaks like it warm, birches moderately cool and spruces cold. Planting a tree in a wrong ambient temperature will cause the sapling to wilt. It is also an electric element that outputs analog signal corresponding to the surrounding temperature.",
+			"CRDescription:0": "Make a thermometer to measure ambient temperature"
+		},
+		"HygrometerBlock:0": {
+			"DisplayName": "Hygrometer",
+			"Description": "Hygrometer displays humidity of the surrounding area. It is an important tool when planting trees. All trees need a lot of humidity to grow. When a tree is planted an area which is too dry, the sapling will wilt. It is also an electric element that outputs analog signal corresponding to the surrounding humidity.",
+			"CRDescription:0": "Make a hydrometer to measure ambient humidity"
+		},
+		"IronHammerBlock:0": {
+			"DisplayName": "Iron Hammer",
+			"Description": "Hammer is used to create furniture from blocks placed in the world.",
+			"CRDescription:0": "Make an iron tool"
+		},
+		"WhistleBlock:0": {
+			"DisplayName": "Whistle",
+			"Description": "Whistle can be used to summon nearby steeds or drive cattle. Cattle will clump together and move away from the whistling person. You can control them by riding behind and directing them with controlled whistle blows from the sides. Whistle is also perfect for scaring birds.",
+			"CRDescription:0": "Craft whistle from iron"
+		},
+		"WoodenClubBlock:0": {
+			"DisplayName": "Wooden Club",
+			"Description": "A wooden club is a primitive melee weapon, although significantly better than bare hands or a stick. When used frequently, it will quickly get damaged and fail. You should progress to specialized weapons made of metals.",
+			"CRDescription:0": "Make a wooden weapon"
+		},
+		"StoneClubBlock:0": {
+			"DisplayName": "Stone Club",
+			"Description": "A stone club is a primitive melee weapon, although significantly better than bare hands or a stick. When used frequently, it will quickly get damaged and fail. You should progress to specialized weapons made of metals.",
+			"CRDescription:0": "Make a stone weapon"
+		},
+		"WoodenSpearBlock:0": {
+			"DisplayName": "Wooden Spear",
+			"Description": "A spear is a versatile weapon that can be both thrown and used for melee attacks. When used, it will eventually lose its sharpness and fail. Spears made with better materials will last longer and cause more damage. Thrown spears will stick in soft materials. It may be hard to remove a spear which embedded itself too hard.",
+			"CRDescription:0": "Make a wooden weapon"
+		},
+		"StoneSpearBlock:0": {
+			"DisplayName": "Stone Spear",
+			"Description": "A spear is a versatile weapon that can be both thrown and used for melee attacks. When used, it will eventually lose its sharpness and fail. Spears made with better materials will last longer and cause more damage. Thrown spears will stick in soft materials. It may be hard to remove a spear which embedded itself too hard.",
+			"CRDescription:0": "Make a stone weapon"
+		},
+		"CopperSpearBlock:0": {
+			"DisplayName": "Copper Spear",
+			"Description": "A spear is a versatile weapon that can be both thrown and used for melee attacks. When used, it will eventually lose its sharpness and fail. Spears made with better materials will last longer and cause more damage. Thrown spears will stick in soft materials. It may be hard to remove a spear which embedded itself too hard.",
+			"CRDescription:0": "Make a copper weapon"
+		},
+		"IronSpearBlock:0": {
+			"DisplayName": "Iron Spear",
+			"Description": "A spear is a versatile weapon that can be both thrown and used for melee attacks. When used, it will eventually lose its sharpness and fail. Spears made with better materials will last longer and cause more damage. Thrown spears will stick in soft materials. It may be hard to remove a spear which embedded itself too hard.",
+			"CRDescription:0": "Make an iron weapon"
+		},
+		"DiamondSpearBlock:0": {
+			"DisplayName": "Diamond Tip Spear",
+			"Description": "A spear is a versatile weapon that can be both thrown and used for melee attacks. When used, it will eventually lose its sharpness and fail. Spears made with better materials will last longer and cause more damage. Thrown spears will stick in soft materials. It may be hard to remove a spear which embedded itself too hard.",
+			"CRDescription:0": "Add diamonds to the cutting edge of the weapon"
+		},
+		"CopperMacheteBlock:0": {
+			"DisplayName": "Copper Machete",
+			"Description": "A machete is a simple sword like slashing weapon that is very effective for melee attacks. When used, the machete will gradually lose its sharpness and eventually fail. Machetes made of better materials will last longer and cause more damage.",
+			"CRDescription:0": "Make a copper weapon"
+		},
+		"IronMacheteBlock:0": {
+			"DisplayName": "Iron Machete",
+			"Description": "A machete is a simple sword like slashing weapon that is very effective for melee attacks. When used, the machete will gradually lose its sharpness and eventually fail. Machetes made of better materials will last longer and cause more damage.",
+			"CRDescription:0": "Make an iron weapon"
+		},
+		"DiamondMacheteBlock:0": {
+			"DisplayName": "Diamond Edge Machete",
+			"Description": "A machete is a simple sword like slashing weapon that is very effective for melee attacks. When used, the machete will gradually lose its sharpness and eventually fail. Machetes made of better materials will last longer and cause more damage.",
+			"CRDescription:0": "Add diamonds to the cutting edge of the weapon"
+		},
+		"BowBlock:0": {
+			"DisplayName": "Bow",
+			"Description": "A bow can be used to fire various types of arrows.",
+			"CRDescription:0": "Make a bow from sticks and a string"
+		},
+		"CrossbowBlock:0": {
+			"DisplayName": "Crossbow",
+			"Description": "A crossbow can be used to fire various types of bolts.",
+			"CRDescription:0": "Make a crossbow from rods, string and planks"
+		},
+		"MusketBlock:0": {
+			"DisplayName": "Musket",
+			"Description": "A musket can be used to fire musket balls or buckshot. You can also fire single buckshot balls, but the shot is very inaccurate and lacks power.",
+			"CRDescription:0": "Make a musket from iron and planks"
+		},
+		"ArrowBlock:0": {
+			"DisplayName": "Arrow",
+			"Description": "Arrows and bolts are fired from projectile weapons.",
+			"CRDescription:0": "Make wooden-tipped arrow from stick and feathers"
+		},
+		"BulletBlock:0": {
+			"DisplayName": "Bullet",
+			"Description": "Bullets are fired from firearms.",
+			"CRDescription:0": "Make musket balls from iron rods"
+		},
+		"BombBlock:0": {
+			"DisplayName": "Bomb",
+			"Description": "A bomb is a sphere made of iron filled with gunpowder and fitted with a slow-burning fuse. It will explode a few seconds after it is thrown.",
+			"CRDescription:0": "Make throwable bomb by encasing gunpowder in an iron sphere"
+		},
+		"IncendiaryBombBlock:0": {
+			"DisplayName": "Incendiary Bomb",
+			"Description": "An incendiary bomb is a sphere made of iron filled with gunpowder with incendiary materials and fitted with a slow-burning fuse. It will explode a few seconds after it is thrown. It is weaker than a regualr bomb, but its debris sets flammable objects on fire. Do not use in the wooded areas!",
+			"CRDescription:0": "Make throwable incendiary bomb by adding sulphur to a bomb"
+		},
+		"FireworksBlock:0": {
+			"DisplayName": "Fireworks",
+			"Description": "Fireworks burst in the sky creating beautiful patterns. They can be launched by hand, but it's better to launch them en masse using the dispenser. And better still to wire multiple dispensers with electricity and create a beautiful, programmed fireworks display. Fireworks come in 8 colors, 8 shapes, 2 altitude modes (low and high). Additionally each firework can be made to flicker. Color and shape of the head determines color and shape of the burst. Thick shafts burst high, narrow shafts burst low. Red stabilizers indicate flickering."
+		},
+		"FlourBlock:0": {
+			"DisplayName": "Flour",
+			"Description": "Flour is white powder obtained by crushing grains of rye. Mix it with water to make dough.",
+			"CRDescription:0": "Crush rye grains to make flour"
+		},
+		"DoughBlock:0": {
+			"DisplayName": "Dough",
+			"Description": "Dough is obtained by mixing flour with various ingredients. It can be baked into bread.",
+			"CRDescription:0": "Mix flour and water to make bread dough"
+		},
+		"RottenDoughBlock:0": {
+			"DisplayName": "Moldy Dough",
+			"Description": "A moldy piece of dough."
+		},
+		"BreadBlock:0": {
+			"DisplayName": "Bread",
+			"Description": "A loaf of bread. Very tasty and nutritious meal.",
+			"CRDescription:0": "Bake dough to make bread"
+		},
+		"RottenBreadBlock:0": {
+			"DisplayName": "Moldy Bread",
+			"Description": "A moldy loaf of bread. Do not eat."
+		},
+		"RawBirdBlock:0": {
+			"DisplayName": "Raw Bird",
+			"Description": "A bird carcass. Can be consumed raw, but is much more nutritious when cooked in a furnace."
+		},
+		"CookedBirdBlock:0": {
+			"DisplayName": "Cooked Bird",
+			"Description": "Cooked bird meat. Very tasty and nutritious meal.",
+			"CRDescription:0": "Cook raw bird to increase its nutritional value and make it preserve better"
+		},
+		"RottenBirdBlock:0": {
+			"DisplayName": "Rotten Bird",
+			"Description": "Rotten bird meat. Do not eat."
+		},
+		"RawMeatBlock:0": {
+			"DisplayName": "Raw Meat",
+			"Description": "A piece of raw meat. Can be consumed raw, but is much more nutritious when cooked in a furnace."
+		},
+		"CookedMeatBlock:0": {
+			"DisplayName": "Cooked Meat",
+			"Description": "Cooked meat. A very tasty and nutritious meal.",
+			"CRDescription:0": "Cook raw meat to increase its nutritional value and make it preserve better"
+		},
+		"RottenMeatBlock:0": {
+			"DisplayName": "Rotten Meat",
+			"Description": "Rotten meat. Do not eat."
+		},
+		"RawFishBlock:0": {
+			"DisplayName": "Raw Fish",
+			"Description": "A fish carcass. Can be consumed raw, but is much more nutritious when cooked in a furnace."
+		},
+		"CookedFishBlock:0": {
+			"DisplayName": "Cooked Fish",
+			"Description": "Cooked fish. A very tasty and nutritious meal.",
+			"CRDescription:0": "Cook raw fish to increase its nutritional value and make it preserve better"
+		},
+		"RottenFishBlock:0": {
+			"DisplayName": "Rotten Fish",
+			"Description": "Rotten fish. Do not eat."
+		},
+		"MilkBucketBlock:0": {
+			"DisplayName": "Milk",
+			"Description": "A bucket full of milk, can be consumed. Milk is obtained by milking a cow. Be careful of nearby bulls, because they will attack once they sense that someone is too near the cows. Once milked, a cow will slowly regenerate the milk, and after some time it will be available for milking again."
+		},
+		"RottenMilkBucketBlock:0": {
+			"DisplayName": "Spoiled Milk",
+			"Description": "A bucket full of spoiled milk, do not drink."
+		},
+		"RottenEggBlock:0": {
+			"DisplayName": "Rotten Egg",
+			"Description": "Rotten egg. Do not eat."
+		},
+		"PumpkinSoupBucketBlock:0": {
+			"DisplayName": "Pumpkin Soup",
+			"Description": "Pumpkin soup, tasty and nutritious. Can be made by cooking raw pumpkin in a bucket of water."
+		},
+		"RottenPumpkinSoupBucketBlock:0": {
+			"DisplayName": "Rotten Pumpkin Soup",
+			"Description": "Rotten pumpkin soup, do not eat."
+		},
+		"WireBlock:0": {
+			"DisplayName": "Electric Wire",
+			"Description": "A thin wire made of copper, it conducts electricity very well. Used for making electric circuits. Wire can be placed on any surface and connections with all nearby wires will be created automatically. A wire will connect between edges of diagonally adjacent blocks, allowing you to make hidden connections.",
+			"CRDescription:0": "Work copper ingots into a length of electric wire"
+		},
+		"NotGateBlock:0": {
+			"DisplayName": "Logic NOT Gate",
+			"Description": "Logic NOT gate. Has one input and one output. Inverts the electric signal coming on the input. The output is 1 when input is 0, otherwise it is 0. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic NOT gates from copper and germanium"
+		},
+		"AndGateBlock:0": {
+			"DisplayName": "Logic AND Gate",
+			"Description": "Logic AND gate. Has two inputs on the sides and one output. The output is 1 when both inputs are 1, otherwise it is 0. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic AND gates from copper and germanium"
+		},
+		"OrGateBlock:0": {
+			"DisplayName": "Logic OR Gate",
+			"Description": "Logic OR gate. Has two inputs on the sides and one output. The output is 1 when any of the inputs is 1, otherwise it is 0. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic OR gates from copper and germanium"
+		},
+		"XorGateBlock:0": {
+			"DisplayName": "Logic XOR Gate",
+			"Description": "Logic XOR gate. Has two inputs on the sides and one output. The output is 1 when exactly one of the inputs is 1, otherwise it is 0. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic XOR gates from copper and germanium"
+		},
+		"NandGateBlock:0": {
+			"DisplayName": "Logic NAND Gate",
+			"Description": "Logic NAND gate. Has two inputs on the sides and one output. The output is 0 when both inputs are 1, otherwise it is 1. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic NAND gates from copper and germanium"
+		},
+		"NorGateBlock:0": {
+			"DisplayName": "Logic NOR Gate",
+			"Description": "Logic NOR gate. Has two inputs on the sides and one output. The output is 0 when any of the inputs is 1, otherwise it is 1. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic NOR gates from copper and germanium"
+		},
+		"DelayGateBlock:0": {
+			"DisplayName": "Delay Gate",
+			"Description": "A delay gate with one input and one output. A single gate will delay any signal for about 0.2 seconds. Chaining 2 gates directly (without a wire in between), gives a delay of 1 second. Chaining 3 gates directly gives a delay of 5 seconds. Chaining delay gates with a wire between simply combines the delays. Two gates will give a delay of 0.4 seconds, 3 gates will give 0.6 seconds, and so on. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic Delay gates from copper and germanium"
+		},
+		"AdjustableDelayGateBlock:0": {
+			"DisplayName": "Adjustable Delay Gate",
+			"Description": "An adjustable delay gate with one input and one output. The delay of the gate can be adjusted in 0.01s increments by editing it. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic Adjustable Delay gates from copper, germanium and iron"
+		},
+		"SRLatchBlock:0": {
+			"DisplayName": "SR Latch",
+			"Description": "Logic SR latch. Can be used as a memory element holding a single bit. Has three inputs (S, R and clock), and one output. A signal on S input sets the state to 1. A signal on R input resets the state to 0. Output always indicates the current state of the latch. Can work in synchronous or asynchronous mode, depending on whether clock input is connected. In synchronous mode the states of S and R inputs are read only during a rising edge on the clock input. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Logic SR Latches from copper and germanium"
+		},
+		"CounterBlock:0": {
+			"DisplayName": "4-Bit Counter",
+			"Description": "An electric 4 bit counter with increment, decrement, reset and overflow detection capabilities (useful for chaining counters). Outputs its current value at the top via an analog signal. You can use analog-to-digital converter to extract the actual 4 bits, if needed. Signal on the right input increments the counter. Signal on the left input decrements it. Both increment and decrement wrap around when reach above 15 or below 0, in which case an overflow signal is generated at the bottom output. The back input (use wire-though-block element to access it) resets the counter to 0. Plus, minus and reset inputs are activated by rising edge of the signal. The counter can be mounted on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft 4-bit Counters from copper and germanium"
+		},
+		"MemoryBankBlock:0": {
+			"DisplayName": "Memory Bank",
+			"Description": "Writeable memory bank containing 256 4-bit words. The memory can be addressed using two 4-bit address lines placed on the left and right. If an address line is not connected, it's assumed to be zero. Value stored in the memory bank under the specified address can be read at the top output. Bottom input is used as a clock in a similar fashion to SR Latch. If the clock line is not connected, reads are immediate. To write to the memory bank, supply the value to be written on the back input (you must use wire-through-block). The write is triggered by setting clock input to a low voltage between 0.1 and 0.7 volts (a value of 0.8 and larger will trigger a read). The contents of memory block can be manually edited by tapping edit button when block is held in hand or looked at. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Memory Bank from copper and germanium"
+		},
+		"TruthTableCircuitBlock:0": {
+			"DisplayName": "Truth Table Circuit",
+			"Description": "A programmable circuit that uses a user-entered truth table to determine value of the output for all possible combination of the inputs. There are 4 inputs on all sides and one output at the back (to access the output element must be placed on a wire-through-block). The truth table must be entered manually by tapping edit button while holding the item in hand. Truth table contains output values for all possible input value combinations. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Truth Table Circuit from copper and germanium"
+		},
+		"RealTimeClockBlock:0": {
+			"DisplayName": "Real Time Clock",
+			"Description": "A real time clock that provides an accurate and always up to date readout of time. The clock value changes even if it's far away from the player. Zero value of the clock is at the point when the game started. You cannot reset the clock, it always tells the time since the game started. The clock outputs time via 5 outputs, each of them 4-bit analog signal. Sixteen least significant bits are on the four sides, and the 5th output (containing the most significant 4 bits) is on the back (you must place the clock on a wire-through-block to access the 5th output). The clock is set up so that it advances by exactly 4096 ticks each day. That means each tick is about 0.3 seconds long and that 4th output contains number of days since the game started. Combined value of outputs 1, 2 and 3 contains time of day, to about 0.3 second accuracy. 4th output alone will overflow after 16 days. Use 5th output to extend the overflow period to 256 days. ",
+			"CRDescription:0": "Craft Real Time Clocks from copper, germanium and glass"
+		},
+		"RandomGeneratorBlock:0": {
+			"DisplayName": "Random Generator",
+			"Description": "Electric random generator. Can be used to generate random electric signals. Has a single clock input and one random output. Output is an analog signal and always indicates the latest result of the random generator. Can work in synchronous or asynchronous mode, depending on whether clock input is connected. In synchronous mode the random value is generated only during a rising edge on the clock input, otherwise it is generated continuously with average frequency of about 2 Hz. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Random Generators from copper and germanium"
+		},
+		"DigitalToAnalogConverterBlock:0": {
+			"DisplayName": "Digital To Analog Converter",
+			"Description": "Electric DAC. Converts 4 digital signals fed to its sides to one analog signal at the back. You need to place DAC on a WireThroughBlock element to be able to access the output signal. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Digital To Analog Converters from copper and germanium"
+		},
+		"AnalogToDigitalConverterBlock:0": {
+			"DisplayName": "Analog To Digital Converter",
+			"Description": "Electric ADC. Converts one analog signal fed to its back to 4 digital signals output through its sides. You need to place DAC on a WireThroughBlock element to be able provide the input signal. Can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Analog To Digital Converters from copper and germanium"
+		},
+		"SoundGeneratorBlock:0": {
+			"DisplayName": "Sound Generator",
+			"Description": "Electric sound generator. Takes 4 inputs: pitch (left), octave (right), volume (top) and tone (bottom). All of these inputs are analog. The pitch ranges from C note (value of 0V) to D note in the next octave (value of 1.4V). 1.5V at pitch input means pause, no sound is played. The octave input can be used to shift the pitch by up to two octaves. The volume input sets the volume of played sound, with 0V being muted and 1.5V being the loudest. The actual sound is played whenever tone input goes from zero to non-zero. The value supplied to the tone input when it goes from zero to non-zero determines which instrument should be played: 0.1=bell, 0.2=Organ, 0.3=Ping, 0.4=String, 0.5=Trumpet, 0.6=Voice, 0.7=Piano, 0.8=PianoSustain, 0.9=Drums. With drums, pitch input determines one of 10 drums: 0.0=Snare, 0.1=BassDrum, 0.2=ClosedHiHat, 0.3=PedalHiHat, 0.4=OpenHiHat, 0.5=LowTom, 0.6=HighTom, 0.7=Crash, 0.8=Ride, 0.9=HandClap. Some animals, especially birds, are afraid of the loud sounds. This element can be placed on any surface and rotated to desired orientation.",
+			"CRDescription:0": "Craft Sound Generators from copper, germanium and iron"
+		},
+		"BatteryBlock:0": {
+			"DisplayName": "Battery",
+			"Description": "An electric battery used to power electric circuits. Will connect to any wire placed next to it and power it to a constant voltage, which is 1.5V by default. The voltage can be adjusted by editing the battery.",
+			"CRDescription:0": "Craft batteries from copper and coal"
+		},
+		"LightbulbBlock:0": {
+			"DisplayName": "Lightbulb",
+			"Description": "Electric lightbulb, emits a lot of light when connected to a source of electricity. Can be placed on any surface.",
+			"CRDescription:0": "Craft lightbulbs from copper and glass"
+		},
+		"SwitchBlock:0": {
+			"DisplayName": "Switch",
+			"Description": "An electric switch. It is used to set the state of an electric circuit to 1.5V (lever up) or 0V (lever down). The voltage remains in the selected state until the lever is moved again. A switch has outputs on all sides for easy connection, and can be placed on any surface.",
+			"CRDescription:0": "Craft electric switches from copper and sticks"
+		},
+		"ButtonBlock:0": {
+			"DisplayName": "Button",
+			"Description": "An electric button. Used to momentarily set the state of an electric circuit to 1.5V. The duration of the pulse generated by a single button click is about 1\/10 of a second, after which time the outputs return to 0V state. A button can be triggered by a projectile striking it. It has outputs on all sides for easy connection and can be placed on any surface.",
+			"CRDescription:0": "Craft electric buttons from copper and planks"
+		},
+		"PressurePlateBlock:0": {
+			"DisplayName": "Pressure Plate",
+			"Description": "Electric pressure plate. The pressure plate generates a signal when it is pressed, for example by something heavy resting on it, or by a projectile striking it. The voltage generated depends on the weight of item and is between 0.8V (lightest) and 1.5V (heaviest), therefore the pressure plate can be used as a weight. As soon as the pressure is removed, the output signal returns to 0V. The plate has outputs on all sides for easy connection. It can be placed on any surface.",
+			"CRDescription:0": "Craft electric pressure plates from copper and planks"
+		},
+		"MotionDetectorBlock:0": {
+			"DisplayName": "Motion Detector",
+			"Description": "An electric motion detector. The detector will produce signal whenever it detects motion in front of its face, up to about 8 blocks away. When motion is detected, the output of the motion detector is between 0.8 and 1.5V, indicating how close to the detector the object is moving. It has outputs on all sides for easy connection and can be placed on any surface.",
+			"CRDescription:0": "Craft motion detectors from copper, glass and marble"
+		},
+		"PistonBlock:0": {
+			"DisplayName": "Piston",
+			"Description": "Pistons can be used to push and pull blocks. The extension of piston is controlled by voltage applied to it. 0.8V will make piston extend to one block, 0.9V to two etc. 1.5V will extend a piston to a maximum of 8 blocks. Pistons can also be edited to limit the maximum extension to lower values. If the piston is a pull piston, it will also pull blocks back when retracting. If the piston is a strict pull piston, it will not retract unless it is pulling back enough blocks. Number of pulled blocks can be adjusted by editing up to a maximum of 8."
+		},
+		"PistonHeadBlock:0": {
+			"DisplayName": "Piston Head",
+			"Description": ""
+		},
+		"WireThroughPlanksBlock:0": {
+			"DisplayName": "Wire Through Planks",
+			"Description": "A planks block with a wire running across a hole drilled through the middle. This block behaves exactly the same as planks, but can conduct electricity when both ends of the embedded wire are a connected to something. This block can be placed with ends pointing north\/south, east\/west or up\/down. It is very useful when there is a need to run electricity through solid walls, or to insulate the wire from unwanted connections with other wires.",
+			"CRDescription:0": "Drill a hole in the planks block and put an electric wire through it"
+		},
+		"WireThroughStoneBlock:0": {
+			"DisplayName": "Wire Through Stone",
+			"Description": "A granite block with a wire running across a hole drilled through the middle. This block behaves exactly the same as granite, but can conduct electricity when both ends of the embedded wire are a connected to something. This block can be placed with ends pointing north\/south, east\/west or up\/down. It is very useful when there is a need to run electricity through solid walls, or to insulate the wire from unwanted connections with other wires.",
+			"CRDescription:0": "Drill a hole in the stone block and put an electric wire through it"
+		},
+		"WireThroughBricksBlock:0": {
+			"DisplayName": "Wire Through Bricks",
+			"Description": "A bricks block with a wire running across a hole drilled through the middle. This block behaves exactly the same as bricks, but can conduct electricity when both ends of the embedded wire are a connected to something. This block can be placed with ends pointing north\/south, east\/west or up\/down. It is very useful when there is a need to run electricity through solid walls, or to insulate the wire from unwanted connections with other wires.",
+			"CRDescription:0": "Drill a hole in the bricks block and put an electric wire through it"
+		},
+		"WireThroughSemiconductorBlock:0": {
+			"DisplayName": "Wire Through Semiconductor",
+			"Description": "A semiconductor block with a wire running across a hole drilled through the middle. This block can conduct electricity when both ends of the embedded wire are a connected to something. It can be placed with ends pointing north\/south, east\/west or up\/down. It is very useful when there is a need to run electricity through solid walls, or to insulate the wire from unwanted connections with other wires.",
+			"CRDescription:0": "Drill a hole in semiconductor block and put an electric wire through it"
+		},
+		"WireThroughCobblestoneBlock:0": {
+			"DisplayName": "Wire Through Cobblestone",
+			"Description": "A cobblestone block with a wire running across a hole drilled through the middle. This block can conduct electricity when both ends of the embedded wire are a connected to something. It can be placed with ends pointing north\/south, east\/west or up\/down. It is very useful when there is a need to run electricity through solid walls, or to insulate the wire from unwanted connections with other wires.",
+			"CRDescription:0": "Drill a hole in cobblestone block and put an electric wire through it"
+		},
+		"LedBlock:0": {
+			"DisplayName": "LED",
+			"Description": "A light emitting diode. When connected to a power source emits weak colored light. The light is too weak to light up the surroundings, but it's easily visible. It has inputs on all sides for easy connection and can be placed on any surface."
+		},
+		"FourLedBlock:0": {
+			"DisplayName": "4-LED",
+			"Description": "A set of 4 square light emitting diodes. When connected to a power source, leds emit weak colored light. The element splits the analog signal into 4 bits to determine which of the 4 diodes should be lit. The light is too weak to light up the surroundings, but it's easily visible. Useful for creating high resolution screens. It has inputs on all sides for easy connection and can be placed on any surface."
+		},
+		"SevenSegmentDisplayBlock:0": {
+			"DisplayName": "7-Segment Display",
+			"Description": "A 7-segment display. Displays one of the 16 hexadecimal characters: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F based on a single analog input supplied to it. The input value is converted to 4-bit digital form and used as a hexadecimal character to be displayed. Can be placed on any vertical surface."
+		},
+		"MulticoloredLedBlock:0": {
+			"DisplayName": "Multicolored LED",
+			"Description": "A light emitting diode. When connected to a power source emits weak colored light. The color of the light depends on the value of signal applied to the diode. 0.8V or above produces light of 8 different colors. The light is too weak to light up the surroundings, but it's easily visible. Useful for creating status lights. It has inputs on all sides for easy connection and can be placed on any surface."
+		},
+		"OneLedBlock:0": {
+			"DisplayName": "1-LED",
+			"Description": "A large square light emitting diode. When connected to a power source, leds emit weak colored light. The color of the light depends on the value of signal applied to the diode. 0.8V or above produces light of 8 different colors. The light is too weak to light up the surroundings, but it's easily visible. Useful for creating color screens. It has inputs on all sides for easy connection and can be placed on any surface."
+		},
+		"PhotodiodeBlock:0": {
+			"DisplayName": "Photodiode",
+			"Description": "An electric photodiode. Used to detect light. The diode will generate a signal when light is hitting its surface. The voltage depends on intensity of the light and is between 0.8V (dimmest) to 1.5V (brightest). 0V means no light. The diode has outputs on all sides for easy connection and can be placed on any surface.",
+			"CRDescription:0": "Craft photodiodes from copper and glass"
+		},
+		"TargetBlock:0": {
+			"DisplayName": "Target",
+			"Description": "A target can be used for shooting practice. It will signal a hit with an analog electric signal. The voltage of the signal determines how close to the center the hit occurred, from 0.8V at the outside of the target to 1.5V at the center. Voltages below 0.8V indicate no hit has been registered.",
+			"CRDescription:0": "Put together white and black planks to make a shooting target."
+		},
+		"DetonatorBlock:0": {
+			"DisplayName": "Electric Detonator",
+			"Description": "A detonator contains a small amount of sensitive explosive and is used to initiate larger, less sensitive explosives, such as gunpowder kegs. Because it is very sensitive, it will explode when hit by a hard object, or when an electric current flows through it. Can be used to electrically initiate explosives, with instant explosion. Can be placed on any surface.",
+			"CRDescription:0": "Craft electric detonators from copper and gunpowder"
+		},
+		"ClothingBlock:32": {
+			"DisplayName": "Old Hat",
+			"Description": "Old hat you wore when being abandoned on this land. Can be dyed. Almost no protection. Weak insulation."
+		},
+		"ClothingBlock:37": {
+			"DisplayName": "Old Tank Top",
+			"Description": "Old tank top you wore when being abandoned on this land. Can be dyed. Almost no protection. Weak insulation."
+		},
+		"ClothingBlock:1": {
+			"DisplayName": "Old Shirt",
+			"Description": "Old shirt you wore when being abandoned on this land. Can be dyed. Almost no protection. Weak insulation."
+		},
+		"ClothingBlock:30": {
+			"DisplayName": "Fedora",
+			"Description": "A had made of cotton. Almost no protection. Weak insulation.",
+			"CRDescription:0": "Tailor a cotton fedora from canvas"
+		},
+		"ClothingBlock:13": {
+			"DisplayName": "Shirt",
+			"Description": "Long-sleeved cotton shirt. Can be dyed. Almost no protection. Weak insulation.",
+			"CRDescription:0": "Tailor a cotton shirt from canvas"
+		},
+		"ClothingBlock:14": {
+			"DisplayName": "T-shirt",
+			"Description": "Short-sleeved cotton shirt. Can be dyed. Almost no protection. Weak insulation.",
+			"CRDescription:0": "Tailor a cotton t-shirt from canvas"
+		},
+		"ClothingBlock:15": {
+			"DisplayName": "Tank Top",
+			"Description": "No sleeves cotton shirt. Can be dyed. Almost no protection. Weak insulation.",
+			"CRDescription:0": "Tailor a cotton tank top from canvas"
+		},
+		"ClothingBlock:16": {
+			"DisplayName": "Pants",
+			"Description": "Long pants made of canvas. Can be dyed. Almost no protection. Weak insulation.",
+			"CRDescription:0": "Tailor cotton pants from canvas and string"
+		},
+		"ClothingBlock:17": {
+			"DisplayName": "Shorts",
+			"Description": "Short pants made of canvas. Can be dyed. Almost no protection. Weak insulation.",
+			"CRDescription:0": "Tailor cotton shorts from canvas and string"
+		},
+		"ClothingBlock:24": {
+			"DisplayName": "Sweater",
+			"Description": "Sweater made of canvas. Can be dyed. Almost no protection. Good insulation.",
+			"CRDescription:0": "Tailor a sweater from canvas"
+		},
+		"ClothingBlock:25": {
+			"DisplayName": "Long Johns",
+			"Description": "Long Johns made of canvas. Can be dyed. Almost no protection. Good insulation.",
+			"CRDescription:0": "Tailor long johns from canvas"
+		},
+		"ClothingBlock:26": {
+			"DisplayName": "Socks",
+			"Description": "Socks made of canvas. Can be dyed. Almost no protection. Good insulation.",
+			"CRDescription:0": "Tailor socks from canvas"
+		},
+		"ClothingBlock:31": {
+			"DisplayName": "Cowboy Hat",
+			"Description": "A cowboy hat made of leather. Can be dyed. Some protection. Some insulation.",
+			"CRDescription:0": "Tailor a cowboy hat from leather"
+		},
+		"ClothingBlock:11": {
+			"DisplayName": "Leather Hat",
+			"Description": "A hat made of leather. Can be dyed. Some protection. Some insulation.",
+			"CRDescription:0": "Tailor a hat from leather"
+		},
+		"ClothingBlock:5": {
+			"DisplayName": "Leather Jerkin",
+			"Description": "A jerkin vest made of leather. Can be dyed. Some protection. Weak insulation.",
+			"CRDescription:0": "Tailor a jerkin from leather"
+		},
+		"ClothingBlock:12": {
+			"DisplayName": "Leather Pants",
+			"Description": "Long pants made of leather. Can be dyed. Weak protection. Some insulation.",
+			"CRDescription:0": "Tailor pants from leather"
+		},
+		"ClothingBlock:29": {
+			"DisplayName": "Leather Sandals",
+			"Description": "Sandals made of leather. Can be dyed. Some protection. Some insulation.",
+			"CRDescription:0": "Make leather sandals from leather and planks"
+		},
+		"ClothingBlock:8": {
+			"DisplayName": "Leather Boots",
+			"Description": "Boots made of leather. Can be dyed. Some protection. Some insulation. Make you move faster.",
+			"CRDescription:0": "Make leather boots from leather and planks"
+		},
+		"ClothingBlock:27": {
+			"DisplayName": "Cavalry Boots",
+			"Description": "Long boots made of leather. Good protection. Good insulation. Makes your horse run faster.",
+			"CRDescription:0": "Make cavalry boots from leather and planks"
+		},
+		"ClothingBlock:18": {
+			"DisplayName": "Fur Hat",
+			"Description": "Thick, warm hat made of fur. Weak protection. Good insulation.",
+			"CRDescription:0": "Tailor a hat from fur"
+		},
+		"ClothingBlock:6": {
+			"DisplayName": "Fur Coat",
+			"Description": "Thick, warm coat made of fur. Weak protection. Good insulation. Slows you down.",
+			"CRDescription:0": "Tailor a coat from fur"
+		},
+		"ClothingBlock:7": {
+			"DisplayName": "Fur Leggings",
+			"Description": "Thick, warm leggings made of fur. Weak protection. Good insulation. Slows you down.",
+			"CRDescription:0": "Tailor leggings from fur"
+		},
+		"ClothingBlock:23": {
+			"DisplayName": "Wooden Chest Plate",
+			"Description": "Makeshift chest armor made of wooden sticks and string. Some protection. No insulation.",
+			"CRDescription:0": "Tie sticks together to make wooden chest armor"
+		},
+		"ClothingBlock:28": {
+			"DisplayName": "Wooden Leggings",
+			"Description": "Makeshift legs armor made of wooden sticks and string. Some protection. No insulation.",
+			"CRDescription:0": "Tie sticks together to make wooden legs armor"
+		},
+		"ClothingBlock:33": {
+			"DisplayName": "Copper Helmet",
+			"Description": "Heavy helmet made of copper. Average protection. Weak insulation.",
+			"CRDescription:0": "Make armored helmet from copper and leather cap"
+		},
+		"ClothingBlock:34": {
+			"DisplayName": "Copper Chest Plate",
+			"Description": "Heavy chest armor made of copper. Average protection. Weak insulation. Slows you down.",
+			"CRDescription:0": "Make armored chest plate from copper and leather jerkin"
+		},
+		"ClothingBlock:35": {
+			"DisplayName": "Copper Leggings",
+			"Description": "Heavy leg plates made of copper. Average protection. Weak insulation. Slows you down.",
+			"CRDescription:0": "Make armored leggings from copper and fur leggings"
+		},
+		"ClothingBlock:36": {
+			"DisplayName": "Copper Boots",
+			"Description": "Heavy protective boots made of copper. Average protection. Weak insulation.",
+			"CRDescription:0": "Make armored boots from copper and leather boots"
+		},
+		"ClothingBlock:2": {
+			"DisplayName": "Chain Mail",
+			"Description": "Light iron armor that can be worn under outer clothes and does not slow you down. Good protection. No insulation.",
+			"CRDescription:0": "Make chain mail from iron"
+		},
+		"ClothingBlock:10": {
+			"DisplayName": "Iron Helmet",
+			"Description": "Heavy helmet made of iron. Good protection. Weak insulation.",
+			"CRDescription:0": "Make armored helmet from iron and leather cap"
+		},
+		"ClothingBlock:3": {
+			"DisplayName": "Iron Chest Plate",
+			"Description": "Heavy chest armor made of iron. Good protection. Weak insulation. Slows you down.",
+			"CRDescription:0": "Make armored chest plate from iron and leather jerkin"
+		},
+		"ClothingBlock:4": {
+			"DisplayName": "Iron Leggings",
+			"Description": "Heavy leg plates made of iron. Good protection. Weak insulation. Slows you down.",
+			"CRDescription:0": "Make armored leggings from iron and fur leggings"
+		},
+		"ClothingBlock:9": {
+			"DisplayName": "Iron Boots",
+			"Description": "Heavy protective boots made of iron. Good protection. Weak insulation.",
+			"CRDescription:0": "Make armored boots from iron and leather boots"
+		},
+		"ClothingBlock:21": {
+			"DisplayName": "Diamond Helmet",
+			"Description": "Exquisite, strong helmet made of diamond. Excellent protection. No insulation.",
+			"CRDescription:0": "Make diamond helmet from iron helmet and diamonds"
+		},
+		"ClothingBlock:19": {
+			"DisplayName": "Diamond Chest Plate",
+			"Description": "Exquisite, strong chest armor made of diamond. Excellent protection. No insulation.",
+			"CRDescription:0": "Make diamond chest plate from iron chest plate and diamonds"
+		},
+		"ClothingBlock:20": {
+			"DisplayName": "Diamond Leggings",
+			"Description": "Exquisite, strong leg plates made of diamond. Excellent protection. No insulation.",
+			"CRDescription:0": "Make diamond leggings from iron leggings and diamonds"
+		},
+		"ClothingBlock:22": {
+			"DisplayName": "Diamond Boots",
+			"Description": "Exquisite, strong protective boots made of diamond. Excellent protection. No insulation. Make you move faster.",
+			"CRDescription:0": "Make diamond boots from iron boots and diamonds"
+		},
+		"SaplingBlock:1": {
+			"DisplayName": "Birch Sapling",
+			"CRDescription:0": "Cut saplings from birch leaves"
+		},
+		"SaplingBlock:2": {
+			"DisplayName": "Spruce Sapling",
+			"CRDescription:0": "Cut saplings from spruce leaves"
+		},
+		"SaplingBlock:3": {
+			"DisplayName": "Tall Spruce Sapling",
+			"CRDescription:0": "Cut saplings from tall spruce leaves"
+		},
+		"SaplingBlock:4": {
+			"DisplayName": "Mimosa Sapling",
+			"CRDescription:0": "Cut saplings from mimosa leaves"
+		},
+		"SeedsBlock:1": {
+			"CRDescription:0": "Extract seeds from red flower"
+		},
+		"SeedsBlock:2": {
+			"CRDescription:0": "Extract seeds from purple flower"
+		},
+		"SeedsBlock:3": {
+			"CRDescription:0": "Extract seeds from white flower"
+		},
+		"SeedsBlock:7": {
+			"CRDescription:0": "Extract seeds from a fully grown pumpkin",
+			"CRDescription:1": "Extract seeds from a fully grown pumpkin"
+		},
+		"ArrowBlock:1": {
+			"CRDescription:0": "Make stone-tipped arrow from stick, feathers and stone"
+		},
+		"ArrowBlock:2": {
+			"CRDescription:0": "Make iron-tipped arrow from stick, feathers and iron"
+		},
+		"ArrowBlock:3": {
+			"CRDescription:0": "Make diamond-tipped arrow from iron arrow and a diamond"
+		},
+		"ArrowBlock:4": {
+			"CRDescription:0": "Make fire arrow from wooden arrow and sulphur"
+		},
+		"ArrowBlock:5": {
+			"CRDescription:0": "Make iron bolt from rod and feather"
+		},
+		"ArrowBlock:6": {
+			"CRDescription:0": "Make diamond-tipped bolt from iron bolt and a diamond"
+		},
+		"ArrowBlock:7": {
+			"CRDescription:0": "Make explosive bolt from iron bolt and gunpowder"
+		},
+		"ArrowBlock:8": {
+			"CRDescription:0": "Make copper-tipped arrow from stick, feathers and copper"
+		},
+		"BulletBlock:1": {
+			"CRDescription:0": "Make buckshot from musket balls",
+			"CRDescription:1": "Make buckshot from buckshot balls"
+		},
+		"BulletBlock:2": {
+			"CRDescription:0": "Extract buckshot balls from buckshot"
+		},
+		"GravestoneBlock:1": {
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"GravestoneBlock:2": {
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"GravestoneBlock:3": {
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"GravestoneBlock:4": {
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"GravestoneBlock:5": {
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"GravestoneBlock:6": {
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"GravestoneBlock:7": {
+			"CRDescription:0": "Craft gravestone from granite"
+		},
+		"PressurePlateBlock:1": {
+			"CRDescription:0": "Craft electric pressure plates from copper and stone"
+		},
+		"PistonBlock:448": {
+			"CRDescription:0": "Use planks, semiconductor and copper to make a piston"
+		},
+		"PistonBlock:450": {
+			"CRDescription:0": "Add iron hooks to piston to make a pulling piston"
+		},
+		"PistonBlock:452": {
+			"CRDescription:0": "Add copper hooks to piston to make a strict pulling piston"
+		}
+	},
+	"Help": {
+		"1": {
+			"value": "",
+			"Name": "Gamepad",
+			"Title": "Gamepad Controls"
+		},
+		"2": {
+			"value": "",
+			"Name": "Keyboard",
+			"Title": "Keyboard Controls"
+		},
+		"3": {
+			"value": "\\n Use the touchpad at the bottom left side of the screen to move.\\n Tap it once to jump.\\n This can also be configured to use directional buttons instead of the pad.\\n \\n\\n\\n Use the touchpad at the bottom right side of the screen to look around.\\n Tap it once to jump.\\n You can also drag your finger across any area of the screen to look.\\n \\n\\n\\n You can tweak control scheme of the game in the Controls and Sensitivity settings.\\n Experiment with various options, for example you may find you prefer buttons to touchpads, or split touch with crosshair to regular controls.\\n Controlling a first person game on a small touchscreen may look difficult, but once you get the hang of it, it is no different than using a gamepad or a mouse.\\n Because you can touch any part of the screen at any time, some actions like block digging or placement may even be easier.\\n \\n\\n\\n Some cheap or old devices have low quality touch screens or buggy touch drivers.\\n They might intermittently drop active touch points, or mix them up if touched in more than one point at once.\\n These are best avoided as playing on them is extremely frustrating.\\n ",
+			"Title": "Touch Screen Controls"
+		},
+		"4": {
+			"value": "\\n Sneaking is useful if you want to move slowly and carefully, for example to avoid falling near the edge of a tall crevice.\\n \\n\\n\\n To toggle sneak mode, press the sneak button on the right side of the screen.\\n When sneak mode is enabled, your movement will be restricted at edges to prevent you from falling.\\n \\n\\n\\n Sneaking also makes your movements much quieter, allowing you to come closer to certain animals without scaring them away. \\n For example, you can use sneak to get close to a bird without scaring it away. \\n Just make sure you don't approach it from the front, because it will see you and fly away. \\n ",
+			"Title": "Sneaking"
+		},
+		"5": {
+			"value": "\\n Flight is only available in Creative Mode.\\n To toggle fly mode, tap the flight button on the right side of the screen. \\n Jumping twice in quick succession will also toggle fly mode.\\n \\n\\n\\n Flying is much faster than walking and allows you to quickly get to otherwise inaccessible areas.\\n ",
+			"Title": "Flying"
+		},
+		"6": {
+			"value": "\\n Ladders can be crafted from wooden sticks.\\n Once placed on a vertical wall, they allow you to climb the wall easily.\\n \\n\\n\\n It's safest to climb the ladder when facing it.\\n This is true both for climbing upwards and downwards.\\n \\n\\n\\n Consequently, the best way to climb down a ladder is to approach it backwards, as you would do in real life.\\n \\n\\n\\n You can jump off the ladder at any time\\n ",
+			"Title": "Climbing Ladders"
+		},
+		"7": {
+			"value": "\\n Health bar is displayed in the game screen as little hearts.\\n It is the amount of life left in the player.\\n When it drops to zero, the player dies.\\n \\n\\n\\n It slowly replenishes when player is not hungry, it replenishes faster when sleeping.\\n Be careful when your health is low, even a slight injury may kill you.\\n \\n\\n\\n When the player is sick, the hearts become dirty green.\\n Do not eat dodgy food to avoid sickness.\\n When the player has flu, the hearts become blue.\\n Do not get cold for prolonged periods to avoid getting flu.\\n ",
+			"Name": "Health",
+			"Title": "Health"
+		},
+		"8": {
+			"value": "\\n When you eat raw meat, uncooked eggs or any food that has been allowed to rot, the player may become sick.\\n \\n\\n\\n Sickness is an unpleasant condition. \\n You health will slowly drop down to a single heart, making you very vulnerable.\\n Your activities will be constantly interrupted by vomiting and nausea attacks.\\n You will move slowly, be weak and tire easily.\\n You will not be able to eat certain food types.\\n \\n\\n\\n It is best to sleep it off, maybe in the morning your stomach will get better.\\n ",
+			"Name": "Sickness",
+			"Title": "Sickness"
+		},
+		"9": {
+			"value": "\\n When your body temperature stays low for a long period, the player will start to sneeze.\\n This is a warning sign that you may get flu soon.\\n Warm yourself up quickly.\\n \\n\\n\\n Flu is a dangerous condition.\\n You health will slowly drop down to two hearts, making you very vulnerable.\\n Your activities will be frequently interrupted by coughing attacks.\\n You will move slowly, be weak and tire easily.\\n You will also become very sleepy.\\n \\n\\n\\n It is best to get to a warm place and sleep the flu off, maybe in the morning you will get better.\\n Flu is very difficult to cure when you are cold.\\n ",
+			"Name": "Flu",
+			"Title": "Flu"
+		},
+		"10": {
+			"value": "\\n Hunger bar is displayed in the game screen as little fishes.\\n If you don't eat for a long time, your character will start complaining about it and eventually losing health, until you die.\\n In addition to that, if you're hungry, you don't regenerate health.\\n \\n\\n\\n To eat, drag an edible item onto the player in the body panel.\\n Your character will inform you whether you are still hungry.\\n \\n\\n\\n Food can be obtained from many sources in the game.\\n The obvious one is hunting edible animals, such as cows, birds and wildboars.\\n Keep in mind that hunting may be dangerous, and the supply of animals will quickly dry up in nearby areas, forcing you to search further.\\n \\n\\n\\n An alternative to hunting is farming.\\n Farming lets you create a sustainable source of food, although it may require lots of preparatory work and further maintenance.\\n ",
+			"Name": "Hunger",
+			"Title": "Hunger"
+		},
+		"11": {
+			"value": "\\n Stamina is the measure of tiredness of your character.\\n When you perform a tiring action for a long time without break, you will tire and start panting.\\n \\n\\n\\n When you are panting, your performance is lower than when you are rested.\\n You will move and dig slower, and you will not be able to perform jumps.\\n \\n\\n\\n Some of the actions that are tiring: running, jumping, swimming, digging, fighting.\\n \\n\\n\\n It is very dangerous to get tired when you are in water, because you can't rest while swimming.\\n Watch for early signs of panting, and get out of water immediately.\\n When you get exhausted while in water, you will start drowning and die unless the shore is very near.\\n \\n\\n\\n Be careful, it's easy to get tired when running away from dangerous animals.\\n ",
+			"Name": "Stamina",
+			"Title": "Stamina"
+		},
+		"12": {
+			"value": "\\n Sleeping will help restore your health and pass the boring night hours when it's too dark or dangerous to work.\\n \\n\\n\\n Even if you are not hurt, you still need to sleep from time to time.\\n If you neglect it, your character will start to have short blackouts.\\n If you keep active despite this warning, the blackouts will get longer and eventually you will lose consciousness.\\n Losing consciousness is very dangerous, because predatory animals will quickly smell you and feast on your unguarded flesh.\\n \\n\\n\\n Although you don't need a bed, you can only sleep in a cosy and comfortable place.\\n The ground cannot be too hard and the area cannot be too exposed to the elements, or wet.\\n \\n\\n\\n Your respawn point is set to a place where you last slept.\\n To sleep, open the body screen and press a little sleeping button.\\n \\n\\n\\n Note: Sleeping is disabled in the demo.\\n ",
+			"Name": "Sleep",
+			"Title": "Sleeping"
+		},
+		"13": {
+			"value": "\\n When you are out in the cold without proper clothes, your body temperature will drop.\\n Your view will start to freeze over and you will start losing health.\\n Find a warmer place or get near fire to warm and dry yourself.\\n If you stay cold for a long time, you will start sneezing and may get flu.\\n \\n\\n\\n Too much warmth will do you no good either, standing too close to a large fire will cause you to overheat.\\n \\n\\n\\n Sheltered areas are warmer than outside.\\n Plugging all the holes and locking doors will make a shelter warmer still.\\n Even a small hole open to the elements will admit draughts and make a large difference to temperature.\\n Make a fire inside your shelter to make it homely warm and allow you to take your clothes off.\\n \\n\\n\\n Being wet dramatically increases your susceptibility to cold, find a warm place to dry yourself faster.\\n \\n\\n\\n The best way to deal with cold is to wear multiple layers of thick, dry clothes.\\n You need to cover your entire body, leaving feet or head unclothed will defeat most of the warming effect other clothes have.\\n Clothes made of animal fur are best for keeping cold out.\\n ",
+			"Name": "Temperature",
+			"Title": "Body Temperature"
+		},
+		"14": {
+			"value": "\\n Your character can get wet by being outside in the rain or by falling into water.\\n Wetness heavily reduces insulation provided by clothing, so it's very easy to freeze in colder climates.\\n Your character will dry faster in a warm place.\\n ",
+			"Name": "Wetness",
+			"Title": "Wetness"
+		},
+		"15": {
+			"value": "\\n All food items will turn rotten after some time.\\n The little white fish icon next to the item will turn brown to indicate that the rot process is starting.\\n Some time after that, the food item will rot.\\n \\n\\n\\n Raw food will rot very quickly.\\n Cooking food will prolong its life.\\n \\n\\n\\n Rotten food is still attractive to animals and can even be eaten by the player, but has a high chance of causing sickness.\\n \\n\\n\\n When the player is sick, he is very slow, weak and will stop to vomit periodically.\\n It's best to go to sleep and wait for the sickness to pass.\\n \\n\\n\\n Most rotten food will eventually turn into compost, a valuable farming resource which can be used instead of soil to grow plants more quickly.\\n This will let you utilize valuable saltpeter for making explosives, instead of sprinkling it as fertilizer. \\n ",
+			"Name": "FoodRot",
+			"Title": "Food Rot"
+		},
+		"16": {
+			"value": "\\n Your character becomes more experienced over time.\\n Experience is represented by little golden orbs that can be picked up.\\n They appear when you mine minerals, harvest crops or hunt animals.\\n Collect them.\\n \\n\\n\\n If you gather enough experience, your character will advance to the next level.\\n Your strength, speed and resilience will increase and your food needs will decrease.\\n You will also be able to use more advanced tools, weapons and armor.\\n \\n\\n\\n When you die and respawn, your level is reduced to a much lower value.\\n It will take a lot of time to regain the lost experience.\\n ",
+			"Name": "Levels",
+			"Title": "Levels and Experience"
+		},
+		"17": {
+			"value": "\\n You can ride certain animals, such as horses or camels.\\n Riding an animal lets you move more quickly and view the world from a higher vantage point.\\n \\n\\n\\n To mount an animal, get close to it and wait for it to stop.\\n The sneak button will turn into mount button.\\n Press it to mount\/dismount.\\n You can also mount boats in the same way as animals.\\n \\n\\n\\n To successfully ride an animal, you need a saddle, which can be crafted from leather and wooden sticks.\\n When the animal is saddled, its behavior changes and it becomes more friendly towards you.\\n Do not mount an unsaddled animal, it will not like it, and may even hurt you.\\n \\n\\n\\n A whistle will summon any saddled animals that are nearby.\\n It is a good idea to carry a whistle with you when you are riding.\\n ",
+			"Title": "Riding Animals"
+		},
+		"18": {
+			"value": "\\n In Survivalcraft, the entire world is destructible.\\n \\n\\n\\n To dig a block, press it and hold your finger.\\n Digging cracks will appear as the block is being dug.\\n \\n\\n\\n Some blocks take a very long time to dig without proper tools.\\n Digging some blocks, such as glass, will destroy them.\\n ",
+			"Title": "Digging Blocks"
+		},
+		"19": {
+			"value": "\\n To place a block, select it from your inventory so that you are holding it in your hand.\\n Then tap the face of an existing block, where you want the new block to be attached.\\n The block will be placed there immediately, unless it is impossible for some reason.\\n \\n\\n\\n Certain items behave differently if attached to different parts of an existing block.\\n For example, trapdoors can be attached to the top or bottom parts with different results.\\n ",
+			"Title": "Placing Blocks"
+		},
+		"20": {
+			"value": "\\n Certain blocks are interactive.\\n Some examples of interactive blocks: doors, chests, workbenches, furnaces, buttons.\\n \\n\\n\\n To interact with a block, tap on it.\\n This will invoke the action associated with the block.\\n \\n\\n\\n For example, if you tap on a closed door, it will open.\\n ",
+			"Title": "Interacting With Blocks"
+		},
+		"21": {
+			"value": "\\n Some blocks are editable.\\n Examples of editable blocks: crossbow, memory bank, musket, truth table.\\n \\n\\n\\n Editable blocks are marked with an edit icon in your inventory.\\n \\n\\n\\n To edit a block in the inventory, select it so that you hold it in your hand.\\n If the selected block is editable, sneak button will turn into edit button.\\n \\n\\n\\n To edit a block which is placed on the ground, stand close to it and point center of the screen at the block.\\n If the block in front of you is editable, it will be highlighted and sneak button will turn into edit button.\\n \\n\\n\\n Editing lets you change advanced properties of blocks.\\n For example editing a crossbow will let you draw it and load a bolt.\\n Editing a truth table lets you see and set the binary values.\\n To discover which items are editable, watch out for the edit icon on inventory items.\\n \\n\\n\\n If you both hold an editable item in your hand and look at an editable block in the terrain, the item in the terrain will take precedence.\\n ",
+			"Title": "Editing Blocks"
+		},
+		"22": {
+			"value": "\\n Certain items can be thrown.\\n Some examples of throwable items: stone chunks, spears, bricks, snowballs.\\n \\n\\n\\n To throw an item, select it in your inventory, so that you are holding it in your hand.\\n Press and hold a point on the screen where you want to throw.\\n A throwing sights will appear.\\n \\n\\n\\n You can move the sights to refine your aim.\\n Once you release your finger, the item will be thrown.\\n To cancel a throw, move the sights to the edge of the screen.\\n \\n\\n\\n Spears are powerful thrown weapons that do a lot of damage when they hit the target.\\n ",
+			"Title": "Throwing Items"
+		},
+		"23": {
+			"value": "\\n All items and blocks can be dropped if you no longer need them.\\n \\n\\n\\n To drop an item or block, drag it from the inventory slot and drop it on the screen.\\n The item will fly a short distance away and fall to the ground.\\n \\n\\n\\n Watch out, if you're standing too close you will immediately pick up the dropped item again.\\n \\n\\n\\n Dropping items into fire or magma will destroy them.\\n ",
+			"Title": "Dropping Items"
+		},
+		"24": {
+			"value": "\\n Crafting is a process of making more complicated items out of simpler ones, using a workbench or the crafting area.\\n \\n\\n\\n To craft, you need to place ingredients in the crafting slots in a pattern specific to the item being crafted.\\n All crafting recipes are available in RECIPAEDIA.\\n \\n\\n\\n There are two sizes of crafting areas: 2x2 and 3x3.\\n The smaller area is always available and can be accessed by pressing the crafting button.\\n To craft more complicated items on a 3x3 area you need to make a workbench, place it somewhere in the world and click on it.\\n ",
+			"Title": "Crafting"
+		},
+		"25": {
+			"value": "\\n Smelting is thermal processing of substances in a furnace.\\n Up to 2 substances can be placed in the furnace at the same time.\\n \\n\\n\\n Furnace requires fuel to work.\\n You can use anything that is combustible as a fuel, but some fuels are better (longer lasting) than others.\\n The best fuel is coal.\\n \\n\\n\\n You can leave the furnace while it is smelting. The smelting process will continue while you are away.\\n All smelting recipes are available in RECIPAEDIA.\\n ",
+			"Title": "Smelting"
+		},
+		"26": {
+			"value": "\\n Press and hold the slot containing the stack you want to split for about 1 second.\\n A red border will appear around it.\\n The slot is now in splitting mode.\\n Tap any other empty slot, and one item will be taken from the highlighted slot and placed into the tapped slot.\\n \\n\\n\\n This technique can also be used to quickly spread items from one stack to multiple slots, e.g. in a workbench.\\n ",
+			"Title": "Splitting stacks of items"
+		},
+		"27": {
+			"value": "\\n You need to mine to obtain resources needed for crafting and smelting.\\n Mining can be as simple as digging in a random place with your bare hands.\\n You will however soon discover that it is not an effective way to mine, because digging hard rock by hand takes a very long time.\\n \\n\\n\\n You need to craft mining tools, such as a shovel and pickaxe first.\\n You also need to dig in different places to find specific resources.\\n Caves are a good starting point, because they show you a large cross section through the terrain for free.\\n \\n\\n\\n Be aware that some resources, such as diamonds or malachite, require tools made of strong materials to be mined.\\n ",
+			"Title": "Mining"
+		},
+		"28": {
+			"value": "\\n Farming allows you to grow a variety of plants for decorative or consumption purposes.\\n To grow a plant, you need to obtain its seeds, usually from a fully grown plant specimen.\\n \\n\\n\\n Some plants will drop seeds immediately when they are harvested, some will require crafting to extract seeds.\\n Some seeds will tolerate poor soil, like dirt or grass.\\n Others, like rye or pumpkins, require high quality tilled and moist soil, which has been fertilized with saltpeter.\\n To make sure the soil is moist, use bucket to create water channels no further than several blocks away.\\n Moist soil is darker than a dry one.\\n To further enhance soil quality, sprinkle it with saltpeter (which is a source of nitrogen).\\n \\n\\n\\n Plants may take a long time to grow, be patient.\\n ",
+			"Title": "Farming"
+		},
+		"29": {
+			"value": "\\n Buckets are used for transporting fluids, such as water or magma.\\n To fill empty bucket with a fluid, you need to find a source block of the fluid.\\n For example, all ocean blocks are source blocks of water.\\n \\n\\n\\n Holding the empty bucket in your hand, tap the source block to collect it.\\n The block will be removed from the world and placed inside the bucket.\\n \\n\\n\\n To pour the fluid from the bucket, tap on terrain.\\n A new source block of fluid will be created, and the fluid will spread out from there.\\n You can collect the placed source block again with the empty bucket.\\n ",
+			"Title": "Buckets"
+		},
+		"30": {
+			"value": "\\n Some blocks and items can be dyed or painted.\\n \\n\\n\\n To paint bricks, stone, wood or other blocks, make a paint bucket of appropriate color and use it on the item you want to paint.\\n One bucket is good for painting several dozen blocks, after that it runs out.\\n \\n\\n\\n Paint stripper can be used to remove paint and restore blocks to their original appearance.\\n \\n\\n\\n To dye clothing, place a piece of clothing with a bucket full of paint in a furnace.\\n You can dye clothing multiple times, combining colors.\\n \\n\\n\\n You can also dye carpets in a similar way.\\n \\n\\n\\n Available colors of the paint (palette) can be customized in the world options screen.\\n You can also customize the names of colors.\\n The total number of colors is always 16, so to make a new color you need to sacrifice one of the existing ones.\\n Customized colors also affect clothing, dyeing and furniture.\\n ",
+			"Title": "Dyeing and Painting"
+		},
+		"31": {
+			"value": "\\n Electricity is a powerful mechanism in the game that can be used to control behavior of certain blocks.\\n For example, a lightbulb will produce light when connected to a source of electricity, doors will open or close if activated with an electric signal, and many more.\\n \\n\\n\\n If you know a bit about real-world electronics, you should feel at home in Survivalcraft.\\n All the familiar devices, such as logic gates (AND, OR, NOT etc.) are present and signals are characterized by voltage.\\n You can combine gates to build complex circuits, even computers or video games (check Community Content for some great builds by master electricians).\\n There are also sensors, such as pressure plates, photodiodes etc. that produce varying signals depending on conditions around them.\\n \\n\\n\\n For descriptions of all available electric devices, see RECIPAEDIA.\\n \\n\\n\\n Electric signals in the game are conducted through copper wires and have a voltage that is between 0V and 1.5V, in increments of 0.1V.\\n This gives 16 distinct voltage values.\\n \\n\\n\\n Digital devices, such as buttons, switches or doors work only with digital signals that have two possible values: low (0, false, off, no) and high (1, true, on, yes).\\n In this case, a voltage below 0.8V indicates low, 0.8V and greater indicates high.\\n Most commonly digital signals have voltages of 0V for low and 1.5V for high, but any value below 0.8V will be read as low.\\n \\n\\n\\n Analog devices, such as pressure plates, motion detectors or lightbulbs work with analog signals.\\n They will react to each different value of voltage between 0 and 1.5V, not just low and high states.\\n For example, sound generator volume and pitch inputs are controlled by analog voltages.\\n The volume and pitch will increase smoothly as the voltages get higher.\\n \\n\\n\\n It's good to remember that both analog and digital signals are really the same thing when conducted through the wire, a voltage between 0V and 1.5V.\\n Only the way a device interprets the signals voltage determines whether it is digital or analog.\\n \\n\\n\\n Voltage can also be interpreted as a number, with 0V representing 0 and 1.5V representing 15.\\n Some devices, such as displays, DAC\/ADC converters or counters use this interpretation.\\n \\n\\n\\n All electric devices have connections (inputs and outputs) on their sides, and sometimes also on their back (the face attached to the wall).\\n On complex devices these are indicated by blue and red dots on edges of the elements.\\n Blue means input, red means output.\\n Number of dots means number of the connection.\\n Simple devices, such as buttons, switches or lightbulbs do not have these dots, because they use one input\/output only and can be connected from any side.\\n \\n\\n\\n Electric devices can be placed on the walls and on the floor\/ceiling (with some exceptions).\\n Once placed, they can be rotated so that it's easy to connect appropriate inputs and outputs together with the wires.\\n \\n\\n\\n There is a special type of block in the game, called wire-though-block, which is a normal block with a hole drilled and an electric wire threaded though it.\\n It is very useful when trying to hide wires from sight, run them though the wall, or prevent them from connecting with other wires.\\n It is also the only way to access the \"back\" connection of devices which have it.\\n \\n\\n\\n Electricity in Survivalcraft is processed at a frequency of 100Hz.\\n It means that voltage goes from one element to another in 0.01s, irrespective of the length of the wire.\\n If you need to delay the signal, you may place some neutral elements in its path (for example an OR gate or a pair of NOT gates).\\n Each additional element in the way of the signal will delay it by 0.01s.\\n For longer delays use Adjustable Delay Gate, which can produce delays of up to 2.55s.\\n \\n\\n\\n Electricity is a complex topic and making large working machines requires some learning, but is very satisfying.\\n Simple devices however can be constructed by anyone.\\n For example, try placing a button next to the hinges of a door.\\n You will notice a wire appeared, clicking the button will now operate the door!\\n All this scary talk about voltages, signals, digital and analog, but in reality it's that simple.\\n \\n\\n\\n Another easy thing to build might be a light switch.\\n Place a lightbulb on the ceiling and a switch (not button) on the wall.\\n Then connect them with a wire.\\n The switch now operates the light, like in a real room!\\n \\n\\n\\n Survivalcraft is more about realism than other games of this type, and electricity is no exception.\\n What you learn here, might become invaluable when you get to learn this at school, or have to use it for living.\\n \\n\\n\\n Explore and have fun!\\n ",
+			"Title": "Electricity"
+		},
+		"32": {
+			"value": "\\n In Survivalcraft you can design and use custom furniture blocks.\\n \\n\\n\\n Furniture blocks are sculpted from up to 16x16x16 smaller sub-blocks.\\n Sub-blocks within a single furniture block can be made of different materials and painted to different colors.\\n Through crafting, furniture blocks can be combined, made interactive or made to work with electricity.\\n Furniture designs can be combined into packs, shared between worlds and uploaded to Community Content.\\n \\n\\n\\n To design and create furniture use the hammer tool.\\n You need to build the design from regular blocks in the world and then use the hammer on the resulting structure to shrink it down.\\n Furniture design window will appear where you can tweak the design by moving it, rotating it and changing resolution (between 2x2x2 and 16x16x16).\\n Once you are happy with the design, you can commit it.\\n \\n\\n\\n In creative mode, the design will be turned into a single furniture block, and the source blocks from which the design was created will remain in the world.\\n In survival modes, the design will be turned into several copies of the furniture block (with number depending on resolution) and the source blocks will be consumed.\\n Furniture blocks can be placed in the world in 4 orientations, similar to e.g. a furnace or a ladder.\\n \\n\\n\\n Not every block can be used for furniture design.\\n For example, dirt or grass are ignored by the hammer tool.\\n Allowed materials include: planks, granite, basalt, sand, clay, cobblestone, stone bricks, sandstone, marble, bricks, coal, malachite, diamond, copper, iron, glass, carpet, torches, wicker lamps, water, magma.\\n Source blocks of the design can be painted or dyed to make the design more colorful.\\n Finished furniture can also be painted, this will cover any colors of the source blocks.\\n \\n\\n\\n Certain source blocks have special functions.\\n For example a torch\/lamp block will cause the furniture to have a fire attached to it in the place of the block.\\n The design will also emit light.\\n \\n\\n\\n You have to be careful when constructing furniture to avoid placing the design on a base made of allowed material (for example sand).\\n The hammer tool will not be able to distinguish between the blocks you placed and the base, and will try to incorporate base into the design.\\n This will likely cause \"design too large\" error, because the maximum size of a design in any dimension is 16 blocks.\\n \\n\\n\\n Once the furniture block has been created, you can use workbench to combine it with other blocks in various ways.\\n The following combinations are possible:\\n \\n\\n\\n * Combine multiple pieces of furniture into one to create interactive furniture.\\n Interactive furniture toggles between its constituing designs on click or on electric signal.\\n You can create opening doors, switchable lights, raising platforms etc.\\n Up to 9 pieces of furniture can be combined (max capacity of workbench).\\n \\n\\n\\n * Combine exactly one furniture design with an electric button to create a custom button.\\n The resulting furniture will act as a button.\\n \\n\\n\\n * Combine exactly two furniture designs with an electric switch to create a custom switch.\\n The resulting furniture will act as a switch, with two furniture pieces acting as two states of the switch.\\n \\n\\n\\n * Combine multiple pieces of furniture with an electric wire to create connected interactive furniture.\\n The furniture will work in the same way as interactive furniture, but toggling it will also toggle all neighboring pieces of connected interactive furniture.\\n You can create multi-block toggleable structures, for example large doors.\\n \\n\\n\\n In the furniture panel in creative inventory you can view and organize your furniture designs.\\n Create named furniture sets to categorize the designs.\\n The newly created designs are placed in \"Uncategorized\" set, which has a special function.\\n Any design in this set, which does not otherwise exist in the world (no items or placed blocks) will be automatically recycled.\\n Be careful and move valuable designs to named furniture sets to avoid accidentally losing them.\\n Each named furniture set can be turned into a furniture pack and exported from the world.\\n You can later import it to other worlds or upload to Dropbox\/SDcard and share with others.\\n Furniture packs can also be uploaded to community content.\\n \\n\\n\\n There are certain limitations to the furniture system:\\n \\n\\n\\n * A furniture block can be made from up to 16x16x16 sub-blocks.\\n \\n\\n\\n * The amount of geometry used for a single design cannot exceed 300 triangles (too complex designs with many nooks and crannies are not possible).\\n The game uses an intelligent tesselation algorithm that optimizes the geometry, so 300 triangles is plenty for even fairly complex designs, unless you really go over the top.\\n To reduce number of triangles, you can reduce number of small details, reduce number of painted blocks and fill up any internal holes in the design.\\n \\n\\n\\n * You can only have up to 1024 unique furniture designs in the world.\\n Every time you paint a furniture or combine it with others, you are creating new designs that count towards the total.\\n Unused designs (that do not exist in the world either as items or blocks, and are in the \"uncategorized\" set in the inventory) are automatically recycled.\\n ",
+			"Title": "Furniture"
+		},
+		"33": {
+			"value": "\\n Pistons are blocks that can push or pull other blocks. \\n Pistons will extend or retract based on voltage applied to them.\\n They can be placed facing any direction.\\n \\n\\n\\n There are 3 types of pistons: push pistons, pull pistons and strict pull pistons.\\n \\n\\n\\n Push pistons push up to 8 blocks as they extend, but they do not pull them back when they retract.\\n \\n\\n\\n Pull pistons act like push pistons, but additionally they pull up to 8 blocks back when they retract.\\n \\n\\n\\n Strict pull pistons act like normal pull pistons, but they will not retract unless they are pulling enough blocks.\\n \\n\\n\\n Voltage applied to a piston determines the extension length.\\n Anthing below 0.8V is retracted. 0.8V is one block extension, 0.9V is two blocks etc.\\n 1.5V equals full extension of 8 blocks.\\n The piston will only react to voltage changes when it is not moving.\\n It will always complete the current move before starting another.\\n \\n\\n\\n Pistons can be edited.\\n You can adjust maximum extension, number of pulled blocks and speed of movement.\\n \\n\\n\\n Certain blocks cannot be moved by pistons.\\n These include any block that contains inventory (chest, workbench, furnace etc.), diamond block and any piston that is extended.\\n Retracted pistons however can be moved by other pistons.\\n This opens up a world of possibilities, with complicated machines where pistons move other pistons.\\n Pistons will also block fluids when extended, so you can use them to make valves.\\n \\n\\n\\n Use pistons to make doors, elevators, moving platforms and all kinds of ingenious machines.\\n ",
+			"Title": "Pistons"
+		},
+		"34": {
+			"value": "\\n Wearing clothing provides warmth in cold climates and armor protection during combat.\\n You need heavy clothing to survive for any period of time in cold areas of the world.\\n \\n\\n\\n The level of thermal insulation is measured in CLO units.\\n For example, 0.0 CLO is naked body, 1.0 CLO is light clothing, 3.0 CLO is heavy insulation.\\n \\n\\n\\n You can access clothing interface by using Clothing button.\\n There are 4 clothing slots on your body: head, torso, legs and feet.\\n Each slot can have multiple clothing items, layered one on top of each other.\\n The effects of multiple clothing items combine.\\n \\n\\n\\n Not everything can be worn on top of everything else, for example you will not be able to wear a t-shirt on top of a fur coat.\\n \\n\\n\\n Wearing thick clothes in one slot while leaving another slot bare will not afford much insulation.\\n It's imperative to cover entire body to really benefit from clothing.\\n It's the thinnest piece of clothing that determines how much heat the character loses.\\n ",
+			"Name": "Clothing",
+			"Title": "Clothing"
+		},
+		"35": {
+			"value": "\\n Wearing armor or thick clothing will reduce or even completely eliminate combat injuries.\\n Armor will absorb the hits, so that they damage the armor instead of injuring your body.\\n Once the armor receives too much damage, it will disintegrate.\\n \\n\\n\\n When you are attacked, you will randomly receive a hit into one of your four body areas: head, torso, legs or feet.\\n If there is no armor at that slot, you will receive full injury, irrespective of how much armor you wear elsewhere.\\n By far the most likely area to receive hits is torso, followed by legs.\\n Wearing torso armor will stop 60% of hits, torso and legs together will stop 80%.\\n Head and feet armor is of less importance, unless you want to be 100% safe.\\n \\n\\n\\n The strongest armor is made of iron and diamonds.\\n Early in the game, you can craft wooden torso armor from sticks and strings.\\n It's not very sturdy but will stand a few hits potentially saving your life.\\n \\n\\n\\n Even plain clothes have certain armor value, especially thick ones made of leather and fur.\\n They do not stop all hits, but only partially reduce the damage.\\n \\n\\n\\n Wearing heavy armor will make you sink to the bottom and drown, be careful around deep water.\\n ",
+			"Title": "Armor"
+		},
+		"36": {
+			"value": "\\n Boats can be used to travel across large bodies of water quickly and safely.\\n \\n\\n\\n If you don't have a boat, you risk drowning from exhaustion or being attacked by dangerous underwater creatures.\\n \\n\\n\\n To craft a boat you need lots of wood and a workbench.\\n Once the boat is crafted, it can be placed on the shore and mounted in the same way as a horse.\\n \\n\\n\\n You can only control a boat when it is in the water.\\n ",
+			"Title": "Boats"
+		},
+		"37": {
+			"value": "\\n Sometimes when you are stuck, the only option is to force respawn at your last sleeping place.\\n \\n\\n\\n To do it, open the body screen and repeatedly press the skull and bones button.\\n ",
+			"Title": "Force Respawn"
+		},
+		"38": {
+			"value": "\\n The game uses Dropbox service to allow you to download and upload data to\/from your device.\\n \\n\\n\\n Through Dropbox, you can backup and share worlds with others.\\n You can also download custom blocks textures, character skins, furniture packs.\\n \\n\\n\\n To login to Dropbox, click on the login button on the Dropbox screen.\\n If you don't have a Dropbox account yet, you will be able to setup one during the login.\\n \\n\\n\\n Once you log in, the Dropbox screen will show you the contents of your online Dropbox folders, and allow you to download the files to your device.\\n \\n\\n\\n See https:\/\/dropbox.com website for more details.\\n ",
+			"Title": "Dropbox"
+		},
+		"39": {
+			"value": "\\n The game uses transfer.sh anonymous file service to allow you to upload data from your device without the hassle of creating any user accounts.\\n \\n\\n\\n Use the link provided after the upload to access the data.\\n Transfer.sh keeps the data for a few days only, after that it is automatically deleted.\\n \\n\\n\\n Do not use these temporary links for Community Content uploads, your item will be deleted by the service and Community Content item will stop working.\\n \\n\\n\\n It is not possible to see the list of items you uploaded, the sole access to data is through the links.\\n \\n\\n\\n See https:\/\/transfer.sh website for more details.\\n \\n\\n\\n Big Kudos to The Dutch Coders!\\n ",
+			"Title": "Transfer.sh"
+		},
+		"40": {
+			"value": "\\n The game allows you to import and export worlds to SD Card for sharing and backup purposes.\\n \\n\\n\\n If your device does not have an SD Card, generic external storage folder will be used.\\n The location of the data on the device is normally \/sdcard\/Survivalcraft\\n ",
+			"Title": "SD Card",
+			"DisabledPlatforms": "Ios, Windows81, WindowsPhone81, Desktop"
+		},
+		"41": {
+			"value": "\\n The game allows you to browse a list of worlds, block textures and other items published by other Survivalcraft community members, and download them.\\n \\n\\n\\n Once you make something interesting, you can also publish it through this service, and it will appear on the list for anyone to download.\\n \\n\\n\\n To publish something, first you need to put it on the internet, so that it's accessible to everyone.\\n The easiest place to use is Dropbox, although you can use any other provider.\\n Once it's done, you can publish the link to it through \"Publish Link\" dialog in the game.\\n \\n\\n\\n Note: the server does not store your content, only the link.\\n Just like a search engine.\\n You are responsible for keeping the data accessible through the published link.\\n Watch out for exceeding bandwidth limits of your provider, having a link near top of the list will make your content receive many thousands of downloads in a short time.\\n ",
+			"Title": "Community Content"
+		}
+	},
+	"Strings": {
+		"MoveControlMode.Pad": "Touchpad",
+		"MoveControlMode.Buttons": "Buttons",
+		"LookControlMode.Pad": "Touchpad Only",
+		"LookControlMode.EntireScreen": "Entire Screen",
+		"LookControlMode.SplitTouch": "Split Touch",
+		"GameMode.Creative.Description": "In Creative mode you have an infinite supply of all items and all blocks can be mined infinitely fast. You are also immortal and can fly.",
+		"GameMode.Harmless.Description": "In Harmless mode almost all danger is removed from the game. The animals will not attack unprovoked. Falls are less deadly. Health regeneration is very quick. Digging is 25% faster. You can place blocks while in the air.",
+		"GameMode.Challenging.Description": "Challenging is the normal survival mode. There is danger, but you will be able to respawn at your last sleep position when you die.",
+		"GameMode.Cruel.Description": "Cruel mode is the same as Challenging, but you will not be able to respawn. Play wisely, because once you are dead, your world is lost!",
+		"GameMode.Adventure.Description": "Adventure mode is for players who want to create quest maps and share them with others. In this mode you cannot dig without tools and health does not regenerate. Create your quest map in Creative mode and change it to Adventure before uploading.",
+		"SeaLevelOffset.Description": "Adjust global sea level of the world.",
+		"TemperatureOffset.Description": "Adjust global temperature of the world.",
+		"HumidityOffset.Description": "Adjust global humidity of the world.",
+		"EnvironmentBehaviorMode.Living.Description": "In Living mode the world is a living place full of animals. Plants and grass grow, blocks made of loose material collapse and detached leaves decay.",
+		"EnvironmentBehaviorMode.Static.Description": "In Static mode the world has no animals. Plants growth, block collapsing and plant decay are disabled. Useful if you want to shape your world the way you want it.",
+		"TimeOfDayMode.Changing.Description": "Time of day will change periodically. Sun, moon and stars will move across the sky.",
+		"TimeOfDayMode.Day.Description": "Time of day will always be noon. Sun, moon and stars will stay stationary in the sky.",
+		"TimeOfDayMode.Night.Description": "Time of day will always be midnight. Sun, moon and stars will stay stationary in the sky.",
+		"TimeOfDayMode.Sunrise.Description": "Time of day will always be morning. Sun, moon and stars will stay stationary in the sky.",
+		"TimeOfDayMode.Sunset.Description": "Time of day will always be evening. Sun, moon and stars will stay stationary in the sky.",
+		"TerrainGenerationMode.Continent.Name": "Continent",
+		"TerrainGenerationMode.Continent.Description": "In Continent mode the environment is made to look like the real world, full of forests, plains, deserts, glaciers, lakes, mountains, hills, caves and so on.",
+		"TerrainGenerationMode.Island.Name": "Island",
+		"TerrainGenerationMode.Island.Description": "In Island mode, the terrain is limited to a small island, but otherwise looks like the Continent mode. You can also adjust the island size.",
+		"TerrainGenerationMode.FlatContinent.Name": "Flat Continent",
+		"TerrainGenerationMode.FlatContinent.Description": "In Flat mode the terrain is completely flat, giving you the total freedom of creation. You can also change terrain level and type of block that fills it.",
+		"TerrainGenerationMode.FlatIsland.Name": "Flat Island",
+		"TerrainGenerationMode.FlatIsland.Description": "In Flat mode the terrain is completely flat, giving you the total freedom of creation. You can also change terrain level and type of block that fills it.",
+		"IslandSize.Description": "Adjust size of the island.",
+		"BiomeSize.Description": "Adjust size of the biomes.",
+		"FlatTerrainLevel.Description": "Adjust level of terrain above bedrock, only applicable in flat terrain mode. The lower you put it, the more space will be available above ground. The higher you put it, the more space will be available underground.",
+		"FlatTerrainShoreRoughness.Description": "Adjust roughness of flat terrain shore, only applicable in flat terrain mode. Zero is completely straight shore. The higher the value, the more rough the shoreline will be.",
+		"FlatTerrainMagmaOcean.Description": "Turn ocean into a sea of magma.",
+		"WeatherMode.True": "The world will experience periodical occurences of rain and snow that will accumulate on the ground. Lightning will strike tall objects and set them on fire.",
+		"WeatherMode.False": "There will be no precipitation or lightning in the world.",
+		"AdventureRespawnMode.True": "The player will be able to respawn at his last spawn or sleeping place when he dies (good for long adventures with checkpoints).",
+		"AdventureRespawnMode.False": "The player will not be able to respawn, but will have to restart the adventure and start from scratch when he dies (good for small adventures with no checkpoints).",
+		"AdventureSurvivalMechanics.True": "Hunger, stamina, body temperature, sleep deprivation will be simulated in adventure mode.",
+		"AdventureSurvivalMechanics.False": "Hunger, stamina, body temperature, sleep deprivation will be disabled in adventure mode. Health and injuries will still be simulated.",
+		"SupernaturalCreatures.True": "Supernatural creatures will spawn in the world.",
+		"SupernaturalCreatures.False": "Supernatural creatures will not spawn in the world. Any existing creatures will remain until despawned.",
+		"FriendlyFire.True": "Players will be able to attack and injure other players.",
+		"FriendlyFire.False": "Players will not be able to attack and injure other players.",
+		"CharacterSkin.Description": "Choose character skin to use during the game.",
+		"BlocksTexture.Description": "Choose blocks texture to use when drawing the world. You can completely change appearance of the world by using a different blocks texture.",
+		"Settings.Compatibility.SinglethreadedTerrainUpdate.Description": "Enable this to force the game to use a single thread only when updating the terrain. It will make the game run slower on multicore devices, but might make it slightly faster on single core ones.",
+		"Settings.Compatibility.UseAudioTrackCaching.Description": "Enable this if you experience issues with audio and have Android 4.3 or earlier. This setting reduces the number of AudioTrack objects created.",
+		"Settings.Compatibility.UseReducedZRange.Description": "Enable this if you experience issues with graphics like invisible parts of the world near the player or garbled textures. It reduces the clip-space Z range from -1\/1 to 0\/1, as some Android devices have depth buffering and clipping issues with the full range.",
+		"ScreenLayout.Single.Name": "Single",
+		"ScreenLayout.Single.Description": "Single player full screen",
+		"ScreenLayout.DoubleVertical.Name": "Double Vertical",
+		"ScreenLayout.DoubleVertical.Description": "Two players split vertically",
+		"ScreenLayout.DoubleHorizontal.Name": "Double Horizontal",
+		"ScreenLayout.DoubleHorizontal.Description": "Two players split horizontally",
+		"ScreenLayout.DoubleOpposite.Name": "Double Opposite",
+		"ScreenLayout.DoubleOpposite.Description": "Opposite, for sharing touch devices",
+		"ScreenLayout.TripleVertical.Name": "Triple Vertical",
+		"ScreenLayout.TripleVertical.Description": "Three players split vertically",
+		"ScreenLayout.TripleHorizontal.Name": "Triple Horizontal",
+		"ScreenLayout.TripleHorizontal.Description": "Three players split horizontally",
+		"ScreenLayout.TripleEven.Name": "Triple Even",
+		"ScreenLayout.TripleEven.Description": "Three players split evenly",
+		"ScreenLayout.TripleOpposite.Name": "Triple Opposite",
+		"ScreenLayout.TripleOpposite.Description": "Opposite, for sharing touch devices",
+		"ScreenLayout.Quadruple.Name": "Quadruple",
+		"ScreenLayout.Quadruple.Description": "Four players split evenly",
+		"ScreenLayout.QuadrupleOpposite.Name": "Quadruple Opposite",
+		"ScreenLayout.QuadrupleOpposite.Description": "Opposite, for sharing touch devices"
+	},
+	"ContentWidgets": {
+		"BestiaryDescriptionScreen": {
+			"1": "Creature Description",
+			"2": "Drops:"
+		},
+		"BestiaryScreen": {
+			"1": "Bestiary"
+		},
+		"CommunityContentScreen": {
+			"1": "Community Content",
+			"2": "-",
+			"3": "...",
+			"4": "-",
+			"5": "...",
+			"6": "Download",
+			"7": "Delete",
+			"8": "..."
+		},
+		"ContentScreen": {
+			"1": "Choose Content Type",
+			"2": "Access content previously uploaded to one of your public storage spaces",
+			"3": "Private",
+			"4": "Access content created by other community members and registered for public access",
+			"5": "Community",
+			"6": "Download a file directly from a web link, if you know it (it's best to use copy\/paste to enter links)",
+			"7": "From Link",
+			"8": "Manage downloaded content",
+			"9": "Manage"
+		},
+		"ExternalContentScreen": {
+			"1": "",
+			"2": "-",
+			"3": "...",
+			"4": "-",
+			"5": "-",
+			"6": "Copy Link"
+		},
+		"GameLoadingScreen": {
+			"1": "Loading World"
+		},
+		"HelpScreen": {
+			"1": "Help Topics",
+			"2": "Bestiary",
+			"3": "Recipaedia"
+		},
+		"HelpTopicScreen": {
+			"1": "Help Topics"
+		},
+		"MainMenuScreen": {
+			"1": "",
+			"2": "Play",
+			"3": "Content",
+			"4": "Settings",
+			"5": "Help",
+			"6": "Full Version...",
+			"7": "Copyright 2011-2019 Candy Rufus Games.",
+			"8": " Check ",
+			"9": "kaalus.wordpress.com",
+			"10": " for more information."
+		},
+		"ManageContentScreen": {
+			"1": "Manage Content",
+			"2": "(Download more using Community Content)",
+			"3": "Delete",
+			"4": "Upload",
+			"5": "..."
+		},
+		"ModifyWorldScreen": {
+			"1": "Modify World",
+			"2": "Rename World:",
+			"3": "World Seed:",
+			"4": "Game Mode:",
+			"5": "Change World Options:",
+			"6": "Options...",
+			"7": "Invalid world name",
+			"8": "Delete",
+			"9": "Upload",
+			"10": "Apply Changes"
+		},
+		"NagScreen": {
+			"1": "Thank you for trying ",
+			"2": "Survivalcraft 2",
+			"3": "!",
+			"4": "Do you want to buy the game?",
+			"5": "Buy",
+			"6": "Quit",
+			"7": "Press Back button again to quit.",
+			"8": "Press Start or Esc to quit."
+		},
+		"NewWorldScreen": {
+			"1": "Start A New World",
+			"2": "Enter World Name:",
+			"3": "Enter Seed:",
+			"4": "Leave blank for a random seed",
+			"5": "Game Mode:",
+			"6": "Starting Position:",
+			"7": "Change World Options:",
+			"8": "Options...",
+			"9": "Error: invalid world name!",
+			"10": "Setup Players",
+
+			},
+		"PlayScreen": {
+			"1": "Existing Worlds",
+			"2": "Play!",
+			"3": "New World",
+			"4": "...",
+			"5": "Scanning Worlds",
+			"6": "Existing Worlds ({0})",
+			"7": "Too many worlds",
+			"8": "A maximum of {0} worlds is allowed on a device. Delete some to make space for new ones.",
+			"9": "{0} players",
+			"10": "{0} player",
+			"11":"The world is missing the following mods. Do you want to continue?",
+			"12":"continue",
+			"13":"cancel",
+			"14":"version"
+
+		},
+		"PlayerScreen": {
+			"1": "Setup Player",
+			"2": "Sex:",
+			"3": "Name:",
+			"4": "Character Skin:",
+			"5": "...",
+			"6": "Controls:",
+			"7": "...",
+			"8": "Add Player",
+			"9": "Delete Player",
+			"10": "Play!",
+			"11": "Add Another"
+		},
+		"PlayersScreen": {
+			"1": "Edit Players",
+			"2": "Screen Layout",
+			"3": "New Player"
+		},
+		"RecipaediaDescriptionScreen": {
+			"1": "Block Description"
+		},
+		"RecipaediaRecipesScreen": {
+			"1": "Block Recipes"
+		},
+		"RecipaediaScreen": {
+			"1": "Recipaedia",
+			"2": "Description",
+			"3": "Recipes"
+		},
+		"RespawningScreen": {
+			"1": "Respawning...",
+			"2": "Your items will stay for a short time at the place of death."
+		},
+		"SettingsAudioScreen": {
+			"1": "Adjust Audio Settings",
+			"2": "Sounds Volume:",
+			"3": "Music Volume:"
+		},
+		"SettingsCompatibilityScreen": {
+			"1": "Adjust Device Compatibility",
+			"2": "Use these settings only if you experience issues with the game.",
+			"3": "Singlethreaded Terrain Update:",
+			"4": "Use AudioTrack Caching:",
+			"5": "Use Reduced Z-Range:",
+			"6": "View Game Log:",
+			"7": "...",
+			"8": "Reset To Defaults:",
+			"9": "Reset"
+		},
+		"SettingsControlsScreen": {
+			"1": "Adjust Controls Settings",
+			"2": "Touchscreen Move Control:",
+			"3": "Touchscreen Look Control:",
+			"4": "Left-handed Layout:",
+			"5": "Flip Vertical Axis:",
+			"6": "Auto Jump:",
+			"7": "Horizontal Creative Flight:",
+			"8": "Move Sensitivity:",
+			"9": "Look Sensitivity:",
+			"10": "Gamepad Cursor Speed:",
+			"11": "Gamepad Dead Zone:",
+			"12": "Creative Mode Dig Speed:",
+			"13": "Creative Mode Reach:",
+			"14": "Minimum Hold Duration:",
+			"15": "Minimum Drag Distance:"
+		},
+		"SettingsGraphicsScreen": {
+			"1": "Adjust Graphics Settings",
+			"2": "Virtual Reality:",
+			"3": "Dark Areas Brightness:"
+		},
+		"SettingsPerformanceScreen": {
+			"1": "Adjust Performance Settings",
+			"2": "Screen Resolution:",
+			"3": "Visibility Range:",
+			"4": "Camera View Angle:",
+			"5": "Terrain Mipmaps:",
+			"6": "Sky Rendering Mode:",
+			"7": "Object Shadows:",
+			"8": "Framerate Limit:",
+			"9": "Display FPS Counter:",
+			"10": "Display FPS Ribbon:"
+		},
+		"SettingsScreen": {
+			"1": "Choose Settings Category",
+			"2": "Performance",
+			"3": "Graphics",
+			"4": "User Interface",
+			"5": "Audio",
+			"6": "Controls",
+			"7": "Compatibility"
+		},
+		"SettingsUiScreen": {
+			"1": "Adjust User Interface Settings",
+			"2": "Window Mode:",
+			"3": "UI Size:",
+			"4": "UI Vertical Flip:",
+			"5": "Hide Move\/Look Pads:",
+			"6": "Show UI in screenshots:",
+			"7": "Show logo in screenshots:",
+			"8": "Screenshot resolution:",
+			"9": "Community Content:"
+		},
+		"TrialEndedScreen": {
+			"1": "The day has ended",
+			"2": "Please purchase the game to continue playing.",
+			"3": "You will be able to keep all the worlds you started.",
+			"4": "Purchase",
+			"5": "Quit",
+			"6": "You managed to survive a day\nin this world",
+			"7": "Please purchase Survivalcraft or start a new world to play again.",
+			"8": "Purchase",
+			"9": "New World"
+		},
+		"WorldOptionsScreen": {
+			"1": "Change World Options",
+			"2": "Terrain Type:",
+			"3": "",
+			"4": "Island Size East\/West:",
+			"5": "Island Size North\/South:",
+			"6": "Flat Terrain Level:",
+			"7": "Flat Terrain Shore Roughness:",
+			"8": "Flat Terrain Block:",
+			"9": "...",
+			"10": "Magma Ocean:",
+			"11": "Sea Level:",
+			"12": "Temperature:",
+			"13": "Humidity:",
+			"14": "Biome Size:",
+			"15": "Blocks Texture:",
+			"16": "...",
+			"17": "Customize Paint Colors:",
+			"18": "...",
+			"19": "Environment Behavior:",
+			"20": "Time Of Day:",
+			"21": "Weather Effects:",
+			"22": "Adventure Respawn:",
+			"23": "Adventure Survival Mechanics:",
+			"24": "Supernatural Creatures:",
+			"25": "Player-on-Player Attacks:"
+		},
+		"BestiaryItem": {
+			"1": "",
+			"2": ""
+		},
+		"BowWidget": {
+			"1": "Bow",
+			"2": "Inventory",
+			"3": ""
+		},
+		"CharacterSkinItem": {
+			"1": ""
+		},
+		"CheckboxContents": {
+			"1": ""
+		},
+		"ChestWidget": {
+			"1": "Chest",
+			"2": "Inventory"
+		},
+		"ClothingWidget": {
+			"1": "Body\/Food",
+			"2": "Inventory",
+			"3": "",
+			"4": ""
+		},
+		"CommunityContentItem": {
+			"1": "",
+			"2": "",
+			"3": ""
+		},
+		"CommunityContentItemMore": {
+			"1": "More Items..."
+		},
+		"CraftingRecipeSlot": {
+			"1": ""
+		},
+		"CraftingTableWidget": {
+			"1": "...",
+			"2": "Crafting",
+			"3": "Inventory"
+		},
+		"CreativeInventoryWidget": {
+			"1": "Weapons",
+			"2": "",
+			"3": ""
+		},
+		"CrossbowWidget": {
+			"1": "Crossbow",
+			"2": "Inventory",
+			"3": ""
+		},
+		"DispenserWidget": {
+			"1": "Dispenser",
+			"2": "Inventory",
+			"3": "Dispense",
+			"4": "Shoot",
+			"5": "Accepts Drops"
+		},
+		"ExternalContentItem": {
+			"1": "",
+			"2": ""
+		},
+		"FullInventoryWidget": {
+			"1": "...",
+			"2": "Handcrafting",
+			"3": "Inventory"
+		},
+		"FurnaceWidget": {
+			"1": "Batch",
+			"2": "Fuel",
+			"3": "...",
+			"4": "Furnace",
+			"5": "Inventory"
+		},
+		"FurnitureInventoryPanel": {
+			"1": "Add",
+			"2": "..."
+		},
+		"FurniturePackItem": {
+			"1": ""
+		},
+		"GameWidget": {
+			"1": "Move",
+			"2": "Look",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "",
+			"7": "",
+			"8": "",
+			"9": "",
+			"10": "",
+			"11": "",
+			"12": "",
+			"13": "",
+			"14": "",
+			"15": ""
+		},
+		"HelpTopicItem": {
+			"1": ""
+		},
+		"InventoryDragWidget": {
+			"1": "",
+			"2": "64"
+		},
+		"LinkContents": {
+			"1": ""
+		},
+		"MusketWidget": {
+			"1": "Musket",
+			"2": "Inventory",
+			"3": ""
+		},
+		"RecipaediaItem": {
+			"1": "",
+			"2": ""
+		},
+		"SliderContents": {
+			"1": ""
+		},
+		"TopBarContents": {
+			"1": "",
+			"2": ""
+		},
+		"VitalStatsWidget": {
+			"1": "",
+			"2": "Tap on labels for more information",
+			"3": "Health",
+			"4": "Stamina",
+			"5": "Sleep",
+			"6": "Food",
+			"7": "Wetness",
+			"8": "Body Heat",
+			"9": "Experience",
+			"10": "Strength",
+			"11": "Resilience",
+			"12": "Speed",
+			"13": "Hunger",
+			"14": "Insulation",
+			"15":"",
+			"16":"Affects melee attack power, digging speed, throwing range, and bow range.",
+			"17":"Affects damage received from attacks, falls, fire, and asphyxiation.",
+			"18":"Affects movement speed on foot, swimming speed, jump height and stamina regeneration.",
+			"19":"Affects how quickly eaten food is depleted.",
+			"Strength": "Strength",
+			"Resilience":"Resilience",
+			"Speed":"Speed",
+			"Hunger":"Hunger",
+			"Choked":"Choked"
+		},
+		"EditMemeryDialogB":{
+		"0":"Edit MemoryBank",
+		"1":"Clear",
+		"2":"Transposition",
+		"3":"Input All:",
+		"4":"Save",
+		"5":"Cancel"
+		},
+
+
+
+		"BuildFurnitureDialog": {
+			"1": "...",
+			"2": "Build",
+			"3": "Cancel"
+		},
+		"CancellableBusyDialog": {
+			"1": "Cancel"
+		},
+		"DownloadContentFromLinkDialog": {
+			"1": "Enter Link To A File",
+			"2": "The name and type will be autofilled from link if possible, otherwise you must specify them manually.",
+			"3": "Link:",
+			"4": "Name:",
+			"5": "Content Type:",
+			"6": "...",
+			"7": "Download",
+			"8": "Cancel"
+		},
+		"EditAdjustableDelayGateDialog": {
+			"1": "Adjust Delay",
+			"2": "OK",
+			"3": "Cancel"
+		},
+		"EditBatteryDialog": {
+			"1": "Adjust Battery Voltage",
+			"2": "OK",
+			"3": "Cancel"
+		},
+		"EditMemoryBankDialog": {
+			"1": "Edit Memory Bank",
+			"2": "Memory bank contains 256 4-bit words. Enter data using hexadecimal characters (0 to 9, A, B, C, D, E, F).",
+			"3": "0123456789ABCDEF",
+			"4": "0",
+			"5": "1",
+			"6": "2",
+			"7": "3",
+			"8": "4",
+			"9": "5",
+			"10": "6",
+			"11": "7",
+			"12": "8",
+			"13": "9",
+			"14": "A",
+			"15": "B",
+			"16": "C",
+			"17": "D",
+			"18": "E",
+			"19": "F",
+			"20": "Enter up to 256 hexadecimal characters",
+			"21": "OK",
+			"22": "Cancel"
+		},
+		"EditPaletteDialog": {
+			"1": "Edit Palette",
+			"2": "Define custom colors for the world",
+			"3": "OK",
+			"4": "Cancel"
+		},
+		"EditPistonDialog": {
+			"1": "Max Extension",
+			"2": "Pull Count",
+			"3": "Speed Setting",
+			"4": "OK",
+			"5": "Cancel"
+		},
+		"EditSignDialog": {
+			"1": "Enter Sign Text Lines",
+			"2": "Line 1",
+			"3": "Line 2",
+			"4": "Line 3",
+			"5": "Line 4",
+			"6": "Enter Sign URL",
+			"7": "When playing in adventure mode only, tapping",
+			"8": "the sign will open this URL in the browser",
+			"9": "Try",
+			"10": "OK",
+			"11": "URL",
+			"12": "Lines",
+			"13": "Cancel"
+		},
+		"EditTruthTableDialog": {
+			"1": "Edit Truth Table",
+			"2": "Truth table defines output values for all possible combinations of inputs.",
+			"3": "In4 In3 In2 In1 Out",
+			"4": " 0 0 0 0",
+			"5": " 0 0 0 1",
+			"6": " 0 0 1 0",
+			"7": " 0 0 1 1",
+			"8": " 0 1 0 0",
+			"9": " 0 1 0 1",
+			"10": " 0 1 1 0",
+			"11": " 0 1 1 1",
+			"12": " 1 0 0 0",
+			"13": " 1 0 0 1",
+			"14": " 1 0 1 0",
+			"15": " 1 0 1 1",
+			"16": " 1 1 0 0",
+			"17": " 1 1 0 1",
+			"18": " 1 1 1 0",
+			"19": " 1 1 1 1",
+			"20": "Enter up to 16 binary characters (0 and 1)",
+			"21": "OK",
+			"22": "Cancel"
+		},
+		"ExternalContentLinkDialog": {
+			"1": "Link Copied To Clipboard",
+			"2": "OK"
+		},
+		"GameMenuDialog": {
+			"1": "Resume",
+			"2": "Quit",
+			"3": "..."
+		},
+		"GamepadHelpDialog": {
+			"1": "Gamepad Controls",
+			"2": "Left Stick",
+			"3": "Right Stick",
+			"4": "Left Trigger",
+			"5": "Right Trigger",
+			"6": "Left Thumb Click",
+			"7": "Right Thumb Click",
+			"8": "Left Shoulder",
+			"9": "Right Shoulder",
+			"10": "A",
+			"11": "B",
+			"12": "X",
+			"13": "Y",
+			"14": "D-Pad Up",
+			"15": "D-Pad Down",
+			"16": "D-Pad Left\/Right",
+			"17": "D-Pad Up\/Down",
+			"18": "Back\/Select\/Pause",
+			"19": "Left Trigger + A",
+			"20": "2xA",
+			"21": "A\/Right Shoulder",
+			"22": "movement",
+			"23": "looking",
+			"24": "place block, use, interact",
+			"25": "dig, attack, aim",
+			"26": "mount creature or vehicle",
+			"27": "change camera mode",
+			"28": "edit block or item",
+			"29": "toggle sneaking",
+			"30": "jump, drag items",
+			"31": "drop active item, cancel",
+			"32": "open inventory panel",
+			"33": "open body panel",
+			"34": "mount creature or vehicle",
+			"35": "change camera mode",
+			"36": "change active slot",
+			"37": "scroll, prev\/next page",
+			"38": "show game menu",
+			"39": "auto move inventory item",
+			"40": "toggle fly mode (creative)",
+			"41": "fly up\/down (creative)",
+			"42": "OK",
+			"43": "Help"
+		},
+		"KeyboardHelpDialog": {
+			"1": "Keyboard Controls",
+			"2": "W\/A\/S\/D",
+			"3": "Mouse Move",
+			"4": "Space",
+			"5": "Shift",
+			"6": "E",
+			"7": "C",
+			"8": "Q",
+			"9": "V",
+			"10": "R",
+			"11": "G",
+			"12": "P",
+			"13": "T",
+			"14": "L",
+			"15": "1 to 6",
+			"16": "2xSpace or F",
+			"17": "Space\/Shift",
+			"18": "Left Mouse Click",
+			"19": "Right Mouse Click",
+			"20": "Left Mouse Drag",
+			"21": "Right Mouse Drag",
+			"22": "Left Mouse Hold",
+			"23": "Shift + Left Mouse Click",
+			"24": "Mouse Wheel",
+			"25": "Escape",
+			"26": "movement",
+			"27": "looking",
+			"28": "jump",
+			"29": "toggle sneaking",
+			"30": "open inventory panel",
+			"31": "open body panel",
+			"32": "drop active item",
+			"33": "change camera mode",
+			"34": "mount creature or vehicle",
+			"35": "edit block or item",
+			"36": "take screenshot",
+			"37": "change time of day (creative)",
+			"38": "summon lightning (creative)",
+			"39": "select inventory slot",
+			"40": "toggle fly mode (creative)",
+			"41": "fly up\/down (creative)",
+			"42": "dig, attack, aim",
+			"43": "place block, use, interact",
+			"44": "move all items",
+			"45": "move a single item",
+			"46": "mark stack for splitting",
+			"47": "auto move inventory item",
+			"48": "scroll, change inventory slot",
+			"49": "show game menu",
+			"50": "OK",
+			"51": "Help"
+		},
+		"LevelFactorDialog": {
+			"1": "Current multipliers:",
+			"2": "OK"
+		},
+		"MoreCommunityLinkDialog": {
+			"1": "Community Content",
+			"2": "User name is used to identify users when publishing and rating community content.",
+			"3": "Active User:",
+			"4": "-",
+			"5": "...",
+			"6": "User ID:",
+			"7": "-",
+			"8": "Copy",
+			"9": "Publish Link",
+			"10": "Close"
+		},
+		"PublishCommunityLinkDialog": {
+			"1": "Publish Link To A File",
+			"2": "Publishing a link does not upload the linked file to the server. Only links are stored on the server. You are responsible for keeping your file accessible through the published link.",
+			"3": "Link:",
+			"4": "Name:",
+			"5": "Content Type:",
+			"6": "...",
+			"7": "Publish",
+			"8": "Cancel"
+		},
+		"RateCommunityContentDialog": {
+			"1": "Rate Community Content",
+			"2": "Offensive content?",
+			"3": "Report",
+			"4": "Rate",
+			"5": "Cancel"
+		},
+		"ReportCommunityContentDialog": {
+			"1": "Report Community Content",
+			"2": "Please tick one that applies most:",
+			"3": "Report",
+			"4": "Cancel"
+		},
+		"TextBoxDialog": {
+			"1": "OK",
+			"2": "Cancel"
+		},
+		"ViewGameLogDialog": {
+			"1": "Copy",
+			"2": "Close"
+		}
+	},
+	"FireworksBlock": {
+		"ShapeDisplayNames": {
+			"0": "Small Burst",
+			"1": "Large Burst",
+			"2": "Circle",
+			"3": "Disc",
+			"4": "Sphere",
+			"5": "Short Trails",
+			"6": "Long Trails",
+			"7": "Flat Trails"
+		},
+		"HeadNames": {
+			"0": "HeadConeSmall",
+			"1": "HeadConeLarge",
+			"2": "HeadCylinderSmall",
+			"3": "HeadCylinderLarge",
+			"4": "HeadSphere",
+			"5": "HeadDiamondSmall",
+			"6": "HeadDiamondLarge",
+			"7": "HeadCylinderFlat"
+		},
+		"FireworksColorDisplayNames": {
+			"0": "White",
+			"1": "Cyan",
+			"2": "Red",
+			"3": "Blue",
+			"4": "Yellow",
+			"5": "Green",
+			"6": "Orange",
+			"7": "Purple"
+		},
+		"Other": {
+			"1": "{0}{1}{2}{3} Fireworks",
+			"2": "Flickering",
+			"3": "Low",
+			"4": "High"
+		}
+	},
+	"WorldPalette": {
+		"0": "White",
+		"1": "Pale Cyan",
+		"2": "Pink",
+		"3": "Pale Blue",
+		"4": "Yellow",
+		"5": "Pale Green",
+		"6": "Salmon",
+		"7": "Light Gray",
+		"8": "Gray",
+		"9": "Cyan",
+		"10": "Purple",
+		"11": "Blue",
+		"12": "Brown",
+		"13": "Green",
+		"14": "Red",
+		"15": "Black"
+	},
+	"Database": {
+		"DisplayName": {
+			"1": "Egg",
+			"2": "White Horse",
+			"3": "White Horse Spawner",
+			"4": "Brown Bear",
+			"5": "Brown Bear Spawner",
+			"6": "Chestnut Horse",
+			"7": "Chestnut Horse Spawner",
+			"8": "Freshwater Bass",
+			"9": "Freshwater Bass Spawner",
+			"10": "Black Cow",
+			"11": "Black Cow Spawner",
+			"12": "Beluga Whale",
+			"13": "Beluga Spawner",
+			"14": "Ostrich",
+			"15": "Ostrich Egg",
+			"16": "Palomino Horse",
+			"17": "Palomino Horse Spawner",
+			"18": "Leopard",
+			"19": "Leopard Spawner",
+			"20": "Gnu Antelope",
+			"21": "Gnu Spawner",
+			"22": "Gray Wolf",
+			"23": "Gray Wolf Spawner",
+			"24": "Rhinoceros",
+			"25": "Rhino Spawner",
+			"26": "Reindeer",
+			"27": "Reindeer Spawner",
+			"28": "Barracuda",
+			"29": "Barracuda Spawner",
+			"30": "Raven",
+			"31": "Raven Egg",
+			"32": "Camel",
+			"33": "Camel Spawner",
+			"34": "Werewolf",
+			"35": "Werewolf Spawner",
+			"36": "White Tiger",
+			"37": "Brown Bull",
+			"38": "Brown Bull Spawner",
+			"39": "Orca",
+			"40": "Orca Spawner",
+			"41": "Duck",
+			"42": "Duck Egg",
+			"43": "Giraffe",
+			"44": "Giraffe Spawner",
+			"45": "Bull Shark",
+			"46": "Bull Shark Spawner",
+			"47": "Tiger Shark",
+			"48": "Tiger Shark Spawner",
+			"49": "Black Horse",
+			"50": "Black Horse Spawner",
+			"51": "Black Bear",
+			"52": "Black Bear Spawner",
+			"53": "Lion",
+			"54": "Lion Spawner",
+			"55": "Tiger",
+			"56": "Tiger Spawner",
+			"57": "Donkey",
+			"58": "Donkey Spawner",
+			"59": "Brown Cow",
+			"60": "Brown Cow Spawner",
+			"61": "Black Bull",
+			"62": "Black Bull Spawner",
+			"63": "Piranha",
+			"64": "Piranha Spawner",
+			"65": "Wildboar",
+			"66": "Wildboar Spawner",
+			"67": "Polar Bear",
+			"68": "Polar Bear Spawner",
+			"69": "Bay Horse",
+			"70": "Bay Horse Spawner",
+			"71": "Yellow Stingray",
+			"72": "Yellow Ray Spawner",
+			"73": "Moose",
+			"74": "Moose Spawner",
+			"75": "Brown Stingray",
+			"76": "Brown Ray Spawner",
+			"77": "Coyote",
+			"78": "Coyote Spawner",
+			"79": "Seabass",
+			"80": "Seabass Spawner",
+			"81": "Hyena",
+			"82": "Hyena Spawner",
+			"83": "Seagull",
+			"84": "Seagull Egg",
+			"85": "White Alpaca Spawner",
+			"86": "White Bull",
+			"87": "Great White Shark",
+			"88": "Great White Shark Spawner",
+			"89": "Bison",
+			"90": "Bison Spawner",
+			"91": "Jaguar",
+			"92": "Jaguar Spawner",
+			"93": "Zebra",
+			"94": "Zebra Spawner",
+			"95": "Cassowary",
+			"96": "Cassowary Egg",
+			"97": "Female Player",
+			"98": "Male Player",
+			"99": ""
+		},
+		"Description": {
+			"1": "A large grass-eating mammal. Not normally aggressive but does not like anyone who approaches too close. Very protective towards the cows. Dangerous when enraged. Delicious to eat.",
+			"2": "A docile animal that can be ridden if equipped with a saddle. Once saddled, will respond to whistle. Very fast moving and not aggressive.",
+			"3": "A large, dangerous mammal omnivore. Will chase anything that approaches it. Fairly slow, but powerful. Unlike black bear, likes warm areas. Not edible, but provides fur when hunted.",
+			"4": "A medium-sized freshwater fish, not aggressive. Delicious to eat.",
+			"5": "A large grass-eating mammal. Can be milked with a bucket. Milk is regenerated after some time, faster than by a brown cow. Docile, but sometimes decides to stand its ground when attacked. Often protected by nearby bulls. Delicious to eat.",
+			"6": "A very large, non aggressive mammal that lives in deep ocean. Provides plenty of food when hunted.",
+			"7": "A large flightless bird. Not aggressive, but runs very fast. Sometimes lays large, edible eggs.",
+			"8": "A medium-sized cat. Powerful, fast and able to jump very high. It is almost impossible to run away from it once it starts the chase. Smaller than Jaguar or Tiger.",
+			"9": "A large antelope. Not normally aggressive but can defend itself if attacked. Delicious to eat.",
+			"10": "A medium sized predatory mammal that lives in cold and temperate areas. Moves fast and hunts in packs at night. Will sometimes stop and howl raising its head high to the moon. During the day is shy and will move away from trouble. Extremely dangerous at night when encountered in large numbers. Will smell prey from large distances and congregate to hunt it. At full moon will change into Werewolf.",
+			"11": "A huge plant eating mammal. Solitary, temperamental and powerful. Has armored skin. Very easily annoyed and extremely dangerous when enraged. Will chase and trample anything that approaches, for no reason. Lives in warm areas.",
+			"12": "A medium size plant eating mammal. Docile despite the pair of formidable antlers. Lives in herds in cold areas. Delicious to eat.",
+			"13": "A medium-sized predatory saltwater fish. Has a painful bite. Delicious to eat. Found in warm areas only.",
+			"14": "A small bird that lives in cold areas. Sometimes lays edible eggs. Delicious to eat when hunted.",
+			"15": "A large animal that can be ridden if equipped with a saddle. Once saddled, will respond to whistle. Fast moving, temperamental and mildly aggressive. Lives in deserts.",
+			"16": "During full moon nights, wolves turn into werewolves. Can be easily seen at night due to its red shiny eyes. Very dangerous, hunts in packs and is much stronger than ordinary wolf. Able to jump high. Will turn back into wolf at dawn.",
+			"17": "A very large predatory mammal that lives in deep ocean. Extremely strong and dangerous, will chase anything that moves. Provides plenty of food when hunted.",
+			"18": "A small bird that lives in humid areas. Sometimes lays edible eggs. Delicious to eat when hunted.",
+			"19": "A very large and tall plant eating mammal. Very strong but docile. Dangerous when decides to defend itself instead of fleeing. Lives in warm areas. Delicious to eat and provides plenty of meat.",
+			"20": "A small, aggressive saltwater shark. Will chase anything that comes close in the water. Is not very strong, but will kill smaller animals easily.",
+			"21": "A large, aggressive saltwater shark. Will chase anything that comes close in the water. Is very strong and will kill almost all land animals easily. Only whales can withstand its ferocious attack.",
+			"22": "A large, dangerous mammal omnivore. Will chase anything that approaches it. Fairly slow, but powerful. Unlike brown bear, likes colder areas. Not edible, but provides fur when hunted.",
+			"23": "A large cat. Powerful and fast, likes to hunt at night. Larger than Leopard or Jaguar, but not as dangerous as Tiger.",
+			"24": "A very large cat. Extremely powerful, fast and able to jump very high. It is almost impossible to run away from it once it starts the chase. Larger and stronger than any other cat, only very large and armored animals like Rhinoceros can survive its attack.",
+			"25": "A stubborn animal that can be ridden if equipped with a saddle. Once saddled, will respond to whistle. Fast moving, not aggressive and very resilient to falls. Sometimes has a fit of stubbornness and refuses to move. Feeding it will often resolve the problem.",
+			"26": "A large grass-eating mammal. Can be milked with a bucket. Milk is regenerated after some time, slower than by a black cow. Docile, but sometimes decides to stand its ground when attacked. Often protected by nearby bulls. Delicious to eat.",
+			"27": "A small predatory fish that is extremely aggressive and hunts in packs. A pack of hungry piranhas will make a short work of almost any creature that steps in the water. Not edible. Lives in warm areas only.",
+			"28": "A medium sized plant-eating mammal. Quite aggressive for its size, but not as fast moving as other animals. Solitary. Delicious to eat.",
+			"29": "A large, dangerous mammal omnivore. Will chase anything that approaches it. Faster, larger and more powerful than other bears. Lives only in very cold areas. Not edible, but provides fur when hunted. Very dangerous on ice because special foot padding makes it slip much less than other creatures.",
+			"30": "Bottom-dwelling fish, lives both in salt and freshwater. Will often bury itself in the mud at the bottom with only the head sticking out. Not aggressive, but has a poisonous sting that will severely injure anyone who steps on it. Delicious to eat.",
+			"31": "A large grass-eating mammal with formidable antlers. Not normally aggressive, but will often defend itself when attacked. Strong and resilient, it often manages to scare away packs of small predators. Lives in cold areas. Delicious to eat and provides valuable fur when hunted.",
+			"32": "Bottom-dwelling fish, lives both in salt and freshwater. Will often bury itself in the mud at the bottom with only the head sticking out. Not aggressive, does not have poisonous sting, unlike the Yellow Stingray. Delicious to eat.",
+			"33": "A medium sized predatory mammal that lives in deserts. Moves fast and hunts in packs at night. Will sometimes stop and howl raising its head high to the moon. During the day is shy and will move away from trouble. Extremely dangerous at night when encountered in large numbers. Will smell prey from large distances and congregate to hunt it.",
+			"34": "A medium-sized saltwater fish, not aggressive. Delicious to eat.",
+			"35": "A small, aggressive and unpleasant predatory mammal. Hunts at night in packs. During the day is shy and prefers to stay away from trouble. Very dangerous in large numbers.",
+			"36": "A small bird that lives near to the ocean shore. Sometimes lays edible eggs. Delicious to eat when hunted.",
+			"37": "A very rare albino mutation of a large grass-eating mammal. Not normally aggressive but does not like anyone who approaches too close. Dangerous when enraged. Delicious to eat. Provides more meat than regular cattle.",
+			"38": "A huge, aggressive ocean shark. Will chase anything that comes close in the water. Has very good smell and will home on its prey from far away. Extremely strong, will kill all land animals easily. Only whales can withstand its ferocious attack.",
+			"39": "A large grass-eating mammal. Lives in herds for protection. Not normally aggressive but does not like anyone who approaches too close. Powerful and dangerous when enraged. Delicious to eat and provides valuable fur when hunted.",
+			"40": "A medium-sized cat. Powerful, fast and able to jump very high. It is almost impossible to run away from it once it starts the chase. Larger and stronger than Leopard, but not as big as Tiger.",
+			"41": "A medium sized plant eating mammal. Very shy and not aggressive. Delicious to eat.",
+			"42": "A large flightless bird. Quite aggressive and has very sharp claws that may inflict catastrophic injuries to an unwary attacker. Sometimes lays large, edible eggs.",
+			"43": "A woman moves fast and does not need much food, but she is weaker than a man and cannot survive as many injuries.",
+			"44": "A man is strong, can hit hard and withstand many injuries, but he is slower moving than a woman and needs more food to survive.",
+			"45": ""
+		}
+	}
+}

@@ -307,6 +307,16 @@ namespace Game
                     noclipState = false;
                 }
             }
+			//allow animallist to fly
+			if (input.IsKeyDownOnce(Key.Control))
+			{
+				ModificationsHolder.allowFlyingAnimal = true;
+			}
+            //allow animallist to drop
+            if (input.IsKeyDownOnce(Key.Tab))
+			{
+				ModificationsHolder.allowFlyingAnimal = false;
+			}
         }
 
 		private void UpdateDebug(bool noclipPreviousState, int speedPreviously)

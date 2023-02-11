@@ -1,0 +1,22 @@
+﻿How to build:
+1. Have no skill issue to know how to build in VS. If have, go look on internet to see how to do so. 
+2. Populate dll. Add in the dlls as needed, it is all inside DLL folder. 
+3. Build project. 
+4. Run project. You will get exception. Press continue and let program crash. 
+5. Go to location for bin output of project. Then, open DLL folder, and from there put in OpenAL folder, lang folder and Content.pak folder into whatever configuration you build project on(Debug, Release...).
+6. Run game. You will see Chinese. I am still working on it, patient. 
+7. Enjoy game. 
+-> If you want to do modification, then you are on your own. You must:
+1. Know some programming
+2. Know how logic works
+3. Know how to look and read code.
+4. Know C#(or some Java)
+If it don't work:
+1. Go to GitHub, press issues, report as follows:
+	1. Your VS version(I use latest)
+	2. Did you modify Y/N
+	3. Do you follow all the steps? If so, talk about exactly what you did. 
+2. Check if references add correctly. Do so by clicking on references in solution explorer. If there are x in some references, then you did not link references properly.
+3. OpenAL is very important. If you keep getting exception, is because it is missing. Remember to put it inside any directory where you have project output to. It should be .../bin/(whatever).  
+4. NET framework version is outdated, please install latest version. 
+5. <RARE> Refactor issues : Not my fault, try fixing yourself. But if can not, you can refer it to issues. But I will take long to reply and fix. 

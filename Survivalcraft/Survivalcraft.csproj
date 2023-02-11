@@ -75,48 +75,48 @@
   <ItemGroup>
     <Reference Include="Engine, Version=1.0.8195.32035, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\Engine.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\Engine.dll</HintPath>
     </Reference>
     <Reference Include="EntitySystem, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\EntitySystem.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\EntitySystem.dll</HintPath>
     </Reference>
     <Reference Include="FJ.CoreWin">
-      <HintPath>..\..\..\SurvivalCraft2Modded\FJ.CoreWin.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\FJ.CoreWin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="NVorbis">
-      <HintPath>..\..\..\SurvivalCraft2Modded\NVorbis.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\NVorbis.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\..\SurvivalCraft2Modded\OpenTK.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="PngCs">
-      <HintPath>..\..\..\SurvivalCraft2Modded\PngCs.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\PngCs.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\SharpDX.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.D3DCompiler, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.D3DCompiler.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\SharpDX.D3DCompiler.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct3D11, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.Direct3D11.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\SharpDX.Direct3D11.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.DXGI, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.DXGI.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\SharpDX.DXGI.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.XAudio2, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.XAudio2.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\SharpDX.XAudio2.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.XInput, Version=2.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SurvivalCraft2Modded\SharpDX.XInput.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\SharpDX.XInput.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
@@ -125,7 +125,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System_Xml">
-      <HintPath>..\..\..\SurvivalCraft2Modded\System_Xml.dll</HintPath>
+      <HintPath>..\生存战争2.2电脑插件版v1.33正式版\System_Xml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -1081,6 +1081,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
+    <None Include="DLL folder%28text file to see what to do%29\Content.pak" />
+    <None Include="DLL folder%28text file to see what to do%29\lang\en_US.json" />
+    <None Include="DLL folder%28text file to see what to do%29\lang\ot_OT.json" />
+    <None Include="DLL folder%28text file to see what to do%29\lang\zh_CN.json" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -1095,7 +1099,29 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DLL folder%28text file to see what to do%29\Engine.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\EntitySystem.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\FJ.CoreWin.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\Microsoft.VisualBasic.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\NVorbis.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\OpenAL\x64\openal32.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\OpenAL\x86\openal32.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\OpenTK.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\PngCs.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\SharpDX.D3DCompiler.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\SharpDX.Direct3D11.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\SharpDX.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\SharpDX.DXGI.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\SharpDX.XAudio2.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\SharpDX.XInput.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\Survivalcraft.exe" />
+    <Content Include="DLL folder%28text file to see what to do%29\System.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\System.Drawing.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\System.Net.Http.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\System_Xml.dll" />
+    <Content Include="DLL folder%28text file to see what to do%29\System_Xml_Linq.dll" />
     <Content Include="Notes\TerrainGeneratorMethodNotes.txt" />
+    <Content Include="SkillIssue.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
