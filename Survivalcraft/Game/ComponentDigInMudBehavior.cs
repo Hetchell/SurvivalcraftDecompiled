@@ -84,7 +84,7 @@ namespace Game
 				{
 					int? standingOnValue = this.m_componentCreature.ComponentBody.StandingOnValue;
 					int digInBlockIndex = this.m_digInBlockIndex;
-					if ((standingOnValue.GetValueOrDefault() == digInBlockIndex & standingOnValue != null) && this.m_componentCreature.ComponentBody.Velocity.LengthSquared() < 1f)
+					if ((standingOnValue.GetValueOrDefault() == digInBlockIndex & standingOnValue != null) && this.m_componentCreature.ComponentBody.getVectorSpeed().LengthSquared() < 1f)
 					{
 						this.m_stateMachine.TransitionTo("DigIn");
 					}
@@ -114,7 +114,7 @@ namespace Game
 				{
 					int? standingOnValue = this.m_componentCreature.ComponentBody.StandingOnValue;
 					int digInBlockIndex = this.m_digInBlockIndex;
-					if ((standingOnValue.GetValueOrDefault() == digInBlockIndex & standingOnValue != null) && this.m_componentCreature.ComponentBody.Velocity.LengthSquared() <= 1f)
+					if ((standingOnValue.GetValueOrDefault() == digInBlockIndex & standingOnValue != null) && this.m_componentCreature.ComponentBody.getVectorSpeed().LengthSquared() <= 1f)
 					{
 						return;
 					}

@@ -48,7 +48,7 @@ namespace Game
 			for (int i = 0; i < this.m_bodies.Count; i++)
 			{
 				ComponentBody componentBody = this.m_bodies.Array[i];
-				if (componentBody.Velocity.LengthSquared() > 0.0625f)
+				if (componentBody.getVectorSpeed().LengthSquared() > 0.0625f)
 				{
 					Vector3 vector = componentBody.Position + new Vector3(0f, 0.5f * componentBody.BoxSize.Y, 0f);
 					float num2 = Vector3.DistanceSquared(vector, this.m_center);

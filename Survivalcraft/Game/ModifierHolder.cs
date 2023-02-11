@@ -410,6 +410,7 @@ namespace Survivalcraft.Game
                         num12 += MathUtils.Max(4f * (this.activeChunkProvider.TGDensityBias - (float)num9), 0f);
                         //Console.WriteLine("Value of num12 is " + num12);
                         grid3d.Set(k, m, l, (float)(num12));
+                        //grid3d.Set(I++, num12);
                     }
                 }
             }
@@ -549,6 +550,10 @@ namespace Survivalcraft.Game
                 return this.m_data[x + y * this.m_sizeX + z * this.m_sizeXY];
             }
 
+            public void Set(int index, float value)
+            {
+                this.m_data[index] = value;
+            }
             public void Set(int x, int y, int z, float value)
             {
                 this.m_data[x + y * this.m_sizeX + z * this.m_sizeXY] = value;
@@ -802,7 +807,7 @@ namespace Survivalcraft.Game
                                     {
                                         byte graniteBlockId = BlocksManager.getID(block => block is GraniteBlock);
                                         byte sandstoneBlockId = BlocksManager.getID(block => block is SandstoneBlock);
-                                        byte basaltBlockId = BlocksManager.getID(block => block is BasaltBlock);
+                                        byte basaltBlockId = BlocksManager.getID(block => block is GlassBlock);
                                         if (!Desertificationflag)
                                         {
                                             if (d13 >= f1)

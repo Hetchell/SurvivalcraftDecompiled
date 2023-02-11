@@ -13,7 +13,7 @@ namespace Game
 		public override void Update(float dt)
 		{
 			float footstepsPhase = this.m_footstepsPhase;
-			float num = this.m_componentCreature.ComponentLocomotion.SlipSpeed ?? Vector3.Dot(this.m_componentCreature.ComponentBody.Velocity, this.m_componentCreature.ComponentBody.Matrix.Forward);
+			float num = this.m_componentCreature.ComponentLocomotion.SlipSpeed ?? Vector3.Dot(this.m_componentCreature.ComponentBody.getVectorSpeed(), this.m_componentCreature.ComponentBody.Matrix.Forward);
 			if (this.m_canCanter && num > 0.7f * this.m_componentCreature.ComponentLocomotion.WalkSpeed)
 			{
 				this.m_gait = ComponentFourLeggedModel.Gait.Canter;

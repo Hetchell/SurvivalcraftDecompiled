@@ -42,7 +42,7 @@ namespace Game
 			this.m_componentCreature.ComponentBody.CollidedWithBody += delegate(ComponentBody body)
 			{
 				this.m_target = body;
-				this.m_isFast = (MathUtils.Max(body.Velocity.Length(), this.m_componentCreature.ComponentBody.Velocity.Length()) > 3f);
+				this.m_isFast = (MathUtils.Max(body.getVectorSpeed().Length(), this.m_componentCreature.ComponentBody.getVectorSpeed().Length()) > 3f);
 			};
 			this.m_stateMachine.AddState("Inactive", delegate
 			{
@@ -67,7 +67,7 @@ namespace Game
 				}
 				if (this.m_target != null)
 				{
-					Vector3 vector = this.m_target.Position + 0.5f * this.m_target.Velocity;
+					Vector3 vector = this.m_target.Position + 0.5f * this.m_target.getVectorSpeed();
 					Vector2 v = Vector2.Normalize(this.m_componentCreature.ComponentBody.Position.XZ - vector.XZ);
 					Vector2 vector2 = Vector2.Zero;
 					float num = float.MinValue;

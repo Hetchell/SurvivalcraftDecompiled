@@ -258,7 +258,7 @@ namespace Game
 				Vector3 vector = 0.5f * (boundingBox2.Min + boundingBox2.Max);
 				float num = Vector3.Distance(v, vector);
 				float num2 = (num < 4f) ? 0.2f : 0f;
-				this.m_componentPathfinding.SetDestination(new Vector3?(vector + num2 * num * this.m_target.ComponentBody.Velocity), 1f, 1.5f, maxPathfindingPositions, true, false, true, this.m_target.ComponentBody);
+				this.m_componentPathfinding.SetDestination(new Vector3?(vector + num2 * num * this.m_target.ComponentBody.getVectorSpeed()), 1f, 1.5f, maxPathfindingPositions, true, false, true, this.m_target.ComponentBody);
 				if (this.m_random.Float(0f, 1f) < 0.33f * this.m_dt)
 				{
 					this.m_componentCreature.ComponentCreatureSounds.PlayAttackSound();

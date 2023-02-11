@@ -180,7 +180,7 @@ namespace Game
 			if (this.m_subsystemTime.PeriodicGameTimeEvent(0.25, 0.0))
 			{
 				float num = new Vector2(this.m_componentCreature.ComponentBody.CollisionVelocityChange.X, this.m_componentCreature.ComponentBody.CollisionVelocityChange.Z).Length();
-				if (this.m_speedLevel == 0 || num < 0.1f || this.m_componentCreature.ComponentBody.Velocity.Length() > MathUtils.Abs(0.5f * this.m_speed * this.m_componentCreature.ComponentLocomotion.WalkSpeed))
+				if (this.m_speedLevel == 0 || num < 0.1f || this.m_componentCreature.ComponentBody.getVectorSpeed().Length() > MathUtils.Abs(0.5f * this.m_speed * this.m_componentCreature.ComponentLocomotion.WalkSpeed))
 				{
 					this.m_lastNotBlockedTime = this.m_subsystemTime.GameTime;
 				}

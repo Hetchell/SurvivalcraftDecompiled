@@ -442,15 +442,15 @@ namespace Game
 		// Token: 0x06000E65 RID: 3685 RVA: 0x0006EA68 File Offset: 0x0006CC68
 		public void NormalMovement(float dt)
 		{
+			Boolean enabler = this.IsCreativeFlyEnabled;
 			this.m_componentCreature.ComponentBody.IsGravityEnabled = true;
 			this.m_componentCreature.ComponentBody.IsGroundDragEnabled = true;
 			this.m_componentCreature.ComponentBody.IsWaterDragEnabled = true;
-			Vector3 vector = this.m_componentCreature.ComponentBody.Velocity;
+			Vector3 vector = this.m_componentCreature.ComponentBody.getVectorSpeed();
 			Vector3 right = this.m_componentCreature.ComponentBody.Matrix.Right;
 			Vector3 vector2 = Vector3.Transform(this.m_componentCreature.ComponentBody.Matrix.Forward, Quaternion.CreateFromAxisAngle(right, this.LookAngles.Y));
 			if (this.WalkSpeed > 0f && this.WalkOrder != null)
 			{
-				Boolean enabler = this.IsCreativeFlyEnabled;
 				enabler = ModificationsHolder.allowFlyingAnimal ? enabler || this.FlyingLogicAnimal(ModificationsHolder.animalTypes) : enabler;
                 if (enabler)
 				{
@@ -464,7 +464,7 @@ namespace Game
 					Vector3 v2 = this.CreativeFlySpeed *  (right * vector3.X + Vector3.UnitY * vector3.Y + v * vector3.Z);
 					float num = (vector3 == Vector3.Zero) ? 5f : 3f;
 					vector += MathUtils.Saturate(num * dt) * (v2 - vector);
-					vector += (v2 * ComponentInput.speed * 0.5f);
+					vector += (v2 * ComponentInput.speed * 0.05f);
 					this.m_componentCreature.ComponentBody.IsGravityEnabled = false;
 					this.m_componentCreature.ComponentBody.IsGroundDragEnabled = false;
 					this.m_flying = true;
@@ -593,15 +593,16 @@ namespace Game
 				this.m_componentCreature.ComponentCreatureSounds.PlayFootstepSound(2f);
 				this.m_subsystemNoise.MakeNoise(this.m_componentCreature.ComponentBody, 0.25f, 10f);
 			}
-			this.m_componentCreature.ComponentBody.Velocity = vector;
-		}
+			//this.m_componentCreature.ComponentBody.Velocity = vector;
+			this.m_componentCreature.ComponentBody.setVectorSpeed(vector, this.m_componentCreature, this, enabler);
+        }
 
 		// Token: 0x06000E66 RID: 3686 RVA: 0x0006F3D4 File Offset: 0x0006D5D4
 		public void LadderMovement(float dt, int value)
 		{
 			this.m_componentCreature.ComponentBody.IsGravityEnabled = false;
 			Vector3 position = this.m_componentCreature.ComponentBody.Position;
-			Vector3 vector = this.m_componentCreature.ComponentBody.Velocity;
+			Vector3 vector = this.m_componentCreature.ComponentBody.getVectorSpeed();
 			int num = Terrain.ExtractContents(value);
 			if (BlocksManager.Blocks[num] is LadderBlock)
 			{
@@ -643,7 +644,7 @@ namespace Game
 			{
 				this.LadderValue = null;
 			}
-			this.m_componentCreature.ComponentBody.Velocity = vector;
+			this.m_componentCreature.ComponentBody.setVectorSpeed(vector);
 		}
 
 		// Token: 0x040008ED RID: 2285

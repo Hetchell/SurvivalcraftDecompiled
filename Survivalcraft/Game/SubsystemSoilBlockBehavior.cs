@@ -36,7 +36,7 @@ namespace Game
 		{
 			if (componentBody.Mass > 20f && !componentBody.IsSneaking)
 			{
-				Vector3 velocity2 = componentBody.Velocity;
+				Vector3 velocity2 = componentBody.getVectorSpeed();
 				if (velocity2.Y < -3f || (velocity2.Y < 0f && this.m_random.Float(0f, 1f) < 1.5f * this.m_subsystemTime.GameTimeDelta && velocity2.LengthSquared() > 1f))
 				{
 					this.m_toDegrade[cellFace.Point] = true;

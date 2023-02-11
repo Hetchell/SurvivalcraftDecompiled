@@ -13,7 +13,7 @@ namespace Game
 		public override void Update(float dt)
 		{
 			float footstepsPhase = this.m_footstepsPhase;
-			float num = this.m_componentCreature.ComponentLocomotion.SlipSpeed ?? Vector3.Dot(this.m_componentCreature.ComponentBody.Velocity, this.m_componentCreature.ComponentBody.Matrix.Forward);
+			float num = this.m_componentCreature.ComponentLocomotion.SlipSpeed ?? Vector3.Dot(this.m_componentCreature.ComponentBody.getVectorSpeed(), this.m_componentCreature.ComponentBody.Matrix.Forward);
 			if (MathUtils.Abs(num) > 0.2f)
 			{
 				base.MovementAnimationPhase += num * dt * this.m_walkAnimationSpeed;
@@ -83,7 +83,7 @@ namespace Game
 				float num3 = 0f;
 				if (base.MovementAnimationPhase != 0f && (this.m_componentCreature.ComponentBody.StandingOnValue != null || this.m_componentCreature.ComponentBody.ImmersionFactor > 0f))
 				{
-					float f0 = (Vector3.Dot(this.m_componentCreature.ComponentBody.Velocity, this.m_componentCreature.ComponentBody.Matrix.Forward) > 0.75f * this.m_componentCreature.ComponentLocomotion.WalkSpeed) ? (1.5f * this.m_walkLegsAngle) : this.m_walkLegsAngle;
+					float f0 = (Vector3.Dot(this.m_componentCreature.ComponentBody.getVectorSpeed(), this.m_componentCreature.ComponentBody.Matrix.Forward) > 0.75f * this.m_componentCreature.ComponentLocomotion.WalkSpeed) ? (1.5f * this.m_walkLegsAngle) : this.m_walkLegsAngle;
 					float num4 = MathUtils.Sin(6.2831855f * (base.MovementAnimationPhase + 0f));
 					float num5 = MathUtils.Sin(6.2831855f * (base.MovementAnimationPhase + 0.5f));
 					num = f0 * num4 + this.m_kickPhase;

@@ -117,7 +117,7 @@ namespace Game
 					{
 						if (componentBody.ParentBody != null)
 						{
-							componentBody.Velocity = componentBody.ParentBody.Velocity;
+							componentBody.setVectorSpeed(componentBody.ParentBody.getVectorSpeed());
 							componentBody.ParentBody = null;
 						}
 					}
@@ -164,7 +164,7 @@ namespace Game
 		// Token: 0x06000F72 RID: 3954 RVA: 0x00075EAC File Offset: 0x000740AC
 		public float ScoreMount(ComponentMount componentMount, float maxDistance)
 		{
-			if (componentMount.ComponentBody.Velocity.LengthSquared() < 1f)
+			if (componentMount.ComponentBody.getVectorSpeed().LengthSquared() < 1f)
 			{
 				Vector3 v = componentMount.ComponentBody.Position + Vector3.Transform(componentMount.MountOffset, componentMount.ComponentBody.Rotation) - this.ComponentCreature.ComponentCreatureModel.EyePosition;
 				if (v.Length() < maxDistance)

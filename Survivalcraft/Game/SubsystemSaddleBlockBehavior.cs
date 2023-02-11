@@ -37,7 +37,7 @@ namespace Game
 						ComponentBody componentBody = entity.FindComponent<ComponentBody>(true);
 						componentBody.Position = bodyRaycastResult.Value.ComponentBody.Position;
 						componentBody.Rotation = bodyRaycastResult.Value.ComponentBody.Rotation;
-						componentBody.Velocity = bodyRaycastResult.Value.ComponentBody.Velocity;
+						componentBody.setVectorSpeed(bodyRaycastResult.Value.ComponentBody.getVectorSpeed());
 						entity.FindComponent<ComponentSpawn>(true).SpawnDuration = 0f;
 						base.Project.RemoveEntity(bodyRaycastResult.Value.ComponentBody.Entity, true);
 						base.Project.AddEntity(entity);

@@ -17,7 +17,7 @@ namespace Game
 		// Token: 0x06000B51 RID: 2897 RVA: 0x00054628 File Offset: 0x00052828
 		public override void Update(float dt)
 		{
-			float num = Vector3.Dot(this.m_componentCreature.ComponentBody.Velocity, this.m_componentCreature.ComponentBody.Matrix.Forward);
+			float num = Vector3.Dot(this.m_componentCreature.ComponentBody.getVectorSpeed(), this.m_componentCreature.ComponentBody.Matrix.Forward);
 			if (MathUtils.Abs(num) > 0.1f)
 			{
 				base.MovementAnimationPhase += num * dt * this.m_walkAnimationSpeed;
@@ -46,7 +46,7 @@ namespace Game
 				{
 					float num5 = (this.m_componentCreature.ComponentLocomotion.LastFlyOrder.Value.LengthSquared() > 0.99f) ? 1.5f : 1f;
 					this.FlyPhase = MathUtils.Remainder(this.FlyPhase + this.m_flyAnimationSpeed * num5 * dt, 1f);
-					if (this.m_componentCreature.ComponentLocomotion.LastFlyOrder.Value.Y < -0.1f && this.m_componentCreature.ComponentBody.Velocity.Length() > 4f)
+					if (this.m_componentCreature.ComponentLocomotion.LastFlyOrder.Value.Y < -0.1f && this.m_componentCreature.ComponentBody.getVectorSpeed().Length() > 4f)
 					{
 						this.FlyPhase = 0.72f;
 					}

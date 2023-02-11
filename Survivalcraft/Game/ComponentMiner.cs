@@ -419,7 +419,7 @@ namespace Game
 			}
 			else if (this.ComponentCreature is ComponentPlayer)
 			{
-				HitValueParticleSystem particleSystem = new HitValueParticleSystem(hitPoint + 0.75f * hitDirection, 1f * hitDirection + this.ComponentCreature.ComponentBody.Velocity, Color.White, LanguageControl.Get(ComponentMiner.fName, 2));
+				HitValueParticleSystem particleSystem = new HitValueParticleSystem(hitPoint + 0.75f * hitDirection, 1f * hitDirection + this.ComponentCreature.ComponentBody.getVectorSpeed(), Color.White, LanguageControl.Get(ComponentMiner.fName, 2));
 				base.Project.FindSubsystem<SubsystemParticles>(true).AddParticleSystem(particleSystem);
 			}
 			if (this.ComponentCreature.PlayerStats != null)
@@ -623,7 +623,7 @@ namespace Game
 						if (attacker is ComponentPlayer && num2 > 0f)
 						{
 							string text = (0f - num2).ToString("0", CultureInfo.InvariantCulture);
-							HitValueParticleSystem particleSystem = new HitValueParticleSystem(hitPoint + 0.75f * hitDirection, 1f * hitDirection + attacker.ComponentBody.Velocity, Color.White, text);
+							HitValueParticleSystem particleSystem = new HitValueParticleSystem(hitPoint + 0.75f * hitDirection, 1f * hitDirection + attacker.ComponentBody.getVectorSpeed(), Color.White, text);
 							target.Project.FindSubsystem<SubsystemParticles>(true).AddParticleSystem(particleSystem);
 						}
 					}

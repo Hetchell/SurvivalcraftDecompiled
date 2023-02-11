@@ -75,7 +75,9 @@ namespace Game
 			this.m_componentBody.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, num);
 			if (obj2 != null && this.MoveOrder != 0f)
 			{
-				this.m_componentBody.Velocity += dt * 3f * this.MoveOrder * this.m_componentBody.Matrix.Forward;
+				Vector3 vectorSpeed = this.m_componentBody.getVectorSpeed();
+				vectorSpeed += dt * 3f * this.MoveOrder * this.m_componentBody.Matrix.Forward;
+				this.m_componentBody.setVectorSpeed(vectorSpeed);
 			}
 			//if (flag)
 			//{

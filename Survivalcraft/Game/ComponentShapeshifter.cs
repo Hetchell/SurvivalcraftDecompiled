@@ -107,7 +107,7 @@ namespace Game
 				ComponentBody componentBody = entity.FindComponent<ComponentBody>(true);
 				componentBody.Position = this.m_componentBody.Position;
 				componentBody.Rotation = this.m_componentBody.Rotation;
-				componentBody.Velocity = this.m_componentBody.Velocity;
+				componentBody.setVectorSpeed(this.m_componentBody.getVectorSpeed());
 				entity.FindComponent<ComponentSpawn>(true).SpawnDuration = 0.5f;
 				base.Project.AddEntity(entity);
 			}

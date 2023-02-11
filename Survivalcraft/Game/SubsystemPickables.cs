@@ -201,7 +201,7 @@ namespace Game
 											}
 											else if (pickable.StuckMatrix == null)
 											{
-												pickable.FlyToPosition = new Vector3?(v + 0.1f * MathUtils.Sqrt(num5) * componentBody.Velocity);
+												pickable.FlyToPosition = new Vector3?(v + 0.1f * MathUtils.Sqrt(num5) * componentBody.getVectorSpeed());
 											}
 										}
 									}

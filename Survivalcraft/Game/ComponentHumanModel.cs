@@ -36,12 +36,12 @@ namespace Game
 			float footstepsPhase = this.m_footstepsPhase;
 			if (this.m_componentCreature.ComponentLocomotion.LadderValue != null)
 			{
-				this.m_footstepsPhase += 1.5f * this.m_walkAnimationSpeed * this.m_componentCreature.ComponentBody.Velocity.Length() * dt;
+				this.m_footstepsPhase += 1.5f * this.m_walkAnimationSpeed * this.m_componentCreature.ComponentBody.getVectorSpeed().Length() * dt;
 				flag2 = false;
 			}
 			else if (!this.m_componentCreature.ComponentLocomotion.IsCreativeFlyEnabled)
 			{
-				float num = this.m_componentCreature.ComponentLocomotion.SlipSpeed ?? (this.m_componentCreature.ComponentBody.Velocity.XZ - this.m_componentCreature.ComponentBody.StandingOnVelocity.XZ).Length();
+				float num = this.m_componentCreature.ComponentLocomotion.SlipSpeed ?? (this.m_componentCreature.ComponentBody.getVectorSpeed().XZ - this.m_componentCreature.ComponentBody.StandingOnVelocity.XZ).Length();
 				if (num > 0.5f)
 				{
 					base.MovementAnimationPhase += num * dt * this.m_walkAnimationSpeed;
@@ -206,7 +206,7 @@ namespace Game
 				}
 				else if (this.m_componentCreature.ComponentLocomotion.IsCreativeFlyEnabled)
 				{
-					float num8 = (this.m_componentCreature.ComponentLocomotion.LastWalkOrder != null) ? MathUtils.Min(0.03f * this.m_componentCreature.ComponentBody.Velocity.XZ.LengthSquared(), 0.5f) : 0f;
+					float num8 = (this.m_componentCreature.ComponentLocomotion.LastWalkOrder != null) ? MathUtils.Min(0.03f * this.m_componentCreature.ComponentBody.getVectorSpeed().XZ.LengthSquared(), 0.5f) : 0f;
 					num3 = -0.1f - num8;
 					x2 = num3;
 					y2 = MathUtils.Lerp(0f, 0.25f, SimplexNoise.Noise(1.07f * num2 + 400f));

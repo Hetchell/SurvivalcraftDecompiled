@@ -12,7 +12,7 @@ namespace Game
 	public class ComponentInput : Component, IUpdateable
 	{
 
-		public static int speed = 1;
+		public static int speed = 0;
 		public static Boolean state = false;
 		public static float step = 0;
 		public static Boolean noclipState = false;

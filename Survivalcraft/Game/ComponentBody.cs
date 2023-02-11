@@ -4,6 +4,7 @@ using System.Linq;
 using Engine;
 using GameEntitySystem;
 using Survivalcraft.Game;
+using Survivalcraft.Game.ModificationHolder;
 using TemplatesDatabase;
 
 namespace Game
@@ -15,6 +16,8 @@ namespace Game
 		// (get) Token: 0x06000B75 RID: 2933 RVA: 0x000563A7 File Offset: 0x000545A7
 		// (set) Token: 0x06000B76 RID: 2934 RVA: 0x000563AF File Offset: 0x000545AF
 		public Vector3 BoxSize { get; set; }
+
+		private ComponentCreature creatureIn;
 
 		// Token: 0x170000F1 RID: 241
 		// (get) Token: 0x06000B77 RID: 2935 RVA: 0x000563B8 File Offset: 0x000545B8
@@ -79,21 +82,119 @@ namespace Game
 		// Token: 0x170000FD RID: 253
 		// (get) Token: 0x06000B8F RID: 2959 RVA: 0x00056484 File Offset: 0x00054684
 		// (set) Token: 0x06000B90 RID: 2960 RVA: 0x0005648C File Offset: 0x0005468C
-		public Vector3 Velocity
+		//public Vector3 Velocity
+		//{
+		//	get
+		//	{
+		//		return this.m_velocity;
+		//	}
+		//	set
+		//	{
+		//		if (value.LengthSquared() > ModificationsHolder.movementLimitPlayer)
+		//		{
+		//			//Console.WriteLine("Before atten -> Vector3 of velocity: " + value.LengthSquared());
+		//			Vector3 atten = 25f * Vector3.Normalize(value);
+  //                  //Console.WriteLine("After atten -> Vector3 of velocity: " + atten.LengthSquared());
+		//			this.m_velocity = atten;
+  //                  return;
+		//		}
+		//		this.m_velocity = value;
+		//	}
+		//}
+
+		public void setVectorSpeed(Vector3 input)
 		{
-			get
+            /**
+			 * limit input according to creature input. If creature == null, assume non-creature and impose 625 limit. 
+			 */
+            if (input.LengthSquared() > 625f)
+            {
+                //Console.WriteLine("Before atten -> Vector3 of velocity: " + value.LengthSquared());
+                Vector3 atten = 25f * Vector3.Normalize(input);
+                //Console.WriteLine("After atten -> Vector3 of velocity: " + atten.LengthSquared());
+                this.m_velocity = atten;
+                return;
+            }
+			this.m_velocity = input;
+        }
+
+		public void setVectorSpeed(Vector3 input, String type)
+		{
+			if (type != "ControlRunnable")
 			{
-				return this.m_velocity;
+				this.setVectorSpeed(input);
+				return;
 			}
-			set
+			if (this.creatureIn is ComponentPlayer)
 			{
-				if (value.LengthSquared() > 625f)
+                if (input.LengthSquared() > ModificationsHolder.movementLimitPlayer)
+                {
+                    //Console.WriteLine("Before atten -> Vector3 of velocity: " + value.LengthSquared());
+                    Vector3 atten = 100f * Vector3.Normalize(input);
+                    //Console.WriteLine("After atten -> Vector3 of velocity: " + atten.LengthSquared());
+                    this.m_velocity = atten;
+                    return;
+                }
+                this.m_velocity = input;
+            }
+		}
+
+		public void setVectorSpeed(Vector3 input, ComponentCreature creature, ComponentLocomotion locomotion, bool isAnimalInListAllowedToFly)
+		{
+			this.creatureIn = creature;
+			if (locomotion.m_componentCreature is ComponentPlayer)
+			{
+				//this is a player. 
+                if (input.LengthSquared() > ModificationsHolder.movementLimitPlayer)
 				{
-					this.m_velocity = 25f * Vector3.Normalize(value);
+					//Console.WriteLine("Before atten -> Vector3 of velocity: " + value.LengthSquared());
+					Vector3 atten = 100f * Vector3.Normalize(input);
+					//Console.WriteLine("After atten -> Vector3 of velocity: " + atten.LengthSquared());
+					this.m_velocity = atten;
 					return;
 				}
-				this.m_velocity = value;
-			}
+				this.m_velocity = input;
+			} else
+			{
+				if (this.FlyingLogicAnimal(ModificationsHolder.animalTypes, creature) && isAnimalInListAllowedToFly)
+				{
+                    if (input.LengthSquared() > ModificationsHolder.movementLimitAnimalsDerFlying)
+                    {
+                        //Console.WriteLine("Before atten -> Vector3 of velocity: " + value.LengthSquared());
+                        Vector3 atten = 16f * Vector3.Normalize(input);
+                        //Console.WriteLine("After atten -> Vector3 of velocity: " + atten.LengthSquared());
+                        this.m_velocity = atten;
+                        return;
+                    }
+					this.m_velocity = input;
+                } else
+				{
+                    if (input.LengthSquared() > 625f)
+                    {
+                        //Console.WriteLine("Before atten -> Vector3 of velocity: " + value.LengthSquared());
+                        Vector3 atten = 25f * Vector3.Normalize(input);
+                        //Console.WriteLine("After atten -> Vector3 of velocity: " + atten.LengthSquared());
+                        this.m_velocity = atten;
+                        return;
+                    }
+                    this.m_velocity = input;
+                }
+            }
+        }
+
+        private Boolean FlyingLogicAnimal(String[] animalSet, ComponentCreature creature)
+        {
+            Boolean result = false;
+            for (int i = 0; i < animalSet.Length; i++)
+            {
+                result = result || creature.DisplayName.Contains(animalSet[i]);
+            }
+            return result;
+        }
+
+        public Vector3 getVectorSpeed()
+		{
+			return this.m_velocity;
 		}
 
 		// Token: 0x170000FE RID: 254
@@ -278,7 +379,7 @@ namespace Game
 			this.WaterDrag = valuesDictionary.GetValue<Vector2>("WaterDrag");
 			this.WaterSwayAngle = valuesDictionary.GetValue<float>("WaterSwayAngle");
 			this.WaterTurnSpeed = valuesDictionary.GetValue<float>("WaterTurnSpeed");
-			this.Velocity = valuesDictionary.GetValue<Vector3>("Velocity");
+			this.m_velocity = valuesDictionary.GetValue<Vector3>("Velocity");
 			this.MaxSmoothRiseHeight = valuesDictionary.GetValue<float>("MaxSmoothRiseHeight");
 			this.ParentBody = valuesDictionary.GetValue<EntityReference>("ParentBody").GetComponent<ComponentBody>(base.Entity, idToEntityMap, false);
 			this.ParentBodyPositionOffset = valuesDictionary.GetValue<Vector3>("ParentBodyPositionOffset");
@@ -293,9 +394,9 @@ namespace Game
         public override void Save(ValuesDictionary valuesDictionary, EntityToIdMap entityToIdMap)
 		{
 			base.Save(valuesDictionary, entityToIdMap);
-			if (this.Velocity != Vector3.Zero)
+			if (this.m_velocity != Vector3.Zero)
 			{
-				valuesDictionary.SetValue<Vector3>("Velocity", this.Velocity);
+				valuesDictionary.SetValue<Vector3>("Velocity", this.m_velocity);
 			}
 			EntityReference value = EntityReference.FromId(this.ParentBody, entityToIdMap);
 			if (!value.IsNullOrEmpty())
@@ -321,7 +422,11 @@ namespace Game
 		public void Update(float dt)
 		{
 			this.CollisionVelocityChange = Vector3.Zero;
-			this.Velocity += this.m_totalImpulse;
+			this.setVectorSpeed(this.getVectorSpeed() + this.m_totalImpulse, "ControlRunnable");
+			if(this.creatureIn is ComponentPlayer)
+			{
+                Console.WriteLine("Speed is: " + this.getVectorSpeed().Length());
+            }
 			this.m_totalImpulse = Vector3.Zero;
 			if (this.m_parentBody != null || this.m_velocity.LengthSquared() > 9.9999994E-11f || this.m_directMove != Vector3.Zero)
 			{
@@ -339,7 +444,7 @@ namespace Game
 			TerrainChunk chunkAtCell = this.m_subsystemTerrain.Terrain.GetChunkAtCell(Terrain.ToCell(position.X), Terrain.ToCell(position.Z));
 			if (chunkAtCell == null || chunkAtCell.State <= TerrainChunkState.InvalidContents4)
 			{
-				this.Velocity = Vector3.Zero;
+				this.setVectorSpeed(Vector3.Zero);
 				return;
 			}
 			this.m_bodiesCollisionBoxes.Clear();
