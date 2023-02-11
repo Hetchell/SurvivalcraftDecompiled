@@ -7,16 +7,20 @@ The game is still broken, but it is now able to be played to my usage. Useless c
 
 CURRENT BUGS/ISSUES:
 1. <Fixed>
-2. Explosive barrels unable to light fuse. 
-3. Magma does not behave properly => will eat sand up? 
+2. <Fixed>
+3. <Fixed>
 4. Terrain generation: 
-        4a. Traps generate wrongly. 
+        4a. <Fixed>
         4b. Ivy generate with offset to trees. 
         4c. Trees dissected by invisible chunks. 
         4d. Chunk generation broken if foreach loop used. 
-5. "Play" button does not work as intended. 
+5. "Play" button does not work as intended. Due to objectDisposedException. 
+6. When no clip and explosive barrel are put down, the barrel becomes transparent even after no clip is turned off. You can not interact with it. Only until game level is exit can you reset barrel behaviour. 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 TODO LIST: 
-1. Make creative fly speed variable by up/down button. Now only set to two speeds. => Find out why speed is limited.
+1. Remove the Chinese words and make language toggle. 
 2. Break terrain generation. 
 3. Implement teleportation(?). 
+4. Implement command support(using external window?)
+5. Make low level Akebi feature. 
+6. Command blocks. 
