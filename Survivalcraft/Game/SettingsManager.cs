@@ -453,8 +453,8 @@ namespace Game
 			SettingsManager.HorizontalCreativeFlight = false;
 			SettingsManager.DropboxAccessToken = string.Empty;
 			SettingsManager.ScpboxAccessToken = string.Empty;
-			SettingsManager.MotdUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
-			SettingsManager.MotdBackupUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
+			//SettingsManager.MotdUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
+			//SettingsManager.MotdBackupUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
 			SettingsManager.MotdUpdatePeriodHours = 12.0;
 			SettingsManager.MotdLastUpdateTime = DateTime.MinValue;
 			SettingsManager.MotdLastDownloadedData = string.Empty;
@@ -500,7 +500,7 @@ namespace Game
 			{
 				if (Storage.FileExists("app:/Settings.xml"))
 				{
-					using (Stream stream = Storage.OpenFile("app:/Settings.xml", OpenFileMode.Read))
+					using (Stream stream = Storage.OpenFile(m_settingsFileName, OpenFileMode.Read))
 					{
 						foreach (XElement node in XmlUtils.LoadXmlFromStream(stream, null, true).Elements())
 						{
@@ -508,6 +508,7 @@ namespace Game
 							try
 							{
 								name = XmlUtils.GetAttributeValue<string>(node, "Name");
+								//Console.WriteLine(name);
 								string attributeValue = XmlUtils.GetAttributeValue<string>(node, "Value");
 								PropertyInfo propertyInfo = (from pi in typeof(SettingsManager).GetRuntimeProperties()
 								where pi.Name == name && pi.GetMethod.IsStatic && pi.GetMethod.IsPublic && pi.SetMethod.IsPublic
@@ -563,7 +564,7 @@ namespace Game
 						}));
 					}
 				}
-				using (Stream stream = Storage.OpenFile("app:/Settings.xml", OpenFileMode.Create))
+				using (Stream stream = Storage.OpenFile(m_settingsFileName, OpenFileMode.Create))
 				{
 					XmlUtils.SaveXmlToStream(xelement, stream, null, true);
 				}
@@ -576,7 +577,7 @@ namespace Game
 		}
 
 		// Token: 0x04000EF1 RID: 3825
-		public const string m_settingsFileName = "app:/Settings.xml";
+		private const string m_settingsFileName = "app:/Settings.xml";
 
 		// Token: 0x04000EF2 RID: 3826
 		public static float m_soundsVolume;

@@ -2,6 +2,7 @@
 using System.Xml.Linq;
 using Engine;
 using Engine.Input;
+using Survivalcraft.Game.ModificationHolder;
 
 namespace Game
 {
@@ -12,6 +13,7 @@ namespace Game
 		public MainMenuScreen()
 		{
 			XElement node = ContentManager.Get<XElement>("Screens/MainMenuScreen");
+			//ModificationsHolder.nodeForMainScreen = node;
 			base.LoadContents(this, node);
 		}
 

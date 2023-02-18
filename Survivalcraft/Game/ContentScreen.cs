@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Survivalcraft.Game.ModificationHolder;
+using System;
 using System.Xml.Linq;
 
 namespace Game
@@ -10,7 +11,8 @@ namespace Game
 		public ContentScreen()
 		{
 			XElement node = ContentManager.Get<XElement>("Screens/ContentScreen");
-			base.LoadContents(this, node);
+   
+            base.LoadContents(this, node);
 			this.m_externalContentButton = this.Children.Find<ButtonWidget>("External", true);
 			this.m_communityContentButton = this.Children.Find<ButtonWidget>("Community", true);
 			this.m_linkButton = this.Children.Find<ButtonWidget>("Link", true);

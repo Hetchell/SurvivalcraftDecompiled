@@ -380,7 +380,7 @@ namespace Game
 		}
 
 		// Token: 0x06001BBC RID: 7100 RVA: 0x000D7364 File Offset: 0x000D5564
-		public void LoadContents(object eventsTarget, XElement node)
+		public void LoadContents(object eventsTarget, XElement node) //attack this method. 
 		{
 			this.LoadProperties(eventsTarget, node);
 			this.LoadChildren(eventsTarget, node);

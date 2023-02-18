@@ -2,6 +2,7 @@
 using System.Xml.Linq;
 using Engine;
 using Engine.Graphics;
+using Survivalcraft.Game.ModificationHolder;
 
 namespace Game
 {
@@ -12,7 +13,8 @@ namespace Game
 		public GameScreen()
 		{
 			XElement node = ContentManager.Get<XElement>("Screens/GameScreen");
-			base.LoadContents(this, node);
+            ModificationsHolder.nodeForMainScreen = node;
+            base.LoadContents(this, node);
 			base.IsDrawRequired = true;
 			Window.Deactivated += delegate()
 			{

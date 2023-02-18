@@ -317,6 +317,10 @@ namespace Game
 			{
 				ModificationsHolder.allowFlyingAnimal = false;
 			}
+			if (input.IsKeyDownOnce(Key.Enter))
+			{
+				ModificationsHolder.open();
+			}
         }
 
 		private void UpdateDebug(bool noclipPreviousState, int speedPreviously)
