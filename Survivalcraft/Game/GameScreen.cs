@@ -13,7 +13,7 @@ namespace Game
 		public GameScreen()
 		{
 			XElement node = ContentManager.Get<XElement>("Screens/GameScreen");
-            ModificationsHolder.nodeForMainScreen = node;
+            //ModificationsHolder.nodeForMainScreen = node;
             base.LoadContents(this, node);
 			base.IsDrawRequired = true;
 			Window.Deactivated += delegate()

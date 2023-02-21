@@ -453,8 +453,8 @@ namespace Game
 			SettingsManager.HorizontalCreativeFlight = false;
 			SettingsManager.DropboxAccessToken = string.Empty;
 			SettingsManager.ScpboxAccessToken = string.Empty;
-			//SettingsManager.MotdUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
-			//SettingsManager.MotdBackupUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
+			SettingsManager.MotdUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
+			SettingsManager.MotdBackupUpdateUrl = "https://m.schub.top/com/motd?v={0}&l={1}";
 			SettingsManager.MotdUpdatePeriodHours = 12.0;
 			SettingsManager.MotdLastUpdateTime = DateTime.MinValue;
 			SettingsManager.MotdLastDownloadedData = string.Empty;
@@ -503,17 +503,16 @@ namespace Game
 					using (Stream stream = Storage.OpenFile(m_settingsFileName, OpenFileMode.Read))
 					{
 						foreach (XElement node in XmlUtils.LoadXmlFromStream(stream, null, true).Elements())
-						{
+						{ 
 							string name = "<unknown>";
 							try
 							{
 								name = XmlUtils.GetAttributeValue<string>(node, "Name");
-								//Console.WriteLine(name);
 								string attributeValue = XmlUtils.GetAttributeValue<string>(node, "Value");
 								PropertyInfo propertyInfo = (from pi in typeof(SettingsManager).GetRuntimeProperties()
 								where pi.Name == name && pi.GetMethod.IsStatic && pi.GetMethod.IsPublic && pi.SetMethod.IsPublic
 								select pi).FirstOrDefault<PropertyInfo>();
-								if (propertyInfo != null)
+								if (propertyInfo != null && !name.Contains("MotdLastDownloadedData"))
 								{
 									object value = HumanReadableConverter.ConvertFromString(propertyInfo.PropertyType, attributeValue);
 									propertyInfo.SetValue(null, value, null);
