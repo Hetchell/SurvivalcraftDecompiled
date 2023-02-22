@@ -270,57 +270,7 @@ namespace Game
 
 		private void UpdateStatesOnKeyboardAction(WidgetInput input)
 		{
-            if (input.IsKeyDownOnce(Key.UpArrow))
-            {
-                speed++;
-                Debug.WriteLine("Speed is increased");
-            }
-            if (input.IsKeyDownOnce(Key.DownArrow))
-            {
-                speed--;
-                Debug.WriteLine("Speed is decreased");
-            }
-            if (input.IsKeyDown(Key.LeftArrow))
-            {
-                state = true;
-                step = ModifierHolder.steppedTravel;
-            }
-            else if (input.IsKeyDown(Key.RightArrow))
-            {
-                state = true;
-                step = -ModifierHolder.steppedTravel;
-            }
-            else
-            {
-                state = false;
-            }
-            if (input.IsKeyDownOnce(Key.N))
-            {
-                if (repeat == 0)
-                {
-                    noclipState = true;
-                    repeat++;
-                }
-                else
-                {
-                    --repeat;
-                    noclipState = false;
-                }
-            }
-			//allow animallist to fly
-			if (input.IsKeyDownOnce(Key.Control))
-			{
-				ModificationsHolder.allowFlyingAnimal = true;
-			}
-            //allow animallist to drop
-            if (input.IsKeyDownOnce(Key.Tab))
-			{
-				ModificationsHolder.allowFlyingAnimal = false;
-			}
-			if (input.IsKeyDownOnce(Key.Enter))
-			{
-				ModificationsHolder.open();
-			}
+			ModificationsHolder.keyboardActions(input);
         }
 
 		private void UpdateDebug(bool noclipPreviousState, int speedPreviously)

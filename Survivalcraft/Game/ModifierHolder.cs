@@ -94,13 +94,13 @@ namespace Survivalcraft.Game
         {
             if (type)
             {
-                this.GenerateTerrainMod(chunkIn, 0, 0, 16, 8);
+                this.GenerateTerrainMod(chunkIn, 0, 0, 16, 8);//0, 0, 16, 8
                 //this.GenerateTerrain(chunk, chunk.Origin.X, chunk.Origin.Y, 3, 3);
                 //this.GenerateTerrain(chunk, 14, 27, 16, 5);
             }
             else
             {
-                this.GenerateTerrainMod(chunkIn, 0, 8, 16, 16);
+                this.GenerateTerrainMod(chunkIn, 0, 8, 16, 16);//0, 8, 16, 16
             }
         }
 
@@ -275,9 +275,9 @@ namespace Survivalcraft.Game
             //this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0  * Math.Pow(2, 10), a1 , a2);
             //this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0 * Math.Pow(2, 10), a1, a2);
             //this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0 * Math.Pow(2, 10), a1, a2);
-            this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 15), a1, a2);
-            this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 15), a1, a2);
-            this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 15), a1, a2);
+            this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 2), a1, a2);
+            this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 2), a1, a2);
+            this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 2), a1, a2);
             for (int k = 0; k < grid3d.SizeX; k++)
             {
                 for (int l = 0; l < grid3d.SizeZ; l++)
@@ -346,7 +346,7 @@ namespace Survivalcraft.Game
                     //f0 = allowMethodOverride ? this.CalculateHeight(x, y) : f0 * 1;
                     ////num7 = this.activeChunkProvider.CalculateHeight(x, y);
                     //v = this.CalculateMountainRangeFactor((float)x, (float)y);
-                    float f0 = this.activeChunkProvider.CalculateHeight((float)x, (float)y) + 1;
+                    float f0 = this.activeChunkProvider.CalculateHeight((float)x, (float)y);
                     float v = this.activeChunkProvider.CalculateMountainRangeFactor((float)x, (float)y);
                     //float f1 = MathUtils.Lerp(holder[0], 1f, TerrainChunkGeneratorProviderActive.Squish(v, holder[1], 1f));
                     float f1 = MathUtils.Lerp(
@@ -361,18 +361,18 @@ namespace Survivalcraft.Game
                     for (int m = 0; m < grid3d.SizeY; m++)
                     {
                         //int f2 = m * 8;
-                        //double d0 = this.ar[I] / 512.0D;
-                        //double d1 = this.br[I] / 512.0D;
-                        //double d2 = (this.r[I] / 10.0D + 1.0D) / 2.0D;
-                        //double d3;
-                        //if (d2 < 0.0D)
-                        //{
-                        //   d3 = d0;
-                        //}
-                        //else
-                        //{
-                        //    d3 = d2 > 1.0D ? d1 : d0 + (d1 - d0) * d2;
-                        //}
+                        double d0 = this.ar[I] / 512.0D;
+                        double d1 = this.br[I] / 512.0D;
+                        double d2 = (this.r[I] / 10.0D + 1.0D) / 2.0D;
+                        double d3;
+                        if (d2 < 0.0D)
+                        {
+                            d3 = d0;
+                        }
+                        else
+                        {
+                            d3 = d2 > 1.0D ? d1 : d0 + (d1 - d0) * d2;
+                        }
                         //float f3 = holder[2] * f1 * MathUtils.Saturate(f0 - (float)f2) * (2f * this.noiseMain.OctavedNoise((float)x, (float)f2, (float)y, holder[3], (int)holder[4], 4f, holder[5], false) - 1f);
                         ////f3 -= holder[2] * f1 * MathUtils.Saturate(f0 - (float)f2) * (2f * (float)r[I] - 1f);
                         ////f3 = (float)d3 * f1;
@@ -405,12 +405,13 @@ namespace Survivalcraft.Game
                                 false
                                 ) - 1f
                                 );
-                        float num11 = (float)num9 + num10;
+                        float num11 = (float)(num9 + num10 + 0 * d3)
+                            ;
                         float num12 = f0 - num11 + 18 * 0;
                         num12 += MathUtils.Max(4f * (this.activeChunkProvider.TGDensityBias - (float)num9), 0f);
                         //Console.WriteLine("Value of num12 is " + num12);
-                        grid3d.Set(k, m, l, (float)(num12));
-                        //grid3d.Set(I++, num12);
+                        //grid3d.Set(k, m, l, (float)(num12));//k, m, l
+                        grid3d.Set(k, m , l, num12);
                     }
                 }
             }
@@ -457,7 +458,7 @@ namespace Survivalcraft.Game
 
             public float Get(int x, int y)
             {
-                return this.m_data[x + y * this.m_sizeX];
+                return this.m_data[(x + y * this.m_sizeX)];
             }
 
             public void Set(int x, int y, float value)
@@ -495,7 +496,7 @@ namespace Survivalcraft.Game
 
             public int m_sizeXY;
 
-            public float[] m_data;
+            public double[] m_data;
             public int SizeX
             {
                 get
@@ -529,10 +530,10 @@ namespace Survivalcraft.Game
                 this.m_sizeY = sizeY;
                 this.m_sizeZ = sizeZ;
                 this.m_sizeXY = this.m_sizeX * this.m_sizeY;
-                this.m_data = new float[this.m_sizeX * this.m_sizeY * this.m_sizeZ];
+                this.m_data = new double[this.m_sizeX * this.m_sizeY * this.m_sizeZ];
             }
 
-            public void Get8(int x, int y, int z, out float v111, out float v211, out float v121, out float v221, out float v112, out float v212, out float v122, out float v222)
+            public void Get8(int x, int y, int z, out double v111, out double v211, out double v121, out double v221, out double v112, out double v212, out double v122, out double v222)
             {
                 int i = x + y * this.m_sizeX + z * this.m_sizeXY;
                 v111 = this.m_data[i];
@@ -545,21 +546,27 @@ namespace Survivalcraft.Game
                 v222 = this.m_data[i + 1 + this.m_sizeX + this.m_sizeXY];
             }
 
-            public float Get(int x, int y, int z)
+            public double Get(int x, int y, int z)
             {
                 return this.m_data[x + y * this.m_sizeX + z * this.m_sizeXY];
             }
 
-            public void Set(int index, float value)
+            public double Get(int I)
+            {
+                I %= this.m_data.Length - 1;
+                return this.m_data[I];
+            }
+
+            public void Set(int index, double value)
             {
                 this.m_data[index] = value;
             }
-            public void Set(int x, int y, int z, float value)
+            public void Set(int x, int y, int z, double value)
             {
                 this.m_data[x + y * this.m_sizeX + z * this.m_sizeXY] = value;
             }
 
-            private float Sample(float x, float y, float z)
+            private double Sample(float x, float y, float z)
             {
                 int num = (int)MathUtils.Floor(x);
                 int num2 = (int)MathUtils.Ceiling(x);
@@ -570,20 +577,20 @@ namespace Survivalcraft.Game
                 float f = x - (float)num;
                 float f2 = y - (float)num3;
                 float f3 = z - (float)num5;
-                float x2 = this.m_data[num + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x3 = this.m_data[num2 + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x4 = this.m_data[num + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x5 = this.m_data[num2 + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x6 = this.m_data[num + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x7 = this.m_data[num2 + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x8 = this.m_data[num + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x9 = this.m_data[num2 + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x10 = MathUtils.Lerp(x2, x3, f);
-                float x11 = MathUtils.Lerp(x4, x5, f);
-                float x12 = MathUtils.Lerp(x6, x7, f);
-                float x13 = MathUtils.Lerp(x8, x9, f);
-                float x14 = MathUtils.Lerp(x10, x11, f2);
-                float x15 = MathUtils.Lerp(x12, x13, f2);
+                double x2 = this.m_data[num + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x3 = this.m_data[num2 + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x4 = this.m_data[num + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x5 = this.m_data[num2 + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x6 = this.m_data[num + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x7 = this.m_data[num2 + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x8 = this.m_data[num + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x9 = this.m_data[num2 + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x10 = MathUtils.Lerp(x2, x3, f);
+                double x11 = MathUtils.Lerp(x4, x5, f);
+                double x12 = MathUtils.Lerp(x6, x7, f);
+                double x13 = MathUtils.Lerp(x8, x9, f);
+                double x14 = MathUtils.Lerp(x10, x11, f2);
+                double x15 = MathUtils.Lerp(x12, x13, f2);
                 return MathUtils.Lerp(x14, x15, f3);
             }
 
@@ -755,33 +762,49 @@ namespace Survivalcraft.Game
             int u = (int)holder[holder.Length - 1] * 1 + this.worldSettings.SeaLevelOffset * 0;
             //u = 15;
             int oceanLevel = u;
-            for (int i = 0; i < grid3DCache.SizeX - 1; i++)
+            int[] g = new int[6];
+            for (int i = 0; i < grid3DCache.SizeX - 1; i++)//x
             {
-                for (int j = 0; j < grid3DCache.SizeZ - 1; j++)
+                g[0] = i * grid3DCache.SizeX; //5
+                g[1] = (i + 1) * grid3DCache.SizeX;
+                for (int j = 0; j < grid3DCache.SizeZ - 1; j++)//z
                 {
-                    for (int k = 0; k < grid3DCache.SizeY - 1; k++)
+                    g[2] = (g[0] + j) * grid3DCache.SizeY;
+                    g[3] = (g[0] + j + 1) * grid3DCache.SizeY; //int j1 = (j + l + 1) * 33
+                    g[4] = (g[1] + j) * grid3DCache.SizeY;
+                    g[5] = (g[1] + j + 1) * grid3DCache.SizeY;
+                    for (int k = 0; k < grid3DCache.SizeY - 1; k++)//y
                     {
-                        grid3DCache.Get8(i, k, j, out float r0, out float r1, out float r2, out float r3, out float r4, out float r5, out float r6, out float r7);
-                        double d0 = (r1 - r0) / 4f;
-                        double d1 = (r3 - r2) / 4f;
-                        double d2 = (r5 - r4) / 4f;
-                        double d3 = (r7 - r6) / 4f;
-                        double d4 = r0;
-                        double d5 = r2;
-                        double d6 = r4;
-                        double d7 = r6;
+                        //grid3DCache.Get8(i, k, j, out float r0, out float r1, out float r2, out float r3, out float r4, out float r5, out float r6, out float r7);
+                        //double d0 = (r1 - r0) / 4f;
+                        //double d1 = (r3 - r2) / 4f;
+                        //double d2 = (r5 - r4) / 4f;//-
+                        //double d3 = (r7 - r6) / 4f;
+                        //double d4 = r0;//r0
+                        //double d5 = r2;//r2
+                        //double d6 = r4;
+                        //double d7 = r6;
+                        double d_0 = 0.125D; //double d0 = 0.125D;
+                        double d4 = grid3DCache.Get(g[2] + k);
+                        double d5 = grid3DCache.Get(g[3] + k);
+                        double d6 = grid3DCache.Get(g[4] + k);
+                        double d7 = grid3DCache.Get(g[5] + k);
+                        double d0 = (grid3DCache.Get(g[2] + k + 1) - d4) * d_0;
+                        double d1 = (grid3DCache.Get(g[3] + k + 1) - d5) * d_0;
+                        double d2 = (grid3DCache.Get(g[4] + k + 1) - d6) * d_0;
+                        double d3 = (grid3DCache.Get(g[5] + k + 1) - d7) * d_0;
                         for (int a = 0; a < 4; a++)//4
                         {
-                            double d8 = (d6 - d4) / 4f;
-                            double d9 = (d7 - d5) / 4f;
+                            double d8 = (d6 - d4) / 4f;//4
+                            double d9 = (d7 - d5) / 4f;//4
                             double d10 = d4;
                             double d11 = d5;
                             for (int b = 0; b < 4; b++)
                             {
-                                double d12 = (d11 - d10) / 8f;
-                                double d13 = d10;
-                                //int x = a + i * 4;
-                                //int y = b + j * 4;
+                                double d12 = (d11 - d10) / 4f;//8
+                                double d13 = d10 - d12;//no d12 negation
+                                int x = a + i * 4;
+                                int y = b + j * 4;
                                 //int x3 = x1 + a + i * 4;
                                 //int z3 = z1 + b + j * 4;
                                 float x4 = grid2DCache[0].Get(a + i * 4, b + j * 4);
@@ -792,8 +815,8 @@ namespace Survivalcraft.Game
                                 float f0 = MathUtils.Lerp(100f, 0f, f);
                                 float f1 = MathUtils.Lerp(300f, 30f, f);
                                 bool Desertificationflag = (temperatureFast > 8 && humidityFast < 8 && x5 < 0.97f) || (MathUtils.Abs(x4) < 16f && x5 < 0.97f);
-                                Desertificationflag = false;
-                                for (int c = 0; c < 8; c++)
+                                //bool Desertificationflag = false;
+                                for (int c = 0; c < 8; c++)//8
                                 {
                                     byte blockID = 0;
                                     if (d13 < 0f)
@@ -837,6 +860,7 @@ namespace Survivalcraft.Game
                                                 blockID = sandstoneBlockId;
                                             }
                                         }
+                                        //blockID = BlocksManager.getID(block => block is BasaltBlock);
                                     }
                                     chunk.SetCellValueFast(par[0] + a + i * 4, c + k * 8, par[1] + b + j * 4, blockID);
                                     d13 += d12;

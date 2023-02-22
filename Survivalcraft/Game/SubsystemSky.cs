@@ -4,6 +4,7 @@ using System.Globalization;
 using Engine;
 using Engine.Graphics;
 using GameEntitySystem;
+using Survivalcraft.Game.ModificationHolder;
 using TemplatesDatabase;
 
 namespace Game
@@ -827,7 +828,7 @@ namespace Game
 		public bool DrawCloudsWireframe;
 
 		// Token: 0x04000598 RID: 1432
-		public bool FogEnabled = true;
+		public bool FogEnabled = ModificationsHolder.fogEnable;
 
 		// Token: 0x04000599 RID: 1433
 		public int[] m_drawOrders = new int[]
