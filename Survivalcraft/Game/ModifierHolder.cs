@@ -271,13 +271,16 @@ namespace Survivalcraft.Game
                     grid2d2.Set(j, i, this.activeChunkProvider.CalculateMountainRangeFactor((float)(j + i1), (float)(i + i0)));
                 }
             }
-            Grid3d grid3d = new Grid3d(i0 / 4 + 1, 33, i1 / 4 + 1);
+            int L_0 = i0 / 4 + 1;
+            int L_1 = 33;
+            int L_2 = i1 / 4 + 1;
+            Grid3d grid3d = new Grid3d(L_0, L_1, L_2);
             //this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0  * Math.Pow(2, 10), a1 , a2);
             //this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0 * Math.Pow(2, 10), a1, a2);
             //this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0 * Math.Pow(2, 10), a1, a2);
-            this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 15), a1, a2);
-            this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 15), a1, a2);
-            this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, 0, k1, 5, 33, 5, a0 * Math.Pow(2, 15), a1, a2);
+            this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, k1, k0, L_0, L_1, L_2, a0 * Math.Pow(2, 0), a1, a2);
+            this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, k1, k0, L_0, L_1, L_2, a0 * Math.Pow(2, 0), a1, a2);
+            this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, k1, k0, L_0, L_1, L_2, a0 * Math.Pow(2, 0), a1, a2);
             for (int k = 0; k < grid3d.SizeX; k++)
             {
                 for (int l = 0; l < grid3d.SizeZ; l++)
@@ -346,7 +349,7 @@ namespace Survivalcraft.Game
                     //f0 = allowMethodOverride ? this.CalculateHeight(x, y) : f0 * 1;
                     ////num7 = this.activeChunkProvider.CalculateHeight(x, y);
                     //v = this.CalculateMountainRangeFactor((float)x, (float)y);
-                    float f0 = this.activeChunkProvider.CalculateHeight((float)x, (float)y) + 1;
+                    float f0 = this.activeChunkProvider.CalculateHeight((float)x, (float)y) + 1 * 0;
                     float v = this.activeChunkProvider.CalculateMountainRangeFactor((float)x, (float)y);
                     //float f1 = MathUtils.Lerp(holder[0], 1f, TerrainChunkGeneratorProviderActive.Squish(v, holder[1], 1f));
                     float f1 = MathUtils.Lerp(
@@ -361,18 +364,18 @@ namespace Survivalcraft.Game
                     for (int m = 0; m < grid3d.SizeY; m++)
                     {
                         //int f2 = m * 8;
-                        //double d0 = this.ar[I] / 512.0D;
-                        //double d1 = this.br[I] / 512.0D;
-                        //double d2 = (this.r[I] / 10.0D + 1.0D) / 2.0D;
-                        //double d3;
-                        //if (d2 < 0.0D)
-                        //{
-                        //   d3 = d0;
-                        //}
-                        //else
-                        //{
-                        //    d3 = d2 > 1.0D ? d1 : d0 + (d1 - d0) * d2;
-                        //}
+                        double d0 = this.ar[I] / 512.0D;
+                        double d1 = this.br[I] / 512.0D;
+                        double d2 = (this.r[I] / 10.0D + 1.0D) / 2.0D;
+                        double d3;
+                        if (d2 < 0.0D)
+                        {
+                          d3 = d0;
+                        }
+                        else
+                        {
+                           d3 = d2 > 1.0D ? d1 : d0 + (d1 - d0) * d2;
+                        }
                         //float f3 = holder[2] * f1 * MathUtils.Saturate(f0 - (float)f2) * (2f * this.noiseMain.OctavedNoise((float)x, (float)f2, (float)y, holder[3], (int)holder[4], 4f, holder[5], false) - 1f);
                         ////f3 -= holder[2] * f1 * MathUtils.Saturate(f0 - (float)f2) * (2f * (float)r[I] - 1f);
                         ////f3 = (float)d3 * f1;
@@ -392,6 +395,7 @@ namespace Survivalcraft.Game
                         //grid3d.Set(k, m, l, f5);
                         //I++;
                         int num9 = m * 8;
+                        Console.WriteLine(d3);
                         float num10 = this.activeChunkProvider.TGTurbulenceStrength * f1 * MathUtils.Saturate(
                             f0 - (float)num9
                             ) * (2f * SimplexNoise.OctavedNoise(
@@ -403,18 +407,19 @@ namespace Survivalcraft.Game
                                 4f, 
                                 this.activeChunkProvider.TGTurbulencePersistence, 
                                 false
-                                ) - 1f
+                                ) * 0 + (float)d3 - 1f
                                 );
                         float num11 = (float)num9 + num10;
                         float num12 = f0 - num11 + 18 * 0;
+                        //num12 = -(float)d3 / 90;
                         num12 += MathUtils.Max(4f * (this.activeChunkProvider.TGDensityBias - (float)num9), 0f);
                         //Console.WriteLine("Value of num12 is " + num12);
-                        grid3d.Set(k, m, l, (float)(num12));
+                        grid3d.Set(k, m, l, (float)((num12) * 1));
                         //grid3d.Set(I++, num12);
                     }
                 }
             }
-            this.setBlock(new Grid2d[] { grid2d, grid2d2 }, grid3d, chunk, x1, z1, x2, z2);
+            this.SetBlock(new Grid2d[] { grid2d, grid2d2 }, grid3d, chunk, x1, z1, x2, z2);
         }
 
  
@@ -532,9 +537,9 @@ namespace Survivalcraft.Game
                 this.m_data = new float[this.m_sizeX * this.m_sizeY * this.m_sizeZ];
             }
 
-            public void Get8(int x, int y, int z, out float v111, out float v211, out float v121, out float v221, out float v112, out float v212, out float v122, out float v222)
+            public void Get8(int u, out float v111, out float v211, out float v121, out float v221, out float v112, out float v212, out float v122, out float v222)
             {
-                int i = x + y * this.m_sizeX + z * this.m_sizeXY;
+                int i = u;
                 v111 = this.m_data[i];
                 v211 = this.m_data[i + 1];
                 v121 = this.m_data[i + this.m_sizeX];
@@ -548,6 +553,19 @@ namespace Survivalcraft.Game
             public float Get(int x, int y, int z)
             {
                 return this.m_data[x + y * this.m_sizeX + z * this.m_sizeXY];
+            }
+
+            public float ClampedGet(int index){
+                float f = 0.1F;
+                if (index > this.m_data.Length){
+                    index -= this.m_data.Length - 1;
+                    f *= 1.5F;
+                    if (f > 10){
+                        f /= 2.0F;
+                        index += (int)f;
+                    }
+                }
+                return f += this.m_data[index];
             }
 
             public void Set(int index, float value)
@@ -749,36 +767,68 @@ namespace Survivalcraft.Game
 
         }
 
-        private void setBlock(Grid2d[] grid2DCache, Grid3d grid3DCache, TerrainChunk chunk, params int[] par)
+        private void SetBlock(Grid2d[] grid2DCache, Grid3d grid3DCache, TerrainChunk chunk, params int[] par){
+            double[] multipliers = new double[21];
+            multipliers[0] = 0.125D;
+            multipliers[1] = 0.125D;
+            multipliers[2] = 0.125D;
+            multipliers[3] = 0.125D;
+            multipliers[4] = 0.25D;
+            multipliers[5] = 0.25D;
+            multipliers[6] = 0.125D;
+            multipliers[7] = 0.01D;
+            multipliers[8] = 1.0D;
+            multipliers[9] = 1.0D;
+            multipliers[10] = 1.0D;
+            multipliers[11] = 1.0D;
+            multipliers[12] = 1.0D;
+            multipliers[13] = 1.0D;
+            multipliers[14] = 1.0D;
+            multipliers[15] = 1.0D;
+            multipliers[16] = 1.0D;
+            multipliers[17] = 1.0D;
+            multipliers[18] = 1.0D;
+            multipliers[19] = 1.0D;
+            multipliers[20] = 1.0D;
+            this.SetBlock(grid2DCache, grid3DCache, chunk, multipliers, par[0], par[1], par[2], par[3], 0, 0, 0);
+        }
+
+        private void SetBlock(Grid2d[] grid2DCache, Grid3d grid3DCache, TerrainChunk chunk, double[] q, params int[] par)
         {
             //Sequence is safe below. 
             int u = (int)holder[holder.Length - 1] * 1 + this.worldSettings.SeaLevelOffset * 0;
             //u = 15;
             int oceanLevel = u;
-            for (int i = 0; i < grid3DCache.SizeX - 1; i++)
+            int[] p = new int[6];
+            for (int j = par[4]; j < grid3DCache.SizeZ - 1; j++)//x, i
             {
-                for (int j = 0; j < grid3DCache.SizeZ - 1; j++)
+                p[0] = j * grid3DCache.SizeY;
+                p[1] = (j + 1) * grid3DCache.SizeY;
+                for (int k = par[5]; k < grid3DCache.SizeY - 1; k++)//z, j
                 {
-                    for (int k = 0; k < grid3DCache.SizeY - 1; k++)
+                    p[2] = (p[0] + k) * grid3DCache.SizeX;
+                    p[3] = (p[0] + k + 1) * grid3DCache.SizeX;
+                    p[4] = (p[1] + k) * grid3DCache.SizeX;
+                    p[5] = (p[1] + k + 1) * grid3DCache.SizeX;
+                    for (int i = par[6]; i < grid3DCache.SizeX - 1; i++)//y, k
                     {
-                        grid3DCache.Get8(i, k, j, out float r0, out float r1, out float r2, out float r3, out float r4, out float r5, out float r6, out float r7);
-                        double d0 = (r1 - r0) / 4f;
-                        double d1 = (r3 - r2) / 4f;
-                        double d2 = (r5 - r4) / 4f;
-                        double d3 = (r7 - r6) / 4f;
-                        double d4 = r0;
-                        double d5 = r2;
-                        double d6 = r4;
-                        double d7 = r6;
+                        double d4 = grid3DCache.m_data[p[2] + i] * q[17];
+                        double d5 = grid3DCache.m_data[p[3] + i] * q[18];
+                        double d6 = grid3DCache.m_data[p[4] + i] * q[19];
+                        double d7 = grid3DCache.m_data[p[5] + i] * q[20];
+                        double d0 = (grid3DCache.m_data[p[2] + i + 1] - d4) * q[0];
+                        double d1 = (grid3DCache.m_data[p[3] + i + 1] - d5) * q[1];
+                        double d2 = (grid3DCache.m_data[p[4] + i + 1] - d6) * q[2];
+                        double d3 = (grid3DCache.m_data[p[5] + i + 1] - d7) * q[3];
                         for (int a = 0; a < 4; a++)//4
                         {
-                            double d8 = (d6 - d4) / 4f;
-                            double d9 = (d7 - d5) / 4f;
-                            double d10 = d4;
-                            double d11 = d5;
+                            double d8 = (d6 - d4) * q[4];
+                            double d9 = (d7 - d5) * q[5];
+                            double d10 = d4 * q[15];
+                            double d11 = d5 * q[16];
                             for (int b = 0; b < 4; b++)
                             {
-                                double d12 = (d11 - d10) / 8f;
+                                double d12 = (d11 - d10) * q[6];
                                 double d13 = d10;
                                 //int x = a + i * 4;
                                 //int y = b + j * 4;
@@ -788,7 +838,7 @@ namespace Survivalcraft.Game
                                 float x5 = grid2DCache[1].Get(a + i * 4, b + j * 4);
                                 int temperatureFast = chunk.GetTemperatureFast(par[0] + a + i * 4, par[1] + b + j * 4);
                                 int humidityFast = chunk.GetHumidityFast(par[0] + a + i * 4, par[1] + b + j * 4);
-                                float f = x5 - 0.01f * (float)humidityFast;
+                                float f = x5 - (float)q[7] * (float)humidityFast;
                                 float f0 = MathUtils.Lerp(100f, 0f, f);
                                 float f1 = MathUtils.Lerp(300f, 30f, f);
                                 bool Desertificationflag = (temperatureFast > 8 && humidityFast < 8 && x5 < 0.97f) || (MathUtils.Abs(x4) < 16f && x5 < 0.97f);
@@ -839,15 +889,15 @@ namespace Survivalcraft.Game
                                         }
                                     }
                                     chunk.SetCellValueFast(par[0] + a + i * 4, c + k * 8, par[1] + b + j * 4, blockID);
-                                    d13 += d12;
+                                    d13 += d12 * q[14];
                                 }
-                                d10 += d8;
-                                d11 += d9;
+                                d10 += d8 * q[8];
+                                d11 += d9 * q[9];
                             }
-                            d4 += d0;
-                            d5 += d1;
-                            d6 += d2;
-                            d7 += d3;
+                            d4 += d0 * q[10];
+                            d5 += d1 * q[11];
+                            d6 += d2 * q[12];
+                            d7 += d3 * q[13];
                         }
                     }
                 }

@@ -827,7 +827,7 @@ namespace Game
 		public bool DrawCloudsWireframe;
 
 		// Token: 0x04000598 RID: 1432
-		public bool FogEnabled = true;
+		public bool FogEnabled = !Survivalcraft.Game.ModificationHolder.ModificationsHolder.allowForUnrestrictedTravel;
 
 		// Token: 0x04000599 RID: 1433
 		public int[] m_drawOrders = new int[]

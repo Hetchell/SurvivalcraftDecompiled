@@ -508,6 +508,7 @@ namespace Game
 							try
 							{
 								name = XmlUtils.GetAttributeValue<string>(node, "Name");
+								Console.WriteLine(name);
 								string attributeValue = XmlUtils.GetAttributeValue<string>(node, "Value");
 								PropertyInfo propertyInfo = (from pi in typeof(SettingsManager).GetRuntimeProperties()
 								where pi.Name == name && pi.GetMethod.IsStatic && pi.GetMethod.IsPublic && pi.SetMethod.IsPublic
