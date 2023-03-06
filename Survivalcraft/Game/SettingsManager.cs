@@ -305,7 +305,7 @@ namespace Game
 		// Token: 0x17000347 RID: 839
 		// (get) Token: 0x0600153F RID: 5439 RVA: 0x000A28D0 File Offset: 0x000A0AD0
 		// (set) Token: 0x06001540 RID: 5440 RVA: 0x000A28D7 File Offset: 0x000A0AD7
-		public static string MotdLastDownloadedData { get; set; }
+		public static string MotdLastDownloadedData { get { return string.Empty; } set { } }
 
 		// Token: 0x17000348 RID: 840
 		// (get) Token: 0x06001541 RID: 5441 RVA: 0x000A28DF File Offset: 0x000A0ADF
