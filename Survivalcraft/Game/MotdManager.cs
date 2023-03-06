@@ -57,8 +57,10 @@ namespace Game
 			{
 				TimeSpan t = TimeSpan.FromHours(SettingsManager.MotdUpdatePeriodHours);
 				DateTime now = DateTime.Now;
-				if (now >= SettingsManager.MotdLastUpdateTime + t)
-				{
+				//bool condition = true; //this will keep logging. 
+                if (now >= SettingsManager.MotdLastUpdateTime + t)
+                //if (condition)
+                {
 					SettingsManager.MotdLastUpdateTime = now;
 					Log.Information("Downloading MOTD");
 					AnalyticsManager.LogEvent("[MotdManager] Downloading MOTD", new AnalyticsParameter[]

@@ -119,7 +119,7 @@ namespace Game
 			}
 			if (this.ComponentBody.ImmersionFactor > 0.2f && this.ComponentBody.ImmersionFluidBlock is MagmaBlock)
 			{
-				if (!componentHealth.IsInvulnerable
+				if (componentHealth == null ||!componentHealth.IsInvulnerable
 					)//&& !(this.componentCreature.DisplayName == "Gray Wolf"))
 				{
                     this.SetOnFire(null, this.m_random.Float(12f, 15f));

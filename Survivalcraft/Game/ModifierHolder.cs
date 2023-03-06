@@ -2,12 +2,9 @@
 using System;
 using Game;
 using Engine;
-using System.Diagnostics;
 using Survivalcraft.Game.NoiseModifier;
 using Random = Game.Random;
-using static Game.TerrainContentGeneratorVersion2_1_inactive;
 using Survivalcraft.Game.ModificationHolder;
-using static Game.TerrainChunkGeneratorProviderActive;
 
 namespace Survivalcraft.Game
 {
@@ -224,7 +221,7 @@ namespace Survivalcraft.Game
         private void GenerateTerrainMod(TerrainChunk chunk, int x1, int z1, int x2, int z2)
         {
             int I = 0;
-            float a0 = 684.412f;
+            float a0 = 684.412f * (float)Math.Pow(2, 15);
             float a1 = a0;
             float a2 = a0 * 2.0f;
             int i0 = x2 - x1;
@@ -278,9 +275,9 @@ namespace Survivalcraft.Game
             //this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0  * Math.Pow(2, 10), a1 , a2);
             //this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0 * Math.Pow(2, 10), a1, a2);
             //this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, 0, k1, i0 / 4 + 1, 33, i1 / 4 + 1, a0 * Math.Pow(2, 10), a1, a2);
-            this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, k1, k0, L_0, L_1, L_2, a0 * Math.Pow(2, 0), a1, a2);
-            this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, k1, k0, L_0, L_1, L_2, a0 * Math.Pow(2, 0), a1, a2);
-            this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, k1, k0, L_0, L_1, L_2, a0 * Math.Pow(2, 0), a1, a2);
+            this.r = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.r, k0, k1, k1, L_0, L_1, L_2, 8.555150000000001D, 4.277575000000001D, 8.555150000000001D);
+            this.ar = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.ar, k0, k1, k1, L_0, L_1, L_2, a0, a1, a2);
+            this.br = this.noiseMain.UseImprovedNoiseGenerateNoiseOctaves(this.br, k0, k1, k1, L_0, L_1, L_2, a0, a1, a2);
             for (int k = 0; k < grid3d.SizeX; k++)
             {
                 for (int l = 0; l < grid3d.SizeZ; l++)
@@ -352,7 +349,7 @@ namespace Survivalcraft.Game
                     float f0 = this.activeChunkProvider.CalculateHeight((float)x, (float)y) + 1 * 0;
                     float v = this.activeChunkProvider.CalculateMountainRangeFactor((float)x, (float)y);
                     //float f1 = MathUtils.Lerp(holder[0], 1f, TerrainChunkGeneratorProviderActive.Squish(v, holder[1], 1f));
-                    float f1 = MathUtils.Lerp(
+                    double f1 = MathUtils.Lerp(
                         this.activeChunkProvider.TGMinTurbulence, 
                         1f, 
                         TerrainChunkGeneratorProviderActive.Squish(
@@ -395,10 +392,10 @@ namespace Survivalcraft.Game
                         //grid3d.Set(k, m, l, f5);
                         //I++;
                         int num9 = m * 8;
-                        Console.WriteLine(d3);
-                        float num10 = this.activeChunkProvider.TGTurbulenceStrength * f1 * MathUtils.Saturate(
-                            f0 - (float)num9
-                            ) * (2f * SimplexNoise.OctavedNoise(
+                        //Console.WriteLine(d3);
+                        double num10 = this.activeChunkProvider.TGTurbulenceStrength * f1 * MathUtils.Saturate(
+                            d3 - (float)num9
+                            ) * (4f * SimplexNoise.OctavedNoise(
                                 (float)x, 
                                 (float)num9, 
                                 (float)y, 
@@ -407,23 +404,34 @@ namespace Survivalcraft.Game
                                 4f, 
                                 this.activeChunkProvider.TGTurbulencePersistence, 
                                 false
-                                ) * 0 + (float)d3 - 1f
+                                ) * 1 - 1f
                                 );
-                        float num11 = (float)num9 + num10;
-                        float num12 = f0 - num11 + 18 * 0;
+                        double num11 = (float)num9 + num10;
+                        double num12 = MathUtils.Clamp(64f + d3, 10f, 251f) - num11 + 18 * 0;
                         //num12 = -(float)d3 / 90;
                         num12 += MathUtils.Max(4f * (this.activeChunkProvider.TGDensityBias - (float)num9), 0f);
                         //Console.WriteLine("Value of num12 is " + num12);
-                        grid3d.Set(k, m, l, (float)((num12) * 1));
+                        grid3d.Set(k, m, l, (num12));
                         //grid3d.Set(I++, num12);
+                        I++;
                     }
                 }
             }
             this.SetBlock(new Grid2d[] { grid2d, grid2d2 }, grid3d, chunk, x1, z1, x2, z2);
         }
 
- 
-        
+        private static double denorm(double lowest_norm, double upper_norm, double lower, double upper, double subj)
+        {
+            return subj < lowest_norm ?
+                upper : (subj > upper_norm ? upper : lower + (upper - lower) * subj);
+        }
+
+        private double map(double x, double in_min, double in_max, double out_min, double out_max)
+        {
+            double d = in_max - in_min != 0 ? in_max - in_min : 0.8d;
+            return (x - in_min) * (out_max - out_min) / d + out_min;
+        }
+
         public class Grid2d
         {
 
@@ -500,7 +508,7 @@ namespace Survivalcraft.Game
 
             public int m_sizeXY;
 
-            public float[] m_data;
+            public double[] m_data;
             public int SizeX
             {
                 get
@@ -534,10 +542,10 @@ namespace Survivalcraft.Game
                 this.m_sizeY = sizeY;
                 this.m_sizeZ = sizeZ;
                 this.m_sizeXY = this.m_sizeX * this.m_sizeY;
-                this.m_data = new float[this.m_sizeX * this.m_sizeY * this.m_sizeZ];
+                this.m_data = new double[this.m_sizeX * this.m_sizeY * this.m_sizeZ];
             }
 
-            public void Get8(int u, out float v111, out float v211, out float v121, out float v221, out float v112, out float v212, out float v122, out float v222)
+            public void Get8(int u, out double v111, out double v211, out double v121, out double v221, out double v112, out double v212, out double v122, out double v222)
             {
                 int i = u;
                 v111 = this.m_data[i];
@@ -550,34 +558,34 @@ namespace Survivalcraft.Game
                 v222 = this.m_data[i + 1 + this.m_sizeX + this.m_sizeXY];
             }
 
-            public float Get(int x, int y, int z)
+            public double Get(int x, int y, int z)
             {
                 return this.m_data[x + y * this.m_sizeX + z * this.m_sizeXY];
             }
 
-            public float ClampedGet(int index){
-                float f = 0.1F;
+            public double ClampedGet(int index){
+                double f = 0.1D;
                 if (index > this.m_data.Length){
                     index -= this.m_data.Length - 1;
-                    f *= 1.5F;
+                    f *= 1.5D;
                     if (f > 10){
-                        f /= 2.0F;
+                        f /= 2.0D;
                         index += (int)f;
                     }
                 }
                 return f += this.m_data[index];
             }
 
-            public void Set(int index, float value)
+            public void Set(int index, double value)
             {
                 this.m_data[index] = value;
             }
-            public void Set(int x, int y, int z, float value)
+            public void Set(int x, int y, int z, double value)
             {
                 this.m_data[x + y * this.m_sizeX + z * this.m_sizeXY] = value;
             }
 
-            private float Sample(float x, float y, float z)
+            private double Sample(float x, float y, float z)
             {
                 int num = (int)MathUtils.Floor(x);
                 int num2 = (int)MathUtils.Ceiling(x);
@@ -585,23 +593,23 @@ namespace Survivalcraft.Game
                 int num4 = (int)MathUtils.Ceiling(y);
                 int num5 = (int)MathUtils.Floor(z);
                 int num6 = (int)MathUtils.Ceiling(z);
-                float f = x - (float)num;
-                float f2 = y - (float)num3;
-                float f3 = z - (float)num5;
-                float x2 = this.m_data[num + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x3 = this.m_data[num2 + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x4 = this.m_data[num + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x5 = this.m_data[num2 + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
-                float x6 = this.m_data[num + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x7 = this.m_data[num2 + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x8 = this.m_data[num + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x9 = this.m_data[num2 + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
-                float x10 = MathUtils.Lerp(x2, x3, f);
-                float x11 = MathUtils.Lerp(x4, x5, f);
-                float x12 = MathUtils.Lerp(x6, x7, f);
-                float x13 = MathUtils.Lerp(x8, x9, f);
-                float x14 = MathUtils.Lerp(x10, x11, f2);
-                float x15 = MathUtils.Lerp(x12, x13, f2);
+                double f = x - (float)num;
+                double f2 = y - (float)num3;
+                double f3 = z - (float)num5;
+                double x2 = this.m_data[num + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x3 = this.m_data[num2 + num3 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x4 = this.m_data[num + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x5 = this.m_data[num2 + num4 * this.m_sizeX + num5 * this.m_sizeX * this.m_sizeY];
+                double x6 = this.m_data[num + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x7 = this.m_data[num2 + num3 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x8 = this.m_data[num + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x9 = this.m_data[num2 + num4 * this.m_sizeX + num6 * this.m_sizeX * this.m_sizeY];
+                double x10 = MathUtils.Lerp(x2, x3, f);
+                double x11 = MathUtils.Lerp(x4, x5, f);
+                double x12 = MathUtils.Lerp(x6, x7, f);
+                double x13 = MathUtils.Lerp(x8, x9, f);
+                double x14 = MathUtils.Lerp(x10, x11, f2);
+                double x15 = MathUtils.Lerp(x12, x13, f2);
                 return MathUtils.Lerp(x14, x15, f3);
             }
 

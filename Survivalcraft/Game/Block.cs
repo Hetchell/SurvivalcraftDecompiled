@@ -209,6 +209,10 @@ namespace Game
 		// Token: 0x060010CD RID: 4301 RVA: 0x0007F3C0 File Offset: 0x0007D5C0
 		public virtual float GetMeleePower(int value)
 		{
+			if(value == 125)
+			{
+				return 111000f;
+			}
 			return this.DefaultMeleePower;
 		}
 
